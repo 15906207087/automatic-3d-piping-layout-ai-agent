@@ -1,0 +1,11 @@
+# CAD MCP 服务依赖
+pywin32>=228
+mcp>=0.1.0
+pydantic>=2.0.0
+typing>=3.7.4.3
+PyMuPDF>=1.24.0
+Pillow>=10.0.0
+
+# LangChain 为可选旁路依赖，不进入主服务安装。
+# 需要时另装: pip install -r requirements-langchain-optional.txt
+# 试点目录: experimental/langchain_pilot/

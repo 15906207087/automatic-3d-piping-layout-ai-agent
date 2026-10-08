@@ -1,0 +1,31 @@
+{
+    "server": {
+        "name": "CAD MCP 服务器",
+        "version": "1.0.0"
+    },
+    "cad": {
+        "type": "AUTOCAD", 
+        "startup_wait_time": 20,
+        "command_delay": 0.5,
+        "boolean_union": 0,
+        "boolean_intersection": 1,
+        "boolean_subtraction": 2
+    },
+    "output": {
+        "directory": "./output",
+        "default_filename": "cad_drawing.dwg"
+    },
+    "vision": {
+        "enabled": false,
+        "provider": "openrouter",
+        "model": "openai/gpt-5.4",
+        "api_key_env": "OPENROUTER_API_KEY",
+        "base_url": "https://openrouter.ai/api/v1/chat/completions",
+        "app_name": "CAD-MCP",
+        "site_url": "https://cursor.local",
+        "poll_interval_ms": 2000,
+        "diff_threshold": 0.0,
+        "timeout_sec": 60,
+        "capture_output_dir": "./output/vision_captures"
+    }
+}

@@ -1,0 +1,338 @@
+{
+  "topic": "循环水",
+  "source_view": "page_4 管道平面布置图",
+  "recognition_basis": {
+    "primary_image": "CAD-MCP/output/循环水/shared/reinspect_p4_p5_v2/循环水_page_4_3x.png",
+    "support_images": [
+      "CAD-MCP/output/循环水/shared/reinspect_p4_p5_v2/sections/p4_left_dn200.png",
+      "CAD-MCP/output/循环水/shared/reinspect_p4_p5_v2/sections/p4_pump_band.png",
+      "CAD-MCP/output/循环水/shared/reinspect_p4_p5_v2/sections/p5_CC.png",
+      "CAD-MCP/output/循环水/shared/reinspect_p4_p5_v2/sections/p5_HH.png",
+      "CAD-MCP/output/循环水/shared/reinspect_p4_p5_v2/sections/p5_II.png"
+    ],
+    "note": "本文件先记录按 P4 渲染图直接观察得到的所有可见管道平面位置判断。标高不在此文件中硬编码，后续应由所连接剖面或既有高程模板补入。"
+  },
+  "section_anchor_judgments": [
+    {
+      "section": "C-C",
+      "page4_visual_anchor": "位于左侧 DN200 下部水平管靠近左墙穿墙套管和 9 号阀门的位置，剖面文字就在该水平 DN200 线附近。",
+      "anchor_zone": "左墙穿墙区",
+      "plan_judgment": "C-C 应锁定在左墙 DN200 穿墙线附近，不应被解释成远离左墙的其他局部管段。",
+      "confidence": 0.98
+    },
+    {
+      "section": "H-H",
+      "page4_visual_anchor": "H 标记位于 Y-0202 右侧中部，紧挨着进入 Y-0202 的短 DN125 横管和局部 DN150 回弯带。",
+      "anchor_zone": "Y-0202 设备带中部",
+      "plan_judgment": "H-H 的平面位置必须靠近 Y-0202 文字与 H 标记所在的局部管带，不应挂到左侧冷却塔或右侧塔区。",
+      "confidence": 0.97
+    },
+    {
+      "section": "I-I",
+      "page4_visual_anchor": "I 标记位于 Y-0202 下方、Y-1401 上方一带，紧邻下部 DN150 回弯链和小口径支线。",
+      "anchor_zone": "Y-0202 / Y-1401 之间的下部局部设备带",
+      "plan_judgment": "I-I 的平面位置必须留在 Y-0202 下方附近，不应跑到 CT-0201 右侧塔区。",
+      "confidence": 0.95
+    },
+    {
+      "section": "F-F",
+      "page4_visual_anchor": "F 标记位于 Y-0202 右侧竖向 DN150 干线上下两处，说明 F-F 控制的是这组局部 DN150 回弯链。",
+      "anchor_zone": "Y-0202 右侧局部 DN150 立管带",
+      "plan_judgment": "F-F 应与 Y-0202 右侧 DN150 立管/回弯总成共线，不应脱离该设备带单独漂移。",
+      "confidence": 0.92
+    }
+  ],
+  "visible_pipe_groups": [
+    {
+      "pipe_id": "p4_upper_header_dn450",
+      "dn": 450,
+      "geometry_kind": "global_horizontal_header",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于整张图上部，横向贯穿泵带与右侧塔区，左端伸出左侧，右端延伸到 P-0201 上方后继续朝右。",
+      "nearby_objects": ["P-0204", "P-0203", "P-0202", "P-0201", "CT-0203", "CT-0202", "CT-0201"],
+      "connected_sections_or_templates": ["H-H", "I-I", "A-A"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.99
+    },
+    {
+      "pipe_id": "p4_lower_header_dn500",
+      "dn": 500,
+      "geometry_kind": "global_horizontal_header",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于整张图下部、蓄水池下侧外缘附近，横向贯穿四台泵下方，左端和右端均有外伸。",
+      "nearby_objects": ["P-0204", "P-0203", "P-0202", "P-0201"],
+      "connected_sections_or_templates": ["A-A", "E-E", "G-G"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.99
+    },
+    {
+      "pipe_id": "p4_p0204_upper_branch_dn250",
+      "dn": 250,
+      "geometry_kind": "pump_upper_branch",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于 P-0204 上方，竖向连接到上部 DN450 主管。",
+      "nearby_objects": ["P-0204"],
+      "connected_sections_or_templates": ["A-A"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.98
+    },
+    {
+      "pipe_id": "p4_p0203_upper_branch_dn250",
+      "dn": 250,
+      "geometry_kind": "pump_upper_branch",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于 P-0203 上方，竖向连接到上部 DN450 主管。",
+      "nearby_objects": ["P-0203"],
+      "connected_sections_or_templates": ["A-A"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.98
+    },
+    {
+      "pipe_id": "p4_p0202_upper_branch_dn250",
+      "dn": 250,
+      "geometry_kind": "pump_upper_branch",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于 P-0202 上方，竖向连接到上部 DN450 主管。",
+      "nearby_objects": ["P-0202"],
+      "connected_sections_or_templates": ["A-A"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.98
+    },
+    {
+      "pipe_id": "p4_p0201_upper_branch_dn250",
+      "dn": 250,
+      "geometry_kind": "pump_upper_branch",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于 P-0201 上方，竖向连接到上部 DN450 主管。",
+      "nearby_objects": ["P-0201"],
+      "connected_sections_or_templates": ["A-A"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.98
+    },
+    {
+      "pipe_id": "p4_p0204_lower_branch_dn300",
+      "dn": 300,
+      "geometry_kind": "pump_lower_branch",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于 P-0204 下方，竖向接到底部 DN500 主管。",
+      "nearby_objects": ["P-0204"],
+      "connected_sections_or_templates": ["A-A", "D-D"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.97
+    },
+    {
+      "pipe_id": "p4_p0203_lower_branch_dn300",
+      "dn": 300,
+      "geometry_kind": "pump_lower_branch",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于 P-0203 下方，竖向接到底部 DN500 主管。",
+      "nearby_objects": ["P-0203"],
+      "connected_sections_or_templates": ["A-A"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.97
+    },
+    {
+      "pipe_id": "p4_p0202_lower_branch_dn300",
+      "dn": 300,
+      "geometry_kind": "pump_lower_branch",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于 P-0202 下方，竖向接到底部 DN500 主管。",
+      "nearby_objects": ["P-0202"],
+      "connected_sections_or_templates": ["A-A"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.97
+    },
+    {
+      "pipe_id": "p4_p0201_lower_branch_dn300",
+      "dn": 300,
+      "geometry_kind": "pump_lower_branch",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于 P-0201 下方，竖向接到底部 DN500 主管。",
+      "nearby_objects": ["P-0201"],
+      "connected_sections_or_templates": ["A-A"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.97
+    },
+    {
+      "pipe_id": "p4_ct0203_drop_dn125",
+      "dn": 125,
+      "geometry_kind": "tower_drop_branch",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于左侧冷却塔组上方，沿 CT-0203 列位从上部 DN450 主管下落。",
+      "nearby_objects": ["CT-0203"],
+      "connected_sections_or_templates": ["H-H"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.9
+    },
+    {
+      "pipe_id": "p4_ct0202_drop_dn125",
+      "dn": 125,
+      "geometry_kind": "tower_drop_branch",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于中间冷却塔组上方，沿 CT-0202 列位从上部 DN450 主管下落。",
+      "nearby_objects": ["CT-0202"],
+      "connected_sections_or_templates": ["H-H"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.9
+    },
+    {
+      "pipe_id": "p4_ct0201_drop_dn150",
+      "dn": 150,
+      "geometry_kind": "tower_drop_branch",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于右侧冷却塔组上方，沿 CT-0201 列位从上部 DN450 主管下落。",
+      "nearby_objects": ["CT-0201"],
+      "connected_sections_or_templates": ["I-I"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.9
+    },
+    {
+      "pipe_id": "p4_left_upper_dn200_horizontal",
+      "dn": 200,
+      "geometry_kind": "sloped_horizontal_run",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于左侧设备带上部，从左侧 DN200 竖向链向右接到左墙穿墙区；图中标注管内底 -0.710、L=7m、i=0.003。",
+      "nearby_objects": ["C-C", "31", "左墙穿墙区"],
+      "connected_sections_or_templates": ["C-C"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.99
+    },
+    {
+      "pipe_id": "p4_left_lower_dn200_horizontal",
+      "dn": 200,
+      "geometry_kind": "sloped_horizontal_run",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于左侧设备带中部，从左侧 DN200 竖向链向右接到 9 号阀门和左墙穿墙区；图中标注管内底 -0.720、L=7m、i=0.003。",
+      "nearby_objects": ["C-C", "9", "31"],
+      "connected_sections_or_templates": ["C-C"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.99
+    },
+    {
+      "pipe_id": "p4_left_dn200_upper_vertical_link",
+      "dn": 200,
+      "geometry_kind": "vertical_link",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "连接左侧上部 DN200 水平管和中部 DN200 水平管的竖向短管，图中标注 DN200 L=2m、i=0.003。",
+      "nearby_objects": ["左侧 DN200 竖向链"],
+      "connected_sections_or_templates": ["C-C"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.98
+    },
+    {
+      "pipe_id": "p4_left_dn200_lower_vertical_link",
+      "dn": 200,
+      "geometry_kind": "vertical_link",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "连接中部 DN200 水平管与下方 DN300 立管三通位置的竖向短管，图中同样标注 DN200 L=2m、i=0.003。",
+      "nearby_objects": ["Y-0202 左侧设备带"],
+      "connected_sections_or_templates": ["C-C", "H-H", "I-I"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.97
+    },
+    {
+      "pipe_id": "p4_left_dn300_vertical_riser",
+      "dn": 300,
+      "geometry_kind": "vertical_riser",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于最左侧设备带下部，自左侧 DN200 竖向链继续向下延伸；图中标注 DN300 L=8m、i=0.003。",
+      "nearby_objects": ["Y-0202", "Y-1401"],
+      "connected_sections_or_templates": ["I-I", "H-H"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.96
+    },
+    {
+      "pipe_id": "p4_left_dn350_to_y0202",
+      "dn": 350,
+      "geometry_kind": "equipment_side_branch",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "由左侧 DN300 立管向右接入 Y-0202 左侧的短横支管，图中标注 DN350。",
+      "nearby_objects": ["Y-0202"],
+      "connected_sections_or_templates": ["H-H", "I-I"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.95
+    },
+    {
+      "pipe_id": "p4_y0202_upper_dn125_drop",
+      "dn": 125,
+      "geometry_kind": "local_drop_branch",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "从上部 DN450 主管左侧支出后在 Y-0202 右上方下落的局部 DN125 立管，位于 23/16 标记附近。",
+      "nearby_objects": ["Y-0202", "H-H", "23", "16"],
+      "connected_sections_or_templates": ["H-H"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.95
+    },
+    {
+      "pipe_id": "p4_y0202_dn150_upper_return_loop",
+      "dn": 150,
+      "geometry_kind": "local_return_loop",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "围绕 Y-0202 右侧和下侧的一组 DN150 回弯链，上端靠近 F 标记，下端通过多只 22 号弯头折返；整体平面包络紧贴 Y-0202 右侧，不应远离该文字区域。",
+      "nearby_objects": ["Y-0202", "F-F", "H-H", "22", "18"],
+      "connected_sections_or_templates": ["F-F", "H-H"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.93
+    },
+    {
+      "pipe_id": "p4_y0202_mid_dn125_into_equipment",
+      "dn": 125,
+      "geometry_kind": "short_equipment_connection",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于 Y-0202 右侧中部、从局部 DN150 干线上接入 Y-0202 的短 DN125 横管，H 标记就在其附近。",
+      "nearby_objects": ["Y-0202", "H-H"],
+      "connected_sections_or_templates": ["H-H"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.96
+    },
+    {
+      "pipe_id": "p4_y0202_y1401_between_dn150_lower_loop",
+      "dn": 150,
+      "geometry_kind": "local_return_loop",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于 Y-0202 下方、Y-1401 上方一带的另一组下部 DN150 回弯链，I 标记紧邻其附近，整体平面包络应留在左侧设备带下部。",
+      "nearby_objects": ["Y-0202", "Y-1401", "I-I", "22"],
+      "connected_sections_or_templates": ["I-I"],
+      "modeling_priority": "must_draw",
+      "confidence": 0.94
+    },
+    {
+      "pipe_id": "p4_y1401_small_dn25_dn20_dn15_cluster",
+      "dn": null,
+      "geometry_kind": "small_bore_local_cluster",
+      "directly_determinable_from_p4": true,
+      "plan_position_text": "位于 Y-1401 右侧和上侧，可见 DN25、DN20、DN15 等小口径局部管线；虽然单段长度难从当前裁图稳定反算，但平面位置明确在 Y-1401 旁，不应漏记。",
+      "nearby_objects": ["Y-1401", "2"],
+      "connected_sections_or_templates": ["I-I"],
+      "modeling_priority": "record_first_then_confirm_geometry",
+      "confidence": 0.72
+    }
+  ],
+  "direct_from_p4_but_not_yet_fully_restored_in_v150": [
+    "p4_p0204_upper_branch_dn250",
+    "p4_p0203_upper_branch_dn250",
+    "p4_p0202_upper_branch_dn250",
+    "p4_p0201_upper_branch_dn250",
+    "p4_p0204_lower_branch_dn300",
+    "p4_p0203_lower_branch_dn300",
+    "p4_p0202_lower_branch_dn300",
+    "p4_p0201_lower_branch_dn300",
+    "p4_ct0203_drop_dn125",
+    "p4_ct0202_drop_dn125",
+    "p4_ct0201_drop_dn150",
+    "p4_left_dn200_upper_vertical_link",
+    "p4_left_dn200_lower_vertical_link",
+    "p4_left_dn300_vertical_riser",
+    "p4_left_dn350_to_y0202",
+    "p4_y0202_upper_dn125_drop",
+    "p4_y0202_dn150_upper_return_loop",
+    "p4_y0202_mid_dn125_into_equipment",
+    "p4_y0202_y1401_between_dn150_lower_loop",
+    "p4_y1401_small_dn25_dn20_dn15_cluster"
+  ],
+  "next_modeling_rule": [
+    "后续改脚本前，必须先把以上每条可见管线映射到可执行 route，不允许继续只保留剖面试绘支路。",
+    "凡是 H-H、I-I、F-F、C-C 文字就在局部管带附近的，平面锚点必须优先锁在文字附近的可见管段，不得挂到远离文字的塔区或主管另一端。",
+    "标高未知或需剖面约束的管线，只允许沿其连接剖面补 z，不允许改变其已由 P4 直接给出的平面位置。"
+  ]
+}

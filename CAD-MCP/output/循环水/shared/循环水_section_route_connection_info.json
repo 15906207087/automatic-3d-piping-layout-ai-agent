@@ -1,0 +1,1615 @@
+{
+  "topic": "循环水",
+  "schema_version": "v1",
+  "purpose": "专门存储剖面图中的局部管道路由、零件串联顺序、正交转向关系和连接拓扑，供后续绘制代码直接读取；与 section_info 的识图说明、dimension_info 的尺寸/试绘参数分开维护。",
+  "recording_principles": [
+    "当前这份 JSON 以人工复核后的剖面分析文字为主记录，避免把尚未验证稳定的几何语义过早翻译成复杂结构约束。",
+    "结构化字段只保留当前绘制代码已经稳定消费的最小执行集；如果文字分析与结构字段暂时并存，应先以人工复核文字为准，再单独收紧结构字段。"
+  ],
+  "source_shared_jsons": {
+    "list_info": "循环水_list_info.json",
+    "dimension_info": "循环水_dimension_info.json",
+    "section_info": "循环水_section_info.json"
+  },
+  "sections": [
+    {
+      "section": "A-A",
+      "status": "reanalyzed_from_user_image",
+      "plan_anchor": {
+        "source_view": "page_4",
+        "user_order_description": "A-A 典型继续按上下分锚点；本轮先回到 v107 代码基线，再只处理复制出来的另外三组：以各组泵下侧为基准线，仅移动对应泵上侧；DN500 主管处那组保持不动。",
+        "resolved_anchor_id": "top_wall_dn300_sleeve_4",
+        "resolved_anchor_x_mm": 5790.0,
+        "anchor_confidence": 0.84
+      },
+      "view_basis": {
+        "source_view": "page_5",
+        "role": "主剖面 + 图上左起第三个刚性防水套管所在列位的局部试绘剖面",
+        "view_direction": "沿图上左起第三个刚性防水套管所在剖切面，从池体/主管侧横向观察到泵组和出口侧",
+        "left_side_meaning": "item13 所在 DN250 立管一侧",
+        "middle_meaning": "池体与 P-0204 典型泵侧接口链",
+        "right_side_meaning": "item14 所在 DN250 回接立管一侧"
+      },
+      "text_record": {
+        "analysis": [
+          "A-A 本轮继续按上下分锚点建模，并先按 v107 代码基线执行。主典型第一组即 DN500 主管处 A-A 保持 top_wall_dn300_sleeve_4 x=5790 不动；另外三组复制 A-A 以各自泵下侧、下方 DN500 主管处列位为基准，只把泵上侧及泵上方链路吸附回对应下侧列位：P-0203 对齐 bottom_embedded_plate_3 x=8450，P-0202 对齐 bottom_embedded_plate_2 x=10250，P-0201 对齐 bottom_embedded_plate_1 x=14200；其中第三组仍沿用既有开关关闭右侧下方 DN500 主干侧支路。用户本轮进一步明确：这三组复制 A-A 中，需要与 top_wall_dn300_sleeve_3 / 2 / 1 共线的是上部泵链及其挂到 DN450 主管的对应接出位置，不是右侧 item14 回接三通本体；右侧回接三通及其下落立管仍应保留在各自下方主干列位，否则会把三通支口几何画坏。剖面图左侧和右侧底部的圆仍代表下方主管截面。左侧的竖管是 DN250，该竖管通过 13 号异径三通与底部主管连接，三通规格按剖面件号语义应为 DN500x250。这根 DN250 立管自 -1.200 上翻，在 +1.200 位置设有 4 号 DN250 手动蝶阀，阀后继续上翻，再经一个 DN250 90°弯头转为横管，向冷却塔方向接入塔侧。这里有一个需要并存记录的点：图面能直接稳定看清的左侧接口标高是 +1.200，而现有 shared 解析里还保留了“左侧转横控制高程 +2.000”这条记录，后续建模时建议再回 PDF 原图复核，不要静默合并。左侧这根 DN250 立管的定位约束也很关键，它不是距池体外壁 1000mm，而是距蓄水池内壁 1000mm。",
+          "剖面中部是 P-0204 的泵侧连接链。中间 DN300 竖管位于蓄水池内部，中心线距蓄水池右侧内壁约1000mm；下部先见 29 号支架，其底部落在蓄水池底标高 -1.400；29 上方是 27 号盲法兰，再上翻为 DN300 立管。该立管自泵下部接口上翻到 +0.535，并通过 19 号 DN300 90°弯头 转成水平 DN300 横管。横管先通过位于池壁处的 30 号穿池壁构件，再从左到右依次经过 3 号、11 号和 25 号 DN300x250 同心异径管；这一段左侧横管在距蓄水池右侧内壁 1850mm 处结束，不继续与泵右侧横管连成一根。",
+          "右侧是回接主管的一段独立 DN250 支路。距蓄水池右侧内壁 2850mm 处，单独开始一根标高 +0.510 的横向连接链；主串按从左向右“26 号异径管 -> 12 号 DN250 伸缩接头 -> 1 号 DN250 止回阀 -> 8 号 DN250 蝶阀 -> 一小段 DN250 横管 -> 20 号 DN250 90°弯头”连续连接，中间不留缝。10 号压力表接口不再作为主串插入件，而是挂在这段右侧 DN250 横管上。弯头后转为竖向下落的 DN250 立管；按当前统一连接语义，这根可见立管从 14 号异径三通的支口端口开始显示，不再把 -1.200 强制解释为可见直管下端。下方主管当前按用户最新更正实际绘制为 DN500，其中心线距蓄水池内壁为 5000mm；14 号件的 DN450x250 件号语义先与该主干实际口径并存记录，不在本轮静默改写。泵左侧横管终点与右侧横管起点之间保留泵体宽度形成的中断，不按一根连续横管处理。"
+        ],
+        "modeling_description": [
+          "A-A 左侧支路可按“主管截面 -> 13号异径三通 -> DN250立管 -> 4号DN250阀门(+1.200) -> DN250阀后继续上翻段 -> DN250弯头 -> 标高+2.000的DN250横管 -> 冷却塔塔侧”的顺序建模。",
+          "A-A 中部泵侧链可按“P-0204下部接口 -> 29号支架(-1.400池底) -> 27号盲法兰 -> 位于蓄水池内部、距右侧内壁1000的DN300立管(+0.535) -> 19号DN300弯头 -> 位于池壁处的30号穿池壁构件 -> 3号 -> 11号 -> 25号DN300x250同心异径管 -> 左侧横管在距右侧内壁1850处结束”的顺序建模。",
+          "A-A 右侧支路可按“距蓄水池右侧内壁2850处单独开始的标高+0.510横向连接链 -> 26号异径管 -> 12号DN250伸缩接头 -> 1号DN250止回阀 -> 8号DN250蝶阀 -> 一小段DN250横管 -> 20号DN250 90度弯头 -> 从14号异径三通支口端口开始显示的DN250立管 -> 14号异径三通 -> 本轮改按右端距右侧内壁700定位的DN450主管截面”的顺序理解；10号压力表接口单独挂在该横向 DN250 管段上，不再作为主串插入件。",
+          "A-A 关键位置参数为：左侧DN250立管与下方DN500主管三通支口同轴；立管中心线距蓄水池内壁1000；中部DN300立管/29号支架/19号弯头中心线位于蓄水池内部、距右侧内壁约1000；泵左侧横管终点距右侧内壁1850；泵右侧横向连接链起点距右侧内壁2850；本轮 A-A 继续采用上下分锚点，但只处理复制出来的另外三组：主典型第一组保持 top_wall_dn300_sleeve_4 x=5790 不动，另外三组仅把上部泵链从 top_wall_dn300_sleeve_3/2/1 收回到各自下侧列位 bottom_embedded_plate_3/2/1，而下侧 DN500 主干侧继续沿用既有列位与开关；同时这三组在上方 DN450 主管上的接出位置需与对应 top_wall_dn300_sleeve_3/2/1 共线，但右侧 14 号回接三通本体及其可见下落立管仍保留在下方主干列位；右侧可见立管默认从 14 号异径三通支口端口起算显示，不再把 -1.200 强制解释为可见直管下端；两者之间不是一根连续横管。"
+        ],
+        "open_points": [
+          "左侧 DN250 转横弯头在当前图面可确认规格为 DN250 90度弯头，但件号未稳定读出，暂以 item_no=null 保留。",
+          "26 号位于右侧主串最左侧，后续与 12/1/8 连续贴合；10 号压力表接口改按支接件理解，不再占用 26 与 12 之间的主串长度。",
+          "item27=盲法兰位于 29 号支架上方、DN300 竖管下部；item30=DN300 横管穿池壁构件。二者当前已写入文字主记录与件号关系，待代码明确消费后再决定是否进入主体串联拓扑。"
+        ]
+      },
+      "verbatim_analysis_snapshot": {
+        "format": "plain_markdown_lines",
+        "lines": [
+          "A-A 本轮先回到 v107 代码基线，再按最新要求区分四组列位：DN500 主管处那组继续保持 top_wall_dn300_sleeve_4 x=5790 不动；复制出来的另外三组则以各自泵下侧和下方 DN500 主管处列位为基准，只移动对应泵上侧及泵上方链路，使 P-0203/P-0202/P-0201 分别对齐 bottom_embedded_plate_3/2/1。剖面图左侧和右侧底部的圆代表主管截面。左侧的竖管是 DN250，该竖管通过 13 号异径三通与底部主管连接，三通规格按剖面件号语义应为 DN500x250。这根 DN250 立管自 -1.200 上翻，在 +1.200 位置设有 4 号 DN250 手动蝶阀，阀后继续上翻，再经一个 DN250 90°弯头 转为横管，向冷却塔方向接入塔侧。这里有一个需要并存记录的点：图面能直接稳定看清的左侧接口标高是 +1.200，而现有 shared 解析里还保留了“左侧转横控制高程 +2.000”这条记录，后续建模时建议再回 PDF 原图复核，不要静默合并。左侧这根 DN250 立管的定位约束也很关键，它不是距池体外壁 1000mm，而是距蓄水池内壁 1000mm。",
+          "",
+          "剖面中部是 P-0204 的泵侧连接链。中间竖管位于蓄水池内壁约1000mm处，下部先见 29 号支架，其底部落在蓄水池底标高 -1.400；29 上方是 27 号盲法兰，再上翻为 DN300 立管。该立管自泵下部接口上翻到 +0.535，并通过 19 号 DN300 90°弯头 转成水平 DN300 横管。横管先通过 30 号穿池壁构件，再从左到右依次经过 3 号、11 号和 25 号 DN300x250 同心异径管，随后转为 DN250 横管。25 号件距蓄水池内壁 1850mm。",
+          "",
+          "右侧是回接主管的一段 DN250 支路。距蓄水池内壁 2850mm 处，可稳定读到一根标高 +0.510 的 DN250 横管；沿这根横管从左向右可见 26 号、10 号接口、12 号 DN250 伸缩接头、1 号 DN250 止回阀和 8 号 DN250 蝶阀，随后通过 20 号 DN250 90°弯头 转为竖向下落的 DN250 立管。该立管正位于下方主管上方，并通过 14 号异径三通与主管连接；按当前统一建模约定，可见立管从三通支口端口开始显示。当前全局主干已按用户最新更正执行为“上方 DN450、下方 DN500”，而 14 号件仍保留 DN450x250 的件号语义并存记录。"
+        ]
+      },
+      "structured_fields": {
+        "elevation_chain_m": [
+          {"value": "-1.200", "meaning": "左侧立管底部标高和右侧回接主管连接高程"},
+          {"value": "±0.000", "meaning": "地坪基准标高"},
+          {"value": "+2.000", "meaning": "左侧 DN250 弯头后横管控制标高"},
+          {"value": "+0.510", "meaning": "右侧 DN250 横段控制标高"},
+          {"value": "+0.535", "meaning": "P-0204 泵侧 DN300 立管上口/转水平控制标高"},
+          {"value": "+1.200", "meaning": "左侧 DN250 阀位控制标高"},
+          {"value": "+1.500", "meaning": "池体主要控制线"},
+          {"value": "+1.900", "meaning": "泵区平台控制标高"},
+          {"value": "-1.400", "meaning": "泵区局部底标高"}
+        ],
+        "linear_dimension_chain_mm": [
+          {"value": 1000, "meaning": "左端立管到底部第一段长度"},
+          {"value": 1500, "meaning": "左侧池体前段长度"},
+          {"value": 4200, "meaning": "池体中部主段长度"},
+          {"value": 1500, "meaning": "池体后段长度"},
+          {"value": 400, "meaning": "池体至泵区之间短分段"},
+          {"value": 2400, "meaning": "泵区左侧局部段长度"},
+          {"value": 1850, "meaning": "泵左侧横管终点距蓄水池右侧内壁的定位链"},
+          {"value": 2850, "meaning": "右侧独立DN250横管起点距蓄水池右侧内壁的定位链"},
+          {"value": 1000, "meaning": "P-0204 设备本体宽度"},
+          {"value": 2150, "meaning": "P-0204 右侧至末端立管分段"},
+          {"value": 10000, "meaning": "左侧池体主模块总长度"},
+          {"value": 5000, "meaning": "右侧泵区模块总长度"}
+        ],
+        "position_constraints": {
+          "axis": "y",
+          "reference_frame": "A-A 剖面横向定位基线",
+          "reference_lines_y_mm": [
+            {"ref_id": "aa_basin_outer_left_wall", "y_mm": 0, "meaning": "A-A 底部 10000 总尺寸左端起点，蓄水池左外壁"},
+            {"ref_id": "aa_basin_inner_left_wall", "y_mm": 300, "meaning": "蓄水池左侧内壁；外壁向内扣除 300 厚池壁"},
+            {"ref_id": "aa_cooling_tower_left_outer_wall", "y_mm": 1500, "meaning": "当前 A-A 典型截到的冷却塔左侧外壁；按 CT-0203 中心 y=3600、塔体宽 4200 反算"},
+            {"ref_id": "aa_basin_zone_1_end", "y_mm": 1500, "meaning": "左侧池体前段结束位置"},
+            {"ref_id": "aa_basin_zone_2_end", "y_mm": 5700, "meaning": "池体中部主段结束位置"},
+            {"ref_id": "aa_basin_zone_3_end", "y_mm": 7200, "meaning": "池体后段结束位置"},
+            {"ref_id": "aa_partition_wall_right_face", "y_mm": 7600, "meaning": "400 厚分隔壁右侧边界"},
+            {"ref_id": "aa_pump_module_left_start", "y_mm": 10000, "meaning": "左侧池体主模块总长度 10000 的右端，同时也是右侧 5000 模块起点"},
+            {"ref_id": "aa_p0204_left_face", "y_mm": 11850, "meaning": "P-0204 左侧外轮廓线，距 5000 模块起点 1850"},
+            {"ref_id": "aa_p0204_centerline", "y_mm": 12350, "meaning": "P-0204 设备中心线，设备宽度 1000 的中线"},
+            {"ref_id": "aa_p0204_right_face", "y_mm": 12850, "meaning": "P-0204 右侧外轮廓线"},
+            {"ref_id": "aa_right_header_circle_center", "y_mm": 14700, "meaning": "右侧主管截面圆心，距当前右侧池内壁 5000，同时距 P-0204 右侧 1850"}
+          ],
+          "node_center_y_mm": {
+            "aa_left_header_circle": -700,
+            "aa_left_valve_4": -700,
+            "aa_left_top_elbow_dn250": -700,
+            "aa_p0204_support_29": 9000,
+            "aa_p0204_elbow_19": 9000,
+            "aa_p0204_valve_3": 10650,
+            "aa_right_reducer_26": 13100,
+            "aa_right_joint_12": 13650,
+            "aa_right_valve_1": 13950,
+            "aa_right_valve_8": 14300,
+            "aa_right_elbow_20": 14700,
+            "aa_right_header_circle": 14700
+          },
+          "derived_points_y_mm": {
+            "aa_left_top_horizontal_target": 1500,
+            "aa_p0204_item30_center": 10000,
+            "aa_p0204_item11_center": 11100,
+            "aa_p0204_reducer_25_large_end": 11550,
+            "aa_p0204_reducer_25_small_end": 11850,
+            "aa_right_horizontal_start": 12850,
+            "aa_right_reducer_26_large_end": 13100,
+            "aa_right_gauge_10_center": 13350
+          },
+          "basis": [
+            "左侧 DN250 立管与下方 DN500 主管通过三通连接，且立管位于主管正上方，因此两者中心线应在同一条竖直线上。",
+            "用户最新明确：左侧这根立管中心线距蓄水池内壁 1000，而不是距外壁 1000；当前左侧内壁 y=300，因此立管/三通支口/左侧弯头中心统一取 y=-700。",
+            "按用户本轮最新要求，A-A 复制路由先回到 v107 代码基线，再只处理复制出来的另外三组：DN500 主管处主典型继续取 top_wall_dn300_sleeve_4 x=5790 不动；其余三组以下方 DN500 主干侧现有列位为基准，仅把上部泵链分别吸附到 bottom_embedded_plate_3 x=8450、bottom_embedded_plate_2 x=10250、bottom_embedded_plate_1 x=14200，其中第三组仍沿用既有开关不绘制右侧下方 DN500 支路。",
+            "10000 总尺寸按 A-A 剖面读取为池体主模块总宽度；5000 总尺寸按 A-A 剖面读取为右侧泵区模块总宽度。",
+            "P-0204 保持与设备平面中心 y=12350 一致；右侧 1850/1000/2150 尺寸链用于反推出设备左右外轮廓与右侧主管截面圆心位置。",
+            "按用户最新明确，中部 DN300 立管/29号支架/19号弯头中心线位于蓄水池内部，距右侧内壁约1000；当前 aa_pump_module_left_start=10000 作为该内壁基线，因此三者中心统一取 y=9000。",
+            "按用户最新明确，中部 DN300 立管下部链应补充为 29(落在蓄水池底标高-1.400) -> 27 -> DN300立管 -> 19 -> 30穿池壁 -> 3/11/25；其中 30 位于池壁处 y=10000，泵左侧横管终点取 y=11850。",
+            "按用户最新明确，右侧标高+0.510 的独立连接链起点距右侧内壁 2850，因此起点取 y=12850；主串按 26/12/1/8/横管/20 顺序连续连接，10 号压力表接口单独挂到该横管上，不再插在 26 与 12 之间。",
+            "按当前最新确认，A-A 右侧 DN250 立管采用与 G-G、E-E 一致的显示语义：可见立管从 14 号异径三通支口端口开始显示，不再把 -1.200 强制解释为可见直管下端；右侧 DN250 立管中心线、14 号异径三通交点以及下方主管截面中心线在 A-A 局部预览中统一距当前右侧池内壁 5000。当前全局主干按用户最新更正执行为“上方 DN450、下方 DN500”，14 号件的 DN450x250 语义先并存保留，因此 aa_right_elbow_20 与 aa_right_header_circle 继续统一收紧到 y=14700。",
+            "泵左侧横管终点 y=11850 与右侧独立横管起点 y=12850 之间保留泵体宽度形成的中断，不再按同一根连续横管连接；11、25、26、1 这类用户点名件应优先按 CAD-MCP 现成标准件直接调用并在出图时保持可见。",
+            "左侧 DN250 弯头后横管的终点不应停在蓄水池左外壁 y=0，而应继续延伸到冷却塔外壁 y=1500。"
+          ]
+        },
+        "key_item_relations": [
+          {"item_no": 13, "meaning": "左侧底部主干连接三通", "specification": "DN500x250"},
+          {"item_no": 4, "meaning": "左侧 DN250 阀位", "specification": "DN250"},
+          {"item_no": null, "meaning": "左侧 DN250 阀后继续上翻并转横的弯头", "specification": "DN250 90度弯头"},
+          {"item_no": 29, "meaning": "中部 DN300 立管下部支架，底部落在蓄水池底标高-1.400", "specification": "ZB3"},
+          {"item_no": 27, "meaning": "位于29号支架上方、DN300竖管下部的盲法兰", "specification": "盲法兰"},
+          {"item_no": 19, "meaning": "P-0204 泵侧 DN300 上翻后的 90 度弯头", "specification": "DN300"},
+          {"item_no": 30, "meaning": "位于19号弯头后、DN300横管穿池壁处的构件", "specification": "防水套管"},
+          {"item_no": 3, "meaning": "30号穿池壁构件后的 DN300 阀位", "specification": "DN300"},
+          {"item_no": 11, "meaning": "位于3号之后的 DN300 伸缩接头", "specification": "DN300"},
+          {"item_no": 25, "meaning": "位于泵左侧横管末端的 DN300x250 同心异径管", "specification": "DN300x250"},
+          {"item_no": 26, "meaning": "右侧独立标高+0.510的 DN250 横管靠左侧异径管", "specification": "DN250x150"},
+          {"item_no": 10, "meaning": "挂在右侧 DN250 横管上的压力表接口，不作为主串插入件", "specification": "Y100 P=1.6"},
+          {"item_no": 8, "meaning": "右侧 DN250 横段蝶阀", "specification": "DN250"},
+          {"item_no": 20, "meaning": "右侧 DN250 横段接回立管的 90 度弯头", "specification": "DN250"},
+          {"item_no": 12, "meaning": "右侧 DN250 伸缩接头", "specification": "DN250"},
+          {"item_no": 1, "meaning": "右侧 DN250 止回阀", "specification": "DN250"},
+          {"item_no": 14, "meaning": "右侧底部主干连接三通", "specification": "DN450x250"}
+        ]
+      },
+      "route_graph": {
+        "nodes": [
+          {
+            "node_id": "aa_left_header_circle",
+            "kind": "header_section_circle",
+            "dn": 450,
+            "proxy_fitting_item_no": 13,
+            "proxy_fitting_specification": "DN500x250",
+            "elevation_mm": -1200,
+            "connection_axes": ["+z"],
+            "connection_end_map": {
+              "aa_left_riser_dn250": "bottom_end"
+            }
+          },
+          {
+            "node_id": "aa_left_valve_4",
+            "kind": "valve",
+            "item_no": 4,
+            "dn": 250,
+            "elevation_mm": 1200,
+            "axis": "+z",
+            "structure_length_mm": 76.0,
+            "connection_end_map": {
+              "negative_axis_side": "bottom_end",
+              "positive_axis_side": "top_end"
+            }
+          },
+          {
+            "node_id": "aa_left_top_elbow_dn250",
+            "kind": "elbow",
+            "item_no": null,
+            "dn": 250,
+            "elevation_mm": 2000,
+            "connection_axes": ["+z", "-y"],
+            "connection_end_map": {
+              "aa_left_post_valve_riser_dn250": "bottom_end",
+              "aa_left_top_horizontal_dn250": "right_end"
+            }
+          },
+          {
+            "node_id": "aa_p0204_support_29",
+            "kind": "support_proxy",
+            "item_no": 29,
+            "related_pump_tag": "P-0204"
+          },
+          {
+            "node_id": "aa_p0204_elbow_19",
+            "kind": "elbow",
+            "item_no": 19,
+            "dn": 300,
+            "elevation_mm": 535,
+            "connection_axes": ["+z", "-y"],
+            "connection_end_map": {
+              "aa_p0204_riser_dn300": "bottom_end",
+              "aa_p0204_horizontal_dn300": "right_end"
+            }
+          },
+          {
+            "node_id": "aa_p0204_joint_11",
+            "kind": "expansion_joint",
+            "item_no": 11,
+            "dn": 300,
+            "axis": "+y",
+            "structure_length_mm": 370.0,
+            "connection_end_map": {
+              "negative_axis_side": "left_end",
+              "positive_axis_side": "right_end"
+            }
+          },
+          {
+            "node_id": "aa_p0204_valve_3",
+            "kind": "valve",
+            "item_no": 3,
+            "dn": 300,
+            "axis": "+y",
+            "structure_length_mm": 83.0,
+            "connection_end_map": {
+              "negative_axis_side": "left_end",
+              "positive_axis_side": "right_end"
+            }
+          },
+          {
+            "node_id": "aa_p0204_reducer_25",
+            "kind": "reducer",
+            "item_no": 25,
+            "dn_large": 300,
+            "dn_small": 250,
+            "axis": "+y",
+            "structure_length_mm": 300.0,
+            "upstream_y_mm": 11550,
+            "downstream_y_mm": 11850,
+            "connection_end_map": {
+              "negative_axis_side": "left_end",
+              "positive_axis_side": "right_end"
+            }
+          },
+          {
+            "node_id": "aa_p0204_gauge_10",
+            "kind": "instrument_port",
+            "item_no": 10
+          },
+          {
+            "node_id": "aa_right_reducer_26",
+            "kind": "reducer",
+            "item_no": 26,
+            "dn_large": 250,
+            "dn_small": 150,
+            "axis": "+y",
+            "draw_axis": "-y",
+            "structure_length_mm": 250.0,
+            "upstream_y_mm": 12850,
+            "downstream_y_mm": 13100,
+            "connection_end_map": {
+              "negative_axis_side": "left_end",
+              "positive_axis_side": "right_end"
+            }
+          },
+          {
+            "node_id": "aa_right_valve_8",
+            "kind": "valve",
+            "item_no": 8,
+            "dn": 250,
+            "elevation_mm": 510,
+            "axis": "+y",
+            "structure_length_mm": 76.0,
+            "connection_end_map": {
+              "negative_axis_side": "left_end",
+              "positive_axis_side": "right_end"
+            }
+          },
+          {
+            "node_id": "aa_right_elbow_20",
+            "kind": "elbow",
+            "item_no": 20,
+            "dn": 250,
+            "elevation_mm": 510,
+            "connection_axes": ["+y", "+z"],
+            "connection_end_map": {
+              "aa_right_horizontal_dn250": "left_end",
+              "aa_right_riser_dn250": "bottom_end"
+            }
+          },
+          {
+            "node_id": "aa_right_joint_12",
+            "kind": "expansion_joint",
+            "item_no": 12,
+            "dn": 250,
+            "axis": "+y",
+            "structure_length_mm": 395.0,
+            "connection_end_map": {
+              "negative_axis_side": "left_end",
+              "positive_axis_side": "right_end"
+            }
+          },
+          {
+            "node_id": "aa_right_valve_1",
+            "kind": "valve",
+            "item_no": 1,
+            "dn": 250,
+            "axis": "+y",
+            "structure_length_mm": 725.0,
+            "connection_end_map": {
+              "negative_axis_side": "left_end",
+              "positive_axis_side": "right_end"
+            }
+          },
+          {
+            "node_id": "aa_right_header_circle",
+            "kind": "header_section_circle",
+            "dn": 450,
+            "proxy_fitting_item_no": 14,
+            "proxy_fitting_specification": "DN450x250",
+            "elevation_mm": -1200,
+            "connection_axes": ["+z"],
+            "connection_end_map": {
+              "aa_right_riser_dn250": "top_end"
+            }
+          }
+        ],
+        "pipe_runs": [
+          {
+            "run_id": "aa_left_riser_dn250",
+            "dn": 250,
+            "orientation": "vertical_up",
+            "axis_sign": "+z",
+            "from_node_id": "aa_left_header_circle",
+            "to_node_id": "aa_left_valve_4",
+            "start_connection_end": "bottom_end",
+            "end_connection_end": "top_end",
+            "from_elevation_mm": -1200,
+            "to_elevation_mm": 1200,
+            "meaning": "左侧 DN250 立管"
+          },
+          {
+            "run_id": "aa_left_post_valve_riser_dn250",
+            "dn": 250,
+            "orientation": "vertical_up",
+            "axis_sign": "+z",
+            "from_node_id": "aa_left_valve_4",
+            "to_node_id": "aa_left_top_elbow_dn250",
+            "start_connection_end": "bottom_end",
+            "end_connection_end": "top_end",
+            "from_elevation_mm": 1200,
+            "to_elevation_mm": 2000,
+            "meaning": "左侧 DN250 阀后继续上翻段"
+          },
+          {
+            "run_id": "aa_left_top_horizontal_dn250",
+            "dn": 250,
+            "orientation": "horizontal_right",
+            "axis_sign": "-y",
+            "from_node_id": "aa_left_top_elbow_dn250",
+            "to_virtual_target": "冷却塔塔侧",
+            "start_connection_end": "right_end",
+            "elevation_mm": 2000,
+            "meaning": "左侧 DN250 弯头后横向接入冷却塔塔侧"
+          },
+          {
+            "run_id": "aa_p0204_riser_dn300",
+            "dn": 300,
+            "orientation": "vertical_up",
+            "axis_sign": "+z",
+            "from_virtual_source": "P-0204 下部接口",
+            "to_node_id": "aa_p0204_elbow_19",
+            "start_connection_end": "bottom_end",
+            "end_connection_end": "top_end",
+            "from_elevation_mm": 0,
+            "to_elevation_mm": 535,
+            "support_node_ids": ["aa_p0204_support_29"],
+            "meaning": "P-0204 泵侧 DN300 上翻立管"
+          },
+          {
+            "run_id": "aa_p0204_horizontal_dn300",
+            "dn": 300,
+            "orientation": "horizontal_right",
+            "axis_sign": "+y",
+            "from_node_id": "aa_p0204_elbow_19",
+            "through_node_ids": ["aa_p0204_valve_3", "aa_p0204_joint_11"],
+            "to_node_id": "aa_p0204_reducer_25",
+            "start_connection_end": "left_end",
+            "end_connection_end": "right_end",
+            "split_node_ids": ["aa_p0204_valve_3", "aa_p0204_joint_11", "aa_p0204_reducer_25"],
+            "branch_node_ids": ["aa_p0204_gauge_10"],
+            "elevation_mm": 535,
+            "meaning": "P-0204 泵侧 DN300 横段"
+          },
+          {
+            "run_id": "aa_transition_dn300_to_dn250",
+            "dn_change": "300_to_250",
+            "from_node_id": "aa_p0204_reducer_25",
+            "to_virtual_target": "泵左侧横管终点",
+            "meaning": "P-0204 泵左侧横管在 25 号异径管处结束"
+          },
+          {
+            "run_id": "aa_right_horizontal_dn250",
+            "dn": 250,
+            "orientation": "horizontal_right",
+            "axis_sign": "+y",
+            "from_virtual_source": "泵右侧独立横管起点",
+            "through_node_ids": ["aa_right_valve_8"],
+            "to_node_id": "aa_right_elbow_20",
+            "start_connection_end": "left_end",
+            "end_connection_end": "right_end",
+            "split_node_ids": ["aa_right_reducer_26", "aa_right_joint_12", "aa_right_valve_1", "aa_right_valve_8"],
+            "through_possible_node_ids": ["aa_right_reducer_26", "aa_right_joint_12", "aa_right_valve_1"],
+            "elevation_mm": 510,
+            "meaning": "右侧独立 DN250 横段"
+          },
+          {
+            "run_id": "aa_right_riser_dn250",
+            "dn": 250,
+            "orientation": "vertical_down",
+            "axis_sign": "-z",
+            "from_node_id": "aa_right_elbow_20",
+            "to_node_id": "aa_right_header_circle",
+            "start_connection_end": "top_end",
+            "end_connection_end": "bottom_end",
+            "from_elevation_mm": 510,
+            "to_elevation_mm": -1200,
+            "meaning": "右侧 DN250 回接立管"
+          }
+        ],
+        "flow_paths": [
+          {
+            "path_id": "aa_left_side_chain",
+            "description": "左侧局部接口链",
+            "sequence": [
+              "aa_left_header_circle",
+              "aa_left_riser_dn250",
+              "aa_left_valve_4",
+              "aa_left_post_valve_riser_dn250",
+              "aa_left_top_elbow_dn250",
+              "aa_left_top_horizontal_dn250"
+            ]
+          },
+          {
+            "path_id": "aa_p0204_left_chain",
+            "description": "P-0204 左侧独立接口链",
+            "sequence": [
+              "P-0204下部接口",
+              "aa_p0204_riser_dn300",
+              "aa_p0204_elbow_19",
+              "aa_p0204_valve_3",
+              "aa_p0204_joint_11",
+              "aa_p0204_reducer_25"
+            ]
+          },
+          {
+            "path_id": "aa_right_return_chain",
+            "description": "P-0204 右侧独立回接链",
+            "sequence": [
+              "泵右侧独立横管起点",
+              "aa_right_reducer_26",
+              "aa_right_joint_12",
+              "aa_right_valve_1",
+              "aa_right_valve_8",
+              "aa_right_elbow_20",
+              "aa_right_riser_dn250",
+              "aa_right_header_circle"
+            ]
+          }
+        ]
+      }
+      
+    },
+    {
+      "section": "B-B",
+      "status": "analyzed_and_coded",
+      "plan_anchor": {
+        "source_view": "page_4",
+        "user_order_description": "蓄水池左壁第二个预埋钢板对应的 B-B 局部 DN100 上翻短接，立管位于该钢板左侧 700",
+        "resolved_anchor_id": "left_embedded_plate_2",
+        "resolved_anchor_x_mm": -400.0,
+        "anchor_confidence": 0.82
+      },
+      "view_basis": {
+        "source_view": "page_5",
+        "role": "局部 DN100 上翻后右转并短下翻的剖面",
+        "view_direction": "从左侧 DN100 立管外侧看向池体接入侧",
+        "left_side_meaning": "DN100 立管与 24 号弯头一侧",
+        "right_side_meaning": "7/2 号阀件区与池体短下翻一侧"
+      },
+      "text_record": {
+        "analysis": [
+          "按用户最新提供的 B-B 截图重新识读，B-B 不是上一轮误恢复的“顶部回弯向左短接”版本。",
+          "当前稳定骨架应改为：左侧一根 DN100 立管自 -0.500 上翻到 +2.050，在顶部经 24 号弯头转向右侧；横向 DN100 管经过 7 号、2 号阀件区后，在右端再短下翻到 +1.800 附近接池体侧。",
+          "结合用户最新更正，B-B 在蓄水池左壁第二个预埋钢管对应列位。此前 shared 把左壁第一/第二块预埋钢板编号方向写反，导致 B-B 被错误挂到上侧带；当前改回 `left_embedded_plate_2` 的 y=1300 作为剖切带。",
+          "图上可直接读到的 700 更稳定地解释为‘第二个左壁预埋钢板左侧 700 的立管偏距’，而不是顶部横管长度。该偏距应以蓄水池左内壁换算；当前按左内壁 x=300 回算，B-B 主立管列位修正为 x=-400，而不再沿用上一轮误写的 x=-550。"
+        ],
+        "modeling_description": [
+          "B-B 当前改按用户图片执行：`左侧DN100立管(第二个左壁预埋钢板左侧700，按左内壁回算到 x=-400) -> 24号弯头右转 -> 短顶部横段 -> 7号阀件 -> 短直管 -> 2号阀件 -> 右端弯头下翻 -> 短竖管`。",
+          "7 号是 DN100 多功能蝶阀，2 号按用户最新指出的 PDF 真值改回 DN100 球阀；它们不应被画成两只完全相同、也不应吞掉右端向下转的弯头和短竖管。2 号球阀恢复按法兰球阀表达，不再沿用临时紧凑式球阀外形。",
+          "局部预览阶段优先校验六件事：左立管标高、相对第二个左壁预埋钢板左偏 700 的列位、24号弯头、7/2 阀件差异、右端下翻弯头与短竖管、以及整段是否仍以白色出图。若当前顶部短链放不下 `7号蝶阀 + 2号球阀 + 右端短下翻`，必须优先外移右侧弯头或增加短链有效长度，不得因为距离限制退回成只画一根横管。回到整体后，B-B 左侧 DN100 立管底部再通过弯头沿 -Y 接出 DN100 横管，终点取下方 DN500 主管所在 y 再向下 4000。"
+        ],
+        "open_points": [
+          "2 号球阀当前先按球阀代理件保证件型语义和连接关系正确；若后续拿到 PDF/BOM 的精确型号，再补更细的球阀外形。"
+        ]
+      },
+      "verbatim_analysis_snapshot": {
+        "format": "plain_markdown_lines",
+        "lines": [
+          "B-B 剖面对应 page_4 左下侧靠近 Y-1401/Y-0202 的局部 DN100 支路，不是全局主干剖面。",
+          "",
+          "剖面主体是一根左侧 DN100 立管，自 -0.500 上翻到 +2.050；该立管位于蓄水池左壁第二个预埋钢板左侧 700 处。顶部经 24 号弯头转向右侧，横段中部经过 7 号、2 号阀件区，右端再经一只下翻弯头和一小段竖管落到 +1.800 附近接池体侧。",
+          "",
+          "剖面可见 24 号 DN100 90 度弯头，以及 7 号 DN100 多功能蝶阀、2 号 DN100 球阀的局部阀件语义；当前更稳定的是“DN100 立管 -> 顶部右向横段 -> 右端短下翻”的骨架，高于精细阀件前后顺序。"
+        ]
+      },
+      "structured_fields": {
+        "elevation_chain_m": [
+          {"value": "-0.500", "meaning": "局部 DN100 最低标高"},
+          {"value": "±0.000", "meaning": "地坪/池体基准标高"},
+          {"value": "+1.500", "meaning": "池体上部控制线"},
+          {"value": "+1.800", "meaning": "右端短下翻接入控制标高"},
+          {"value": "+2.050", "meaning": "局部 DN100 顶部最高标高"}
+        ],
+        "linear_dimension_chain_mm": [
+          {"value": 700, "meaning": "第二个左壁预埋钢板中心线到 B-B 左侧 DN100 立管中心线的左偏距"}
+        ],
+        "position_constraints": {
+          "anchor_id": "left_embedded_plate_2",
+          "section_plane_y_mm": 1300.0,
+          "anchor_center_x_mm": 150.0,
+          "pipe_center_x_mm": -400.0,
+          "basis": [
+            "用户最新明确：B-B 在蓄水池左壁第二个预埋钢管处。",
+            "用户进一步更正：B-B 立管在第二个左壁预埋钢板左侧 700 处。",
+            "该 700 按左内壁换算后，对应立管中心线 x=-400。"
+          ]
+        },
+        "key_item_relations": [
+          {"item_no": 24, "meaning": "左上角转向右侧的 DN100 弯头", "specification": "DN100"},
+          {"item_no": 7, "meaning": "顶部横段中的局部 DN100 多功能蝶阀", "specification": "DN100"},
+          {"item_no": 2, "meaning": "顶部横段中的局部 DN100 球阀", "specification": "DN100"}
+        ]
+      },
+      "route_graph": {
+        "nodes": [
+          {
+            "node_id": "bb_left_turn_24",
+            "kind": "elbow",
+            "item_no": 24,
+            "dn": 100,
+            "elevation_mm": 2050
+          },
+          {
+            "node_id": "bb_valve_7",
+            "kind": "valve",
+            "item_no": 7,
+            "dn": 100
+          },
+          {
+            "node_id": "bb_valve_2",
+            "kind": "valve",
+            "item_no": 2,
+            "dn": 100
+          }
+        ],
+        "pipe_runs": [
+          {
+            "run_id": "bb_local_riser_dn100",
+            "dn": 100,
+            "orientation": "vertical_up",
+            "from_virtual_source": "局部低点",
+            "to_node_id": "bb_left_turn_24",
+            "from_elevation_mm": -500,
+            "to_elevation_mm": 2050,
+            "meaning": "B-B 局部 DN100 立管"
+          },
+          {
+            "run_id": "bb_top_horizontal_dn100",
+            "dn": 100,
+            "orientation": "horizontal_right",
+            "from_node_id": "bb_left_turn_24",
+            "through_possible_node_ids": ["bb_valve_7", "bb_valve_2"],
+            "to_virtual_target": "右端短下翻起点",
+            "elevation_mm": 2050,
+            "length_mm": 260,
+            "meaning": "B-B 局部 DN100 顶部短横段及阀件区"
+          },
+          {
+            "run_id": "bb_right_drop_dn100",
+            "dn": 100,
+            "orientation": "vertical_down",
+            "from_virtual_source": "顶部横段右端",
+            "to_virtual_target": "池体短接侧",
+            "from_elevation_mm": 2050,
+            "to_elevation_mm": 1800,
+            "meaning": "B-B 右端短下翻"
+          }
+        ],
+        "flow_paths": [
+          {
+            "path_id": "bb_local_dn100_chain",
+            "description": "B-B 局部 DN100 上翻后右转短下翻链",
+            "sequence": [
+              "bb_local_riser_dn100",
+              "bb_left_turn_24",
+              "bb_top_horizontal_dn100",
+              "bb_right_drop_dn100"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "section": "C-C",
+      "status": "analyzed_and_coded",
+      "plan_anchor": {
+        "source_view": "page_4",
+        "user_order_description": "左侧 DN200 穿墙支路与雨水井方向接口处；当前 C-C 局部链优先按左墙 DN200 刚性防水套管列位控制。",
+        "resolved_anchor_id": "left_wall_dn200_sleeve_1",
+        "resolved_anchor_x_mm": 150.0,
+        "anchor_confidence": 0.94
+      },
+      "view_basis": {
+        "source_view": "page_5",
+        "role": "左墙 DN200 穿墙剖面",
+        "view_direction": "从雨水井方向看向池壁内侧",
+        "left_side_meaning": "雨水井/外排方向",
+        "right_side_meaning": "池内侧与内平台"
+      },
+      "text_record": {
+        "analysis": [
+          "C-C 剖面对应 page_4 左侧 DN200 穿墙支路与雨水井方向接口处，左侧明确是“排入雨水井”方向。",
+          "剖面主体稳定可读为一条单独的 DN200 左墙穿墙链，不支持把它解释成两条彼此独立的平行 C-C 穿墙管。当前最稳定的局部串联顺序是“雨水井方向短接 -> 9号DN200闸阀 -> 31号DN200刚性防水套管 -> DN200 穿墙段”，管中心控制标高为 -0.700。",
+          "结合本轮用户补充的平面截图，除左墙穿墙本体外，C-C 所属 DN200 系统在 Y-0202 / H-H 附近还存在一条继续向右延伸的平面连管；截图可稳定看出 9 号阀门中心位于 H-H 接 DN450 的那条长横管所在竖向列位左侧 1000，且 DN200 管在阀后并未终止，而是继续向右延伸。",
+          "因此后续执行时，左墙穿墙局部仍保留，但与当前截图直接对应的右侧延伸段应按独立平面连管补绘，不得再把 9 号阀门画成终点。",
+          "除穿墙管外，C-C 还给出了池内分层：+1.900、+1.500、-1.400 和 -2.400，其中 -2.400 对应左上角 1000x1000 集水坑的坑底控制。"
+        ],
+        "modeling_description": [
+          "C-C 可按“雨水井方向外部短接 -> 9号DN200闸阀 -> 31号刚性防水套管 -> DN200 左墙穿墙段(中心 -0.700)”的顺序理解局部骨架；其中 31 号件直接锚定到 `left_wall_dn200_sleeve_1`。",
+          "对本轮用户截图里直接点名的那条 C-C 相关 DN200 平面延伸链，按“DN200 水平管继续向右 -> 9号阀门中心距 H-H 接 DN450 的竖向列位左侧 1000 -> 阀后 DN200 继续延伸”的关系单独补绘，不把它误收敛成在阀门处结束。",
+          "该剖面除 DN200 穿墙管外，还控制左上角集水坑与池内平台的局部标高关系；集水坑继续按 1000x1000、坑底 -2.400 保留。",
+          "C-C 本轮提升为可直接消费的局部 section preview 路由；后续绘制左墙 DN200 穿墙典型时，应优先读取本条剖面路由，而不是继续沿用旧的双 DN200 auxiliary route 假设。"
+        ],
+        "open_points": []
+      },
+      "verbatim_analysis_snapshot": {
+        "format": "plain_markdown_lines",
+        "lines": [
+          "C-C 剖面对应 page_4 左侧 DN200 穿墙支路与雨水井方向接口处，左侧明确是“排入雨水井”方向。",
+          "",
+          "剖面主体是一根 DN200 穿墙管，其中心标高为 -0.700；剖面可见 31 号刚性防水套管与 9 号 DN200 闸阀的局部语义。",
+          "",
+          "除穿墙管外，C-C 还给出了池内分层：+1.900、+1.500、-1.400 和 -2.400，其中 -2.400 对应左上角 1000x1000 集水坑的坑底控制。"
+        ]
+      },
+      "structured_fields": {
+        "elevation_chain_m": [
+          {"value": "+1.900", "meaning": "池顶控制标高"},
+          {"value": "+1.500", "meaning": "池内上部控制标高"},
+          {"value": "±0.000", "meaning": "地坪基准标高"},
+          {"value": "-0.700", "meaning": "DN200 管中心标高"},
+          {"value": "-1.400", "meaning": "池内平台控制标高"},
+          {"value": "-2.400", "meaning": "集水坑底控制标高"}
+        ],
+        "linear_dimension_chain_mm": [
+          {"value": 1000, "meaning": "套管至池内台阶的局部水平尺寸"},
+          {"value": 1000, "meaning": "左上角集水坑平面尺寸"}
+        ],
+        "position_constraints": {
+          "anchor_id": "left_wall_dn200_sleeve_1",
+          "anchor_center_mm": [150.0, 8700.0, -700.0],
+          "axis": "x",
+          "outside_direction": "-x",
+          "inside_direction": "+x",
+          "basis": [
+            "平面锚点直接取 plan_reference.wall_sleeves 中的左墙 DN200 套管 `left_wall_dn200_sleeve_1`。",
+            "剖面图左侧是雨水井/外排方向，右侧是池内侧，因此当前 C-C 局部链按 x 轴从左向右进入池壁。"
+          ]
+        },
+        "key_item_relations": [
+          {"item_no": 9, "meaning": "排入雨水井方向闸阀", "specification": "DN200"},
+          {"item_no": 31, "meaning": "左墙刚性防水套管", "specification": "DN200"}
+        ]
+      },
+      "route_graph": {
+        "nodes": [
+          {
+            "node_id": "cc_gate_valve_9",
+            "kind": "valve",
+            "item_no": 9,
+            "dn": 200,
+            "axis": "+x",
+            "structure_length_mm": 550.0,
+            "pn": 10.0
+          },
+          {
+            "node_id": "cc_wall_sleeve_31",
+            "kind": "wall_sleeve",
+            "item_no": 31,
+            "dn": 200,
+            "axis": "+x",
+            "center_mm": [150.0, 8700.0, -700.0],
+            "center_elevation_mm": -700
+          },
+          {
+            "node_id": "cc_sump_pit_ref",
+            "kind": "pit_reference",
+            "plan_size_mm": [1000, 1000],
+            "bottom_elevation_mm": -2400
+          }
+        ],
+        "pipe_runs": [
+          {
+            "run_id": "cc_left_wall_dn200",
+            "dn": 200,
+            "orientation": "horizontal_right",
+            "from_virtual_source": "雨水井方向",
+            "through_node_ids": ["cc_gate_valve_9", "cc_wall_sleeve_31"],
+            "to_virtual_target": "池内平台侧",
+            "elevation_mm": -700,
+            "length_mm": 1000,
+            "meaning": "C-C 左墙单根 DN200 穿墙典型链"
+          }
+        ],
+        "flow_paths": [
+          {
+            "path_id": "cc_left_wall_chain",
+            "description": "C-C 左墙 DN200 穿墙链",
+            "sequence": [
+              "cc_gate_valve_9",
+              "cc_wall_sleeve_31",
+              "cc_left_wall_dn200"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "section": "D-D",
+      "status": "analyzed_and_coded",
+      "plan_anchor": {
+        "source_view": "page_4",
+        "user_order_description": "D-D 的 DN200 横管应穿过从左往右数第一个 DN200 防水套管；该剖面控制列位按该套管所在竖向列线识读。",
+        "resolved_anchor_id": "top_wall_dn200_sleeve_1",
+        "resolved_anchor_x_mm": 1300.0,
+        "anchor_confidence": 0.94
+      },
+      "view_basis": {
+        "source_view": "page_5",
+        "role": "DN200 典型转向剖面",
+        "view_direction": "从池内支路一侧看向设备基础侧",
+        "left_side_meaning": "池内立管一侧",
+        "right_side_meaning": "设备基础/短接侧"
+      },
+      "text_record": {
+        "analysis": [
+          "D-D 剖面重新按当前局部图直接识读：这条 DN200 典型支路受“从左往右数第一个 DN200 防水套管”控制，而不是继续按 P-0204 泵基础中心列位理解。对应平面锚点取 top_wall_dn200_sleeve_1，x=1300；套管中心线 y=9850，横管中心标高 +0.400。",
+          "剖面主体不是“自下而上翻到 +1.650 再转水平”，而是先有一段 DN200 立管自上部位置下落，到 +0.400 处通过第一只 21 号 DN200 90 度弯头转为水平；横管必须显式经过第一个 DN200 防水套管中心线，且第一只弯头与第二只弯头的理论转角点间距按 650+1000=1650 处理，不能再把 650 单独当成两弯头间中心线长度。",
+          "图中 +1.650 控制的是这段立管的上端高程，+0.400 控制的是横管及第一只弯头所在的中心高程；28 号 DN200 制孔口位于竖管上部穿越位置，31 号刚性防水套管位于水平段穿越位置。池内侧同时存在 +1.600 与 -1.400 两条控制线，说明该典型支路依附于池内分层空间。本轮未再把顶部 DN450 主管三通共线条件绑定到 D-D。"
+        ],
+        "modeling_description": [
+          "D-D 可按“上部 DN200 立管(自 +1.650 下落到 +0.400) -> 第一只21号弯头 -> 经过第一个 DN200 防水套管(top_wall_dn200_sleeve_1, x=1300, y=9850, z=+0.400)的 DN200 横管 -> 第二只21号弯头”的顺序恢复局部骨架；两只弯头的理论转角点间距固定按 1650 处理，其中 650 对应第一只弯头到套管中心线的定位贡献。",
+          "28 号制孔口与 31 号防水套管继续作为局部连接/穿墙语义保留，其中 28 位于竖管上方、31 位于横管穿墙处；本轮代码应直接消费该套管锚点与横管穿套管条件。",
+          "D-D 继续作为泵侧 DN200/DN300 转接高程依据，为总图级泵下支管提供剖面语义支持，但不额外在 D-D 局部预览里补绘顶部 DN450 三通；由于设备不画，第二只弯头后的可见短接本轮不再单独落图。",
+          "本轮按用户当前提供的 D-D 剖面图执行时，只绘制该局部 DN200 管道走向及其直接连接件，不绘制泵体、基础和其他非管道设备。"
+        ],
+        "open_points": []
+      },
+      "verbatim_analysis_snapshot": {
+        "format": "plain_markdown_lines",
+        "lines": [
+          "D-D 剖面对应 page_4 P-0204 左侧 DN200 典型支路位置，是池内 DN200 立管下落后转向设备侧的高程剖面。",
+          "",
+          "剖面主体是一根 DN200 立管，自上部 +1.650 下落到 +0.400；在 +0.400 处通过第一只 21 号 DN200 90 度弯头转为水平，第一只弯头与第二只弯头的理论转角点间距按 650+1000=1650 解释，横管显式经过第一个 DN200 防水套管中心线，第二只弯头后的可见短接不再单独绘制。",
+          "",
+          "剖面还可见位于竖管上方的 28 号 DN200 制孔口，以及位于横管上的 31 号刚性防水套管语义；池内侧同时存在 +1.600 与 -1.400 两条控制线，说明该典型支路依附于池内分层空间。"
+        ]
+      },
+      "structured_fields": {
+        "elevation_chain_m": [
+          {"value": "+1.900", "meaning": "上方平台/短接控制标高"},
+          {"value": "+1.650", "meaning": "DN200 立管顶部控制标高"},
+          {"value": "+1.600", "meaning": "池内上部控制线"},
+          {"value": "+0.400", "meaning": "DN200 中心控制标高"},
+          {"value": "±0.000", "meaning": "设备侧地坪基准标高"},
+          {"value": "-1.400", "meaning": "池内底部控制标高"}
+        ],
+        "linear_dimension_chain_mm": [
+          {"value": 650, "meaning": "第一只弯头到第一个 DN200 防水套管中心线的定位距离"},
+          {"value": 1000, "meaning": "两弯头理论转角点组合距离中的第二段尺寸贡献"},
+          {"value": 1650, "meaning": "第一只弯头与第二只弯头的理论转角点间距"}
+        ],
+        "key_item_relations": [
+          {"item_no": 21, "meaning": "DN200 转向弯头，两处", "specification": "DN200"},
+          {"item_no": 28, "meaning": "DN200 制孔口，位于竖管上部穿越位置", "specification": "DN200"},
+          {"item_no": 31, "meaning": "钢性防水套管", "specification": "DN200"}
+        ]
+      },
+      "route_graph": {
+        "nodes": [
+          {
+            "node_id": "dd_lower_elbow_21",
+            "kind": "elbow",
+            "item_no": 21,
+            "dn": 200,
+            "elevation_mm": 400
+          },
+          {
+            "node_id": "dd_upper_elbow_21",
+            "kind": "elbow",
+            "item_no": 21,
+            "dn": 200,
+            "elevation_mm": 400
+          },
+          {
+            "node_id": "dd_orifice_28",
+            "kind": "orifice",
+            "item_no": 28,
+            "dn": 200,
+            "elevation_mm": 1650
+          },
+          {
+            "node_id": "dd_sleeve_31",
+            "kind": "wall_sleeve",
+            "item_no": 31,
+            "dn": 200
+          }
+        ],
+        "pipe_runs": [
+          {
+            "run_id": "dd_local_riser_dn200",
+            "dn": 200,
+            "orientation": "vertical_down",
+            "from_virtual_source": "池内上部引入端",
+            "to_node_id": "dd_upper_elbow_21",
+            "from_elevation_mm": 1650,
+            "to_elevation_mm": 400,
+            "meaning": "D-D 局部 DN200 下落立管"
+          },
+          {
+            "run_id": "dd_horizontal_turn_dn200",
+            "dn": 200,
+            "orientation": "horizontal_right",
+            "from_node_id": "dd_upper_elbow_21",
+            "through_possible_node_ids": ["dd_orifice_28", "dd_sleeve_31"],
+            "to_node_id": "dd_lower_elbow_21",
+            "elevation_mm": 400,
+            "length_mm": 1650,
+            "meaning": "D-D 局部两只弯头之间的 DN200 转向水平段"
+          }
+        ],
+        "flow_paths": [
+          {
+            "path_id": "dd_local_dn200_chain",
+            "description": "D-D 局部 DN200 转向链",
+            "sequence": [
+              "dd_local_riser_dn200",
+              "dd_upper_elbow_21",
+              "dd_horizontal_turn_dn200",
+              "dd_lower_elbow_21"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "section": "E-E",
+      "status": "analyzed_and_coded",
+      "plan_anchor": {
+        "source_view": "page_4",
+        "user_order_description": "从左到右第三个预埋钢板正上方，横管中线与预埋钢板中线重合",
+        "resolved_anchor_id": "bottom_embedded_plate_3",
+        "resolved_anchor_x_mm": 8450.0,
+        "anchor_confidence": 0.92
+      },
+      "view_basis": {
+        "source_view": "page_5",
+        "role": "局部 DN250 回弯剖面",
+        "view_direction": "从局部 DN250 回弯外侧看向右侧回落立管和底部主管",
+        "left_side_meaning": "主管截面与左侧 DN250 立管",
+        "right_side_meaning": "右侧回落短管靠池内壁一侧"
+      },
+      "text_record": {
+        "analysis": [
+          "E-E 剖面位于从左到右第三个预埋钢板正上方；由布置图可知该处横向管道中线与第三个预埋钢板中线重合，因此平面锚点改按 bottom_embedded_plate_3 取 x=8450mm。",
+          "剖面中的圆代表 DN450 主管，主管中心标高为 -1.200。",
+          "左侧竖管是 DN250 的管子，竖管通过 13 号 DN500x250 异径三通与底部主管连接；在标高 +1.200 处有 4 号 DN250 蝶阀。",
+          "顶部横管是 DN250 的管子，控制标高为 +2.200；根据当前 E-E 剖面截图，应保留左右两只 20 号 DN250 90 度弯头，右侧弯头后继续接一段回落短管。",
+          "右侧回落短管靠池内壁一侧，其中心距蓄水池下侧内壁 500，底标高为 +1.900；该段必须进入当前执行绘图，不再作为历史信息搁置。"
+        ],
+        "modeling_description": [
+          "E-E 可按“主管截面(DN450, -1.200) -> 13号DN500x250异径三通 -> 左侧DN250立管 -> 4号DN250蝶阀(+1.200) -> 左侧上翻段 -> 左20号DN250 90度弯头 -> 顶部DN250横管(+2.200) -> 右20号DN250 90度弯头 -> 右侧回落短管(+1.900)”的顺序建模。",
+          "E-E 的顶部DN250横管应挂在从左到右第三个预埋钢板正上方，平面 x 锚点锁定 `bottom_embedded_plate_3`。",
+          "E-E 的关键位置参数为：顶部 DN250 横管仍挂在第三个预埋钢板正上方；右侧回落短管继续执行“距下侧内壁500、底标高 +1.900”的约束。"
+        ],
+        "open_points": []
+      },
+      "structured_fields": {
+        "elevation_chain_m": [
+          {"value": "-1.200", "meaning": "底部主管中心标高"},
+          {"value": "+1.200", "meaning": "左侧 DN250 阀位标高"},
+          {"value": "+2.200", "meaning": "顶部 DN250 横管标高"},
+          {"value": "+1.900", "meaning": "右侧回落短管底标高"}
+        ],
+        "linear_dimension_chain_mm": [
+          {"value": 500, "meaning": "右侧回落立管中心距蓄水池下侧内壁"}
+        ],
+        "key_item_relations": [
+          {"item_no": 13, "meaning": "底部主管与左侧 DN250 立管连接三通", "specification": "DN500x250"},
+          {"item_no": 4, "meaning": "左侧 DN250 蝶阀", "specification": "DN250"},
+          {"item_no": 20, "meaning": "上下两只 DN250 90 度弯头", "specification": "DN250"}
+        ]
+      },
+      "route_graph": {
+        "nodes": [
+          {
+            "node_id": "ee_header_circle",
+            "kind": "header_section_circle",
+            "dn": 450,
+            "proxy_fitting_item_no": 13,
+            "proxy_fitting_specification": "DN500x250",
+            "elevation_mm": -1200
+          },
+          {
+            "node_id": "ee_valve_4",
+            "kind": "valve",
+            "item_no": 4,
+            "dn": 250,
+            "elevation_mm": 1200
+          },
+          {
+            "node_id": "ee_left_elbow_20",
+            "kind": "elbow",
+            "item_no": 20,
+            "dn": 250,
+            "elevation_mm": 2200
+          },
+          {
+            "node_id": "ee_right_elbow_20",
+            "kind": "elbow",
+            "item_no": 20,
+            "dn": 250,
+            "elevation_mm": 2200
+          },
+          {
+            "node_id": "ee_right_inner_wall_reference",
+            "kind": "offset_reference",
+            "reference": "right_vertical_center_to_bottom_inner_wall",
+            "offset_mm": 500
+          }
+        ],
+        "pipe_runs": [
+          {
+            "run_id": "ee_left_riser_dn250",
+            "dn": 250,
+            "orientation": "vertical_up",
+            "from_node_id": "ee_header_circle",
+            "to_node_id": "ee_valve_4",
+            "from_elevation_mm": -1200,
+            "to_elevation_mm": 1200,
+            "meaning": "左侧 DN250 立管"
+          },
+          {
+            "run_id": "ee_upper_riser_dn250",
+            "dn": 250,
+            "orientation": "vertical_up",
+            "from_node_id": "ee_valve_4",
+            "to_node_id": "ee_left_elbow_20",
+            "from_elevation_mm": 1200,
+            "to_elevation_mm": 2200,
+            "meaning": "左侧阀后继续上翻段"
+          },
+          {
+            "run_id": "ee_top_horizontal_dn250",
+            "dn": 250,
+            "orientation": "horizontal_right",
+            "from_node_id": "ee_left_elbow_20",
+            "to_node_id": "ee_right_elbow_20",
+            "elevation_mm": 2200,
+            "meaning": "顶部 DN250 横管"
+          },
+          {
+            "run_id": "ee_right_drop_dn250",
+            "dn": 250,
+            "orientation": "vertical_down",
+            "from_node_id": "ee_right_elbow_20",
+            "to_node_id": "ee_right_inner_wall_reference",
+            "from_elevation_mm": 2200,
+            "to_elevation_mm": 1900,
+            "meaning": "右侧回落短管"
+          }
+        ],
+        "flow_paths": [
+          {
+            "path_id": "ee_main_return_chain",
+            "description": "E-E 典型 DN250 回弯链",
+            "sequence": [
+              "ee_header_circle",
+              "ee_left_riser_dn250",
+              "ee_valve_4",
+              "ee_upper_riser_dn250",
+              "ee_left_elbow_20",
+              "ee_top_horizontal_dn250",
+              "ee_right_elbow_20",
+              "ee_right_drop_dn250"
+            ]
+          }
+        ]
+      }
+      
+    },
+    {
+      "section": "F-F",
+      "status": "analyzed_and_coded",
+      "plan_anchor": {
+        "source_view": "page_4",
+        "user_order_description": "蓄水池左壁第一块预埋钢板对应的 DN150 局部回弯支路；顶部横管中点应经过该预埋钢板中心。",
+        "resolved_anchor_id": "left_embedded_plate_1",
+        "resolved_anchor_x_mm": 150.0,
+        "anchor_confidence": 0.76
+      },
+      "view_basis": {
+        "source_view": "page_5",
+        "role": "局部 DN150 回弯剖面",
+        "view_direction": "从局部 DN150 支路外侧看向池体短接侧",
+        "left_side_meaning": "DN150 立管一侧",
+        "right_side_meaning": "池体/短接一侧"
+      },
+      "text_record": {
+        "analysis": [
+          "重新核对 page_4 管道平面布置图与 page_5 F-F 后，F-F 对应的是蓄水池左壁第一块预埋钢板所在列位的独立 DN150 局部回弯支路，不应再挂到先前误用的中部 y=5400 列位，也不应因为 shared 里左壁预埋钢板编号方向写反而被误挂到下侧 y=1300 带。",
+          "剖面主体是 18 号 DN150 三通处起的一根 DN150 立管，自 -0.600 上翻到顶部回弯最高点 +2.150；顶部由两只 22 号 DN150 90 度弯头形成 U 形回弯。",
+          "顶部回弯后右侧还有一段 DN150 回落入池/入壁段，剖面明确给出池体控制线 +1.500 和两处 ±0.000；因此当前最稳定的局部连接顺序应改写为“18号DN150三通 -> 左侧DN150立管 -> 上部双22号弯头回弯 -> 右侧DN150回落入池段”。"
+        ],
+        "modeling_description": [
+          "F-F 当前提升为可执行的局部 section preview 路由，按“18号DN150三通(-0.600) -> 左侧DN150立管(+2.150) -> 两只22号DN150弯头组成的顶部300横直段回弯 -> 右侧DN150回落入池段(落到 +1.500 控制线附近)”恢复。",
+          "按用户最新更正，F-F 位于蓄水池左壁第一块预埋钢板对应列位；此前之所以一直没改对，根因是 shared 把左壁第一/第二块预埋钢板编号方向写反。当前已恢复 `left_embedded_plate_1` 为上侧第一块，并将其 x=150 作为顶部横管中点、y=6400 作为剖切列位，不再只改横段长度而让整个剖面跑位。",
+          "用户本轮已明确要求删除 18 号三通旁的小短管，因此 F-F 不再保留左侧外露 stub；同时，与 F-F 相连的平面外接 DN150 管链必须随这次新列位同步回算，不允许出现‘剖面本体移了，外接链还挂在旧列位’的断裂。"
+        ],
+        "open_points": []
+      },
+      "verbatim_analysis_snapshot": {
+        "format": "plain_markdown_lines",
+        "lines": [
+          "F-F 剖面对应 page_4 左中部 DN150 局部支路，是一组独立于 B-B/G-G 的 DN150 局部做法；按用户最新更正，其顶部横管中点应经过蓄水池左侧第一块池顶预埋钢板中心。",
+          "",
+          "剖面主体是一根 DN150 立管，自 -0.600 上翻到 +2.150；顶部由两只 22 号 DN150 弯头形成回弯，本轮顶部可见横直段按用户要求收紧为 300，右侧回落控制到 +1.500。",
+          "",
+          "剖面可见 22 号 DN150 90 度弯头两只和 18 号 DN150 三通；当前最稳定的局部连接关系是“18号DN150三通 -> 左侧DN150立管 -> 顶部回弯 -> 右侧DN150回落入池段”，并且平面上按横管中点对准 `left_embedded_plate_1` x=150，三通左侧不再保留额外小短管。"
+        ]
+      },
+      "structured_fields": {
+        "elevation_chain_m": [
+          {"value": "-0.600", "meaning": "底部局部最低标高"},
+          {"value": "±0.000", "meaning": "地坪/池体基准标高"},
+          {"value": "+1.500", "meaning": "右侧回落入池侧控制标高"},
+          {"value": "+2.150", "meaning": "DN150 顶部最高标高"}
+        ],
+        "linear_dimension_chain_mm": [
+          {"value": 300, "meaning": "F-F 顶部 DN150 可见横直段长度"}
+        ],
+        "position_constraints": {
+          "anchor_id": "left_embedded_plate_1",
+          "anchor_x_mm": 150.0,
+          "confidence": 0.58,
+          "basis": [
+            "page_4 可稳定确认 F-F 位于左中部第一处局部设备带、靠近 Y-0202 与 F 剖切标记。",
+            "按用户最新更正，F-F 顶部横管中点经过蓄水池左侧第一块池顶预埋钢板中心，因此本轮以 `left_embedded_plate_1` x=150 作为横管中点，再回算左侧立管与底部三通列位。"
+          ]
+        },
+        "key_item_relations": [
+          {"item_no": 22, "meaning": "DN150 弯头，两只共同构成顶部回弯", "specification": "DN150"},
+          {"item_no": 18, "meaning": "DN150 三通，位于底部 -0.600 处", "specification": "DN150"}
+        ]
+      },
+      "route_graph": {
+        "nodes": [
+          {
+            "node_id": "ff_bottom_tee_18",
+            "kind": "tee",
+            "item_no": 18,
+            "dn": 150,
+            "elevation_mm": -600
+          },
+          {
+            "node_id": "ff_top_left_elbow_22",
+            "kind": "elbow",
+            "item_no": 22,
+            "dn": 150,
+            "elevation_mm": 2150
+          },
+          {
+            "node_id": "ff_top_right_elbow_22",
+            "kind": "elbow",
+            "item_no": 22,
+            "dn": 150,
+            "elevation_mm": 2150
+          }
+        ],
+        "pipe_runs": [
+          {
+            "run_id": "ff_left_riser_dn150",
+            "dn": 150,
+            "orientation": "vertical_up",
+            "from_node_id": "ff_bottom_tee_18",
+            "to_node_id": "ff_top_left_elbow_22",
+            "from_elevation_mm": -600,
+            "to_elevation_mm": 2150,
+            "meaning": "F-F 左侧 DN150 立管"
+          },
+          {
+            "run_id": "ff_top_return_dn150",
+            "dn": 150,
+            "orientation": "horizontal_right",
+            "from_node_id": "ff_top_left_elbow_22",
+            "to_node_id": "ff_top_right_elbow_22",
+            "elevation_mm": 2150,
+            "length_mm": 300,
+            "meaning": "F-F 顶部 DN150 回弯横段"
+          },
+          {
+            "run_id": "ff_return_drop_dn150",
+            "dn": 150,
+            "orientation": "vertical_down",
+            "from_node_id": "ff_top_right_elbow_22",
+            "to_virtual_target": "池内回落接口",
+            "from_elevation_mm": 2150,
+            "to_virtual_target_elevation_mm": 1500,
+            "meaning": "F-F 右侧 DN150 回落入池段"
+          }
+        ],
+        "flow_paths": [
+          {
+            "path_id": "ff_local_dn150_chain",
+            "description": "F-F 局部 DN150 回弯链",
+            "sequence": [
+              "ff_bottom_tee_18",
+              "ff_left_riser_dn150",
+              "ff_top_left_elbow_22",
+              "ff_top_return_dn150",
+              "ff_top_right_elbow_22",
+              "ff_return_drop_dn150"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "section": "G-G",
+      "status": "analyzed_and_coded",
+      "plan_anchor": {
+        "source_view": "page_4",
+        "user_order_description": "从左到右第一个预埋钢板正上方，横管中线与预埋钢板中线重合",
+        "resolved_anchor_id": "bottom_embedded_plate_5",
+        "resolved_anchor_x_mm": 2750.0,
+        "anchor_confidence": 0.93
+      },
+      "view_basis": {
+        "source_view": "page_5",
+        "role": "局部 DN100-DN250 回弯剖面",
+        "view_direction": "从局部 DN100 支路外侧看向右侧 DN250 立管和底部主管",
+        "left_side_meaning": "DN100 立管和下部短横管一侧",
+        "right_side_meaning": "DN250 立管与底部主管接口一侧"
+      },
+      "text_record": {
+        "analysis": [
+          "G-G 剖面位于从左到右第一个预埋钢板正上方；由布置图可知该处横向管道中线与第一个预埋钢板中线重合，因此平面锚点改按 bottom_embedded_plate_5 取 x=2750mm。",
+          "剖面中的圆代表 DN450 的主管，主管控制标高为 -1.200。右侧竖管是 DN250 的管子，竖管通过 13 号 DN500x250 异径三通与主管连接。",
+          "这根右侧 DN250 立管在标高 +1.000 处通过 17 号 DN250x100 异径三通接出 DN100 支路。顶部 DN100 横管通过该异径三通与 DN250 立管连接，横管中部布置 7 号 DN100 阀门。",
+          "在右侧 DN250 立管左侧 1000 处有一根 DN100 竖管；该 DN100 立管在标高 +1.000 处通过 24 号 DN100 90 度弯头与上方横管连接。",
+          "这根 DN100 立管在标高 -0.650 处通过另一只 24 号 DN100 90 度弯头转出；根据用户本轮更正，弯头后续管道应朝 -X 外接，而不是继续沿局部剖面里的 -Y 方向保留一段可见短接。"
+        ],
+        "modeling_description": [
+          "G-G 可按“主管截面(DN450, -1.200) -> 13号DN500x250异径三通 -> 右侧DN250立管 -> 17号DN250x100异径三通(+1.000) -> 顶部DN100横管 -> 7号DN100阀门 -> 24号DN100 90度弯头 -> 左侧DN100立管 -> 24号DN100 90度弯头”的顺序建模；底部弯头后的后续管道不再在局部图里保留一段沿 -Y 的短横管。",
+          "G-G 的顶部DN100横管中，7号DN100阀门位于横管中段，不是贴三通端或弯头端布置。",
+          "G-G 的关键位置参数为：该剖面位于第一个预埋钢板正上方，平面 x 锚点锁定 `bottom_embedded_plate_5`；左侧DN100立管中心距右侧DN250立管中心1000。回到整体后，左侧 DN100 立管底部再通过弯头沿 -X 接出 DN100 横管，当前先沿可稳定读取的 500 长度执行；局部图中原先那段沿 -Y 的底部短接删除。"
+        ],
+        "open_points": [
+          "底部接口当前继续保留“底部圆按 DN450 主管截面记录、13号件件号语义按 DN500x250 保留”的并存信息。"
+        ]
+      },
+      "structured_fields": {
+        "elevation_chain_m": [
+          {"value": "-1.200", "meaning": "DN250 立管底部和主管接口标高"},
+          {"value": "-0.650", "meaning": "下部短 DN100 横管标高"},
+          {"value": "±0.000", "meaning": "地坪基准标高"},
+          {"value": "+1.000", "meaning": "顶部 DN100 横管和 DN250x100 三通控制标高"}
+        ],
+        "linear_dimension_chain_mm": [
+          {"value": 500, "meaning": "下部短 DN100 横管长度"},
+          {"value": 1000, "meaning": "左侧 DN100 立管中心到右侧 DN250 立管中心的水平距离"}
+        ],
+        "key_item_relations": [
+          {"item_no": 13, "meaning": "底部主管与 DN250 立管连接三通", "specification": "DN500x250"},
+          {"item_no": 17, "meaning": "标高 +1.000 处 DN250x100 异径三通", "specification": "DN250x100"},
+          {"item_no": 24, "meaning": "上下两只 DN100 90 度弯头", "specification": "DN100"},
+          {"item_no": 7, "meaning": "顶部 DN100 横管中部阀位", "specification": "DN100"}
+        ]
+      },
+      "route_graph": {
+        "nodes": [
+          {
+            "node_id": "gg_header_circle",
+            "kind": "header_section_circle",
+            "dn": 450,
+            "proxy_fitting_item_no": 13,
+            "proxy_fitting_specification": "DN500x250",
+            "elevation_mm": -1200
+          },
+          {
+            "node_id": "gg_riser_tee_17",
+            "kind": "reducing_tee",
+            "item_no": 17,
+            "run_dn": 250,
+            "branch_dn": 100,
+            "elevation_mm": 1000
+          },
+          {
+            "node_id": "gg_top_elbow_24",
+            "kind": "elbow",
+            "item_no": 24,
+            "dn": 100,
+            "elevation_mm": 1000
+          },
+          {
+            "node_id": "gg_valve_7",
+            "kind": "valve",
+            "item_no": 7,
+            "dn": 100,
+            "elevation_mm": 1000
+          },
+          {
+            "node_id": "gg_bottom_elbow_24",
+            "kind": "elbow",
+            "item_no": 24,
+            "dn": 100,
+            "elevation_mm": -650
+          }
+        ],
+        "pipe_runs": [
+          {
+            "run_id": "gg_right_riser_dn250",
+            "dn": 250,
+            "orientation": "vertical_up",
+            "from_node_id": "gg_header_circle",
+            "to_node_id": "gg_riser_tee_17",
+            "from_elevation_mm": -1200,
+            "to_elevation_mm": 1000,
+            "meaning": "右侧 DN250 立管"
+          },
+          {
+            "run_id": "gg_top_horizontal_dn100_right",
+            "dn": 100,
+            "orientation": "horizontal_left",
+            "from_node_id": "gg_riser_tee_17",
+            "through_node_ids": ["gg_valve_7"],
+            "to_node_id": "gg_top_elbow_24",
+            "elevation_mm": 1000,
+            "meaning": "顶部 DN100 横管"
+          },
+          {
+            "run_id": "gg_left_vertical_dn100",
+            "dn": 100,
+            "orientation": "vertical_down",
+            "from_node_id": "gg_top_elbow_24",
+            "to_node_id": "gg_bottom_elbow_24",
+            "from_elevation_mm": 1000,
+            "to_elevation_mm": -650,
+            "meaning": "左侧 DN100 立管"
+          }
+        ],
+        "flow_paths": [
+          {
+            "path_id": "gg_local_loop_chain",
+            "description": "G-G 局部 DN100-DN250 回弯链",
+            "sequence": [
+              "gg_header_circle",
+              "gg_right_riser_dn250",
+              "gg_riser_tee_17",
+              "gg_top_horizontal_dn100_right",
+              "gg_valve_7",
+              "gg_top_elbow_24",
+              "gg_left_vertical_dn100",
+              "gg_bottom_elbow_24"
+            ]
+          }
+        ]
+      }
+      
+    },
+    {
+      "section": "H-H",
+      "status": "analyzed_and_coded",
+      "plan_anchor": {
+        "source_view": "page_4",
+        "user_order_description": "按用户最新更正，H-H 位于 Y-0202 正方形右壁中间处；总图可见竖管需略向右外移，避免与设备长方形重叠。",
+        "resolved_anchor_id": "hh_y0202_right_wall_mid",
+        "resolved_anchor_x_mm": -1700.0,
+        "anchor_confidence": 0.9
+      },
+      "view_basis": {
+        "source_view": "page_5",
+        "role": "左侧顶部 DN450 配水主管 - DN125 下落支管典型剖面",
+        "view_direction": "从顶部主管外侧看向左侧冷却塔进水口",
+        "left_side_meaning": "左侧冷却塔塔区",
+        "right_side_meaning": "顶部配水主管一侧"
+      },
+      "text_record": {
+        "analysis": [
+          "按用户最新更正，H-H 不在 Y-0202 左边界向右 400，而在 Y-0202 正方形右壁中间处；结合当前设备外廓，Y-0202 右边界为 x=-2000、设备中线 y=5850。为了避免总图里 DN125 竖管与设备长方形代理重叠，本轮把可见竖管列位外移到 x=-1700。",
+          "page_5 H-H 可稳定读取：顶部主管接入标高 +5.000，中间 DN125 立管控制高程 +1.200，平台/池顶控制线为 +0.200，底部局部标高为 -0.900，且剖面可见两只 23 号 DN125 弯头；用户本轮进一步明确，竖管在 +1.200 位置还存在一个此前漏绘的 6 号 DN125 蝶阀。",
+          "结合 page_4 平面和用户最新补充，H-H 的连接顺序应改写为“Y-0202 右侧下部横管(-0.900) -> 右端 23 号弯头 -> DN125 竖管下段 -> 6号DN125蝶阀(+1.200) -> DN125 竖管上段 -> 顶部长横管 -> header 侧 23 号弯头 -> 下翻短接 -> 16号DN450x125三通 -> DN450 顶部主管”；其中下弯头与上弯头必须保持相反旋向，下部横管应落在弯头右侧，连接主管的长水平管保留为相连管道，重复的长竖向辅助链删除。",
+          "因此本轮 H-H 不再按‘左侧典型 tower-drop’解释，而按‘Y-0202 右侧回接主管链 + 单独长水平接入段’执行。"
+        ],
+        "modeling_description": [
+          "H-H 当前提升为可执行的局部 section preview 路由，按“Y-0202 右侧下部 DN125 横管(-0.900) -> 23号下弯头(与上弯头反向) -> DN125 竖管下段 -> 6号DN125蝶阀(+1.200) -> DN125 竖管上段 -> 23号上弯头 -> 顶部 DN125 接入短段(+5.000) -> 16号DN450x125三通语义 -> DN450 顶部主管”恢复。",
+          "为了适应当前总图保留剖面链且避免与设备长方形重叠，本轮将 H-H 的可见竖管列位收紧到 `Y-0202` 右边界外偏 300 的 x=-1700、设备中线 y=5850；接主管的长水平管由 auxiliary direct segment 单独承担。",
+          "H-H 的标高链不变，仍严格按局部图保持 +5.000、+1.200、+0.200、±0.000、-0.900。"
+        ],
+        "open_points": [
+          "H-H 底部短接末端在剖面里可见，但未标独立长度；本轮局部试绘仅按可见短节补足外形，不把其长度写成强约束尺寸。"
+        ]
+      },
+      "verbatim_analysis_snapshot": {
+        "format": "plain_markdown_lines",
+        "lines": [
+          "按用户最新更正，H-H 位于 Y-0202 正方形右壁中间处；为避免总图里与设备长方形重叠，本轮把可见 H-H 竖管列位外移到 x=-1700，设备中线 y=5850。",
+          "",
+          "剖面主体仍是顶部 DN450 配水主管与 DN125 支路的典型关系：顶部主管标高 +5.000，中间控制标高 +1.200，下端局部标高 -0.900，平台/池顶控制线为 +0.200。",
+          "",
+          "结合 page_4 平面和用户最新补充，该典型关系当前按“Y-0202 右侧横管 -> 23号弯头 -> DN125 竖管 -> 顶部接入段 -> 16号DN450x125三通语义 -> DN450主管”，并单独保留与 DN450 主管相连的长水平接入段理解。"
+        ]
+      },
+      "structured_fields": {
+        "elevation_chain_m": [
+          {"value": "+5.000", "meaning": "顶部主管标高"},
+          {"value": "+1.200", "meaning": "DN125 下落支管中间控制标高"},
+          {"value": "+0.200", "meaning": "平台/池顶控制标高"},
+          {"value": "±0.000", "meaning": "地坪基准标高"},
+          {"value": "-0.900", "meaning": "下端局部标高"}
+        ],
+        "position_constraints": {
+          "axis": "x",
+          "reference_frame": "Y-0202 右壁中部局部剖切列位",
+          "derived_points_x_mm": {
+            "y0202_right_edge": -2000,
+            "hh_section_cut_x": -1700
+          },
+          "basis": [
+            "Y-0202 当前平面中心为 x=-3350，外廓宽度为 2700，因此其右边界为 x=-2000。",
+            "按用户最新更正，H-H 位于 Y-0202 正方形右壁中间处；为了避免总图几何重叠，当前可见竖管列位外移到 x=-1700，y 取设备中线 5850。"
+          ]
+        },
+        "key_item_relations": [
+          {"item_no": 6, "meaning": "DN125 立管在标高 +1.200 处的蝶阀", "specification": "DN125"},
+          {"item_no": 23, "meaning": "DN125 弯头，上下各一处", "specification": "DN125"},
+          {"item_no": 16, "meaning": "顶部主管接 DN125 支路的异径三通语义", "specification": "DN450x125"}
+        ]
+      },
+      "route_graph": {
+        "nodes": [
+          {
+            "node_id": "hh_branch_tee_16",
+            "kind": "reducing_tee_semantic",
+            "item_no": 16,
+            "run_dn": 450,
+            "branch_dn": 125,
+            "elevation_mm": 5000
+          },
+          {
+            "node_id": "hh_upper_elbow_23",
+            "kind": "elbow",
+            "item_no": 23,
+            "dn": 125,
+            "elevation_mm": 5000
+          },
+          {
+            "node_id": "hh_valve_6",
+            "kind": "valve",
+            "item_no": 6,
+            "dn": 125,
+            "elevation_mm": 1200,
+            "axis": "+z",
+            "structure_length_mm": 64.0
+          },
+          {
+            "node_id": "hh_lower_elbow_23",
+            "kind": "elbow",
+            "item_no": 23,
+            "dn": 125,
+            "elevation_mm": -900
+          }
+        ],
+        "pipe_runs": [
+          {
+            "run_id": "hh_top_branch_dn125",
+            "dn": 125,
+            "orientation": "horizontal_left_to_header",
+            "from_node_id": "hh_branch_tee_16",
+            "to_node_id": "hh_upper_elbow_23",
+            "elevation_mm": 5000,
+            "length_mm": 500,
+            "meaning": "H-H 顶部 DN125 接入短段"
+          },
+          {
+            "run_id": "hh_upper_riser_dn125",
+            "dn": 125,
+            "orientation": "vertical_down_from_header_side",
+            "from_node_id": "hh_upper_elbow_23",
+            "to_node_id": "hh_valve_6",
+            "from_elevation_mm": 5000,
+            "to_elevation_mm": 1200,
+            "meaning": "H-H 从上弯头下行到 +1.200 阀位的 DN125 立管上段"
+          },
+          {
+            "run_id": "hh_lower_riser_dn125",
+            "dn": 125,
+            "orientation": "vertical_up_from_lower_outlet",
+            "from_node_id": "hh_lower_elbow_23",
+            "to_node_id": "hh_valve_6",
+            "from_elevation_mm": -900,
+            "to_elevation_mm": 1200,
+            "meaning": "H-H 从下弯头上行到 +1.200 阀位的 DN125 立管下段"
+          },
+          {
+            "run_id": "hh_vertical_drop_dn125",
+            "dn": 125,
+            "orientation": "vertical_up_from_lower_outlet",
+            "from_node_id": "hh_lower_elbow_23",
+            "to_node_id": "hh_upper_elbow_23",
+            "from_elevation_mm": -900,
+            "to_elevation_mm": 5000,
+            "meaning": "H-H 完整 DN125 立管语义链，实际绘图需在 +1.200 阀位处分成上下两段"
+          },
+          {
+            "run_id": "hh_lower_outlet_dn125",
+            "dn": 125,
+            "orientation": "horizontal_right_to_main_side",
+            "from_node_id": "hh_lower_elbow_23",
+            "to_virtual_target": "下部接塔短段末端",
+            "elevation_mm": -900,
+            "length_mm": 300,
+            "meaning": "H-H 位于 Y-0202 右侧设备带、在右端弯头前的下部 DN125 横管"
+          }
+        ],
+        "flow_paths": [
+          {
+            "path_id": "hh_left_tower_drop_chain",
+            "description": "H-H 左侧 DN125 接塔典型链",
+            "sequence": [
+              "hh_branch_tee_16",
+              "hh_top_branch_dn125",
+              "hh_upper_elbow_23",
+              "hh_upper_riser_dn125",
+              "hh_valve_6",
+              "hh_lower_riser_dn125",
+              "hh_lower_elbow_23",
+              "hh_lower_outlet_dn125"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "section": "I-I",
+      "status": "analyzed_and_coded",
+      "plan_anchor": {
+        "source_view": "page_4",
+        "user_order_description": "按用户最新更正，I-I 位于 Y-0202 长方形左侧 400、下侧 300 的位置。",
+        "resolved_anchor_id": "ii_right_tower_drop_group",
+        "resolved_anchor_x_mm": -4300.0,
+        "anchor_confidence": 0.9
+      },
+      "view_basis": {
+        "source_view": "page_5",
+        "role": "右侧顶部配水主管 - DN150 下落支管典型剖面",
+        "view_direction": "从顶部配水主管外侧看向右侧冷却塔进水方向",
+        "left_side_meaning": "顶部配水主管一侧",
+        "right_side_meaning": "右侧冷却塔一侧"
+      },
+      "text_record": {
+        "analysis": [
+          "按用户最新更正，I-I 的平面列位取 Y-0202 左边界向右 400、下边界向下 300。当前 Y-0202 的平面中心为 x=-3350、宽度 2700，因此其左边界为 x=-4700；顶边 y=7200、下边界 y=4500，据此 I-I 当前取 x=-4300、y=4200。",
+          "I-I 本体继续保持已确认的局部剖面语义：顶部弯头前仍是向左的短横段，底部仍是从下弯头的 +Y 侧接出短段；后续若要满足总图朝向，只允许在总图接入阶段做整体旋转，不再回头改写这套局部骨架。",
+          "除下侧 I-I 外，Y-0202 上侧外偏 300 处仍需补一套与其对称的上侧 I-I，并分别通过独立平面外接链接到 F-F 上下两条 DN150 外接管。",
+          "按用户本轮要求，在 Y-0202 正上方新增 TK-0202 立式罐；本轮进一步把罐心左移到 I-I DN150 列位 x=-4300，外径收到上下顶部 DN150 横管间距 1110，并按空心壳+实心底+无顶盖表达；下侧 I-I 与上侧对称 I-I 的顶部 DN150 横管均接到该罐外壁，接管标高仍为 +4.500。"
+        ],
+        "modeling_description": [
+          "I-I 局部 section preview 本体保持“上部 DN150 横管(+4.500) -> 22号上弯头 -> DN150 下落立管 -> 22号下弯头 -> 下部沿 +Y 接出短段(-0.600)”这一已确认骨架；其中上部横管接到左移后的 TK-0202 罐壁，直径按上下横管间距 1110 执行。",
+          "下侧 I-I 平面锚点固定为 x=-4300、y=4200；上侧对称 I-I 仍在 Y-0202 上边界外偏 300 的 y=7500 位置生成，但两者都通过总图级整体旋转接入到新的朝向。",
+          "上下两套 I-I 与 F-F 的连通继续由独立 DN150 平面外接链承担；顶部横管则统一改接 TK-0202，而不是回头修改底部短接方向。"
+        ],
+        "open_points": [
+          "TK-0202 当前按空心壳、实心底、无顶盖的代理尺寸执行；若后续有正式设备表，再回写精确规格。"
+        ]
+      },
+      "verbatim_analysis_snapshot": {
+        "format": "plain_markdown_lines",
+        "lines": [
+          "I-I 位于 Y-0202 左侧 400、下侧 300 的位置；本体继续保持已确认的局部剖面骨架，后续只在总图接入阶段做整体旋转。",
+          "",
+          "当前 Y-0202 的平面中心为 x=-3350、宽度 2700，因此其左边界为 x=-4700；其下边界为 y=4500，据此下侧 I-I 列位取 x=-4300、y=4200；对应的上侧对称列位取 y=7500。",
+          "",
+          "I-I 标高继续按局部图读取为顶部 +4.500、底部 -0.600；当前局部试绘保持上部向左短横段、两只 22 号弯头、DN150 立管和下部沿 +Y 接出的短接。"
+        ]
+      },
+      "structured_fields": {
+        "elevation_chain_m": [
+          {"value": "+4.500", "meaning": "I-I 顶部控制标高"},
+          {"value": "+0.200", "meaning": "平台/池顶控制标高"},
+          {"value": "±0.000", "meaning": "地坪基准标高"},
+          {"value": "-0.600", "meaning": "I-I 底部控制标高"}
+        ],
+        "position_constraints": {
+          "axis": "x",
+          "reference_frame": "Y-0202 左侧局部剖切列位",
+          "basis": [
+            "Y-0202 当前平面中心为 x=-3350，外廓宽度为 2700，因此其左边界为 x=-4700。",
+            "按用户最新更正，I-I 在 Y-0202 大方块左边界向右 400、下边界向下 300 的位置，因此剖切列位取 x=-4300、y=4200。"
+          ]
+        },
+        "key_item_relations": [
+          {"item_no": 22, "meaning": "DN150 弯头，上下各一处", "specification": "DN150"},
+          {"item_no": 26, "meaning": "上部支路/变径语义保留项", "specification": "DN250x150"}
+        ]
+      },
+      "route_graph": {
+        "nodes": [
+          {
+            "node_id": "ii_tank_shell_tk0202",
+            "kind": "equipment_shell",
+            "equipment_tag": "TK-0202",
+            "elevation_mm": 4500,
+            "meaning": "Y-0202 正上方立式罐外壁接管点"
+          },
+          {
+            "node_id": "ii_upper_elbow_22",
+            "kind": "elbow",
+            "item_no": 22,
+            "dn": 150,
+            "elevation_mm": 4500
+          },
+          {
+            "node_id": "ii_lower_elbow_22",
+            "kind": "elbow",
+            "item_no": 22,
+            "dn": 150,
+            "elevation_mm": -600
+          }
+        ],
+        "pipe_runs": [
+          {
+            "run_id": "ii_top_branch_dn150",
+            "dn": 150,
+            "orientation": "horizontal_to_tank",
+            "from_node_id": "ii_tank_shell_tk0202",
+            "to_node_id": "ii_upper_elbow_22",
+            "elevation_mm": 4500,
+            "length_mm": null,
+            "length_basis": "由脚本按 TK-0202 外壁与 I-I 立管列位射线交点回算",
+            "meaning": "I-I 上部 DN150 横管，接入 TK-0202 罐壁"
+          },
+          {
+            "run_id": "ii_vertical_drop_dn150",
+            "dn": 150,
+            "orientation": "vertical_down",
+            "from_node_id": "ii_upper_elbow_22",
+            "to_node_id": "ii_lower_elbow_22",
+            "from_elevation_mm": 4500,
+            "to_elevation_mm": -600,
+            "meaning": "I-I DN150 下落立管"
+          },
+          {
+            "run_id": "ii_lower_outlet_dn150",
+            "dn": 150,
+            "orientation": "top_side_stub",
+            "from_node_id": "ii_lower_elbow_22",
+            "to_virtual_target": "局部下接短段末端",
+            "elevation_mm": -600,
+            "length_mm": 250,
+            "meaning": "I-I 下部 DN150 从上侧切点沿 +Y 接出短段"
+          }
+        ],
+        "flow_paths": [
+          {
+            "path_id": "ii_local_drop_chain",
+            "description": "I-I 局部 DN150 下落链，顶部横管接入 TK-0202",
+            "sequence": [
+              "ii_tank_shell_tk0202",
+              "ii_top_branch_dn150",
+              "ii_upper_elbow_22",
+              "ii_vertical_drop_dn150",
+              "ii_lower_elbow_22",
+              "ii_lower_outlet_dn150"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

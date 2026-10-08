@@ -1,0 +1,12 @@
+# Optional LangChain deps for experimental/langchain_pilot only.
+# Does NOT affect recognize / write-json / draw / check / redraw main path.
+# Main CAD-MCP service does not need this file.
+#
+# Install (in CAD-MCP venv):
+#   .\venv\Scripts\pip.exe install -r requirements-langchain-optional.txt
+#
+# Verify:
+#   .\venv\Scripts\python.exe -m experimental.langchain_pilot
+#
+langchain>=1.3.0,<2.0
+langchain-core>=1.0.0,<2.0

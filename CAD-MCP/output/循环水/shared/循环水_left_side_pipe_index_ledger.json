@@ -1,0 +1,328 @@
+{
+  "topic": "循环水",
+  "scope": "仅统计蓄水池左侧局部设备带，可见范围为左墙 DN200 穿墙链、左侧 DN300/DN350、Y-0202 周边 DN125/DN150、Y-1401 周边 DN25/DN20/DN15；不含两根全局主管、不含泵带、不含冷却塔带。",
+  "count_rule": {
+    "source_count_basis": "按当前 P4 左侧局部裁图可稳定闭环的直管级编号统计；每一根直管单独编号，弯头/三通/阀门不计入“管根数”。",
+    "drawn_count_basis": "按 v156 当前 left-side auxiliary direct segments 逐段统计；不含 upper_header_dn450 / lower_header_dn500 两根全局主管。",
+    "locked_source_pipe_count": 20,
+    "current_v156_drawn_local_pipe_count": 20,
+    "note": "当前按“直管级”粗对照，数量已经能对上，但并不等于 1:1 几何已经正确；若某编号只是粗占位、分段不对、平面位置不对或标高只是假借表达，仍视为未闭环。"
+  },
+  "comparison_summary": {
+    "fully_matched_pipe_nos": [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16, 17],
+    "coarse_or_uncertain_pipe_nos": [10, 13, 18, 19, 20],
+    "missing_pipe_nos": [],
+    "next_focus_pipe_nos": [10, 13, 18, 19, 20]
+  },
+  "pipes": [
+    {
+      "pipe_no": 1,
+      "pipe_code": "LS-01",
+      "name": "左侧上部 DN200 水平管",
+      "dn": 200,
+      "elevation_mm": -710,
+      "source_basis": ["P4 左侧裁图", "C-C"],
+      "plan_anchor": "左侧 DN200 竖向链上端至左墙穿墙区",
+      "source_description": "标注 -0.710、L=7m、i=0.003 的上部 DN200 水平线。",
+      "current_v156_match": {
+        "route_id": "left_wall_dn200_upper",
+        "segment_index": 1
+      },
+      "status": "已绘制"
+    },
+    {
+      "pipe_no": 2,
+      "pipe_code": "LS-02",
+      "name": "左侧 DN200 上部竖向联接段",
+      "dn": 200,
+      "elevation_mm": -710,
+      "source_basis": ["P4 左侧裁图", "C-C"],
+      "plan_anchor": "两条 DN200 水平线之间的上半段联接线",
+      "source_description": "标注 DN200 L=2m 的上半段联接线。",
+      "current_v156_match": {
+        "route_id": "left_wall_dn200_upper",
+        "segment_index": 2
+      },
+      "status": "已绘制"
+    },
+    {
+      "pipe_no": 3,
+      "pipe_code": "LS-03",
+      "name": "左侧中部 DN200 水平管",
+      "dn": 200,
+      "elevation_mm": -720,
+      "source_basis": ["P4 左侧裁图", "C-C"],
+      "plan_anchor": "左侧 DN200 竖向链中段至 9 号阀门/31 号套管",
+      "source_description": "标注 -0.720、L=7m、i=0.003 的中部 DN200 水平线。",
+      "current_v156_match": {
+        "route_id": "left_wall_dn200_lower",
+        "segment_index": 1
+      },
+      "status": "已绘制"
+    },
+    {
+      "pipe_no": 4,
+      "pipe_code": "LS-04",
+      "name": "左侧 DN200 下部竖向联接段",
+      "dn": 200,
+      "elevation_mm": -720,
+      "source_basis": ["P4 左侧裁图", "C-C"],
+      "plan_anchor": "中部 DN200 水平线下方至 DN300 主立管节点",
+      "source_description": "标注 DN200 L=2m 的下半段联接线。",
+      "current_v156_match": {
+        "route_id": "left_wall_dn200_lower",
+        "segment_index": 2
+      },
+      "status": "已绘制"
+    },
+    {
+      "pipe_no": 5,
+      "pipe_code": "LS-05",
+      "name": "左侧 DN300 主立管",
+      "dn": 300,
+      "elevation_mm": -830,
+      "elevation_note": "P4 同时可见 -0.830 / -0.850 两个控制值，当前按主立管上段先锁 -0.830。",
+      "source_basis": ["P4 左侧裁图", "I-I/H-H 参考"],
+      "plan_anchor": "Y-0202 左侧、Y-1401 左上侧的最左一条主立管",
+      "source_description": "标注 DN300 L=8m 的长竖线。",
+      "current_v156_match": {
+        "route_id": "left_side_dn300_main",
+        "segment_index": 1
+      },
+      "status": "已绘制"
+    },
+    {
+      "pipe_no": 6,
+      "pipe_code": "LS-06",
+      "name": "接入 Y-0202 的 DN350 短横管",
+      "dn": 350,
+      "elevation_mm": -830,
+      "source_basis": ["P4 左侧裁图", "I-I/H-H 参考"],
+      "plan_anchor": "左侧 DN300 主立管至 Y-0202 左边界",
+      "source_description": "贴着 Y-0202 左边界标注 DN350 的短横段。",
+      "current_v156_match": {
+        "route_id": "left_dn350_to_y0202",
+        "segment_index": 1
+      },
+      "status": "已绘制"
+    },
+    {
+      "pipe_no": 7,
+      "pipe_code": "LS-07",
+      "name": "Y-0202 右上侧 DN125 上接平面段",
+      "dn": 125,
+      "elevation_mm": 5000,
+      "source_basis": ["P4 左侧裁图", "H-H"],
+      "plan_anchor": "顶部主管与 H-H 局部管带之间的 DN125 投影线",
+      "source_description": "H 字上方的 DN125 局部接入线。",
+      "current_v156_match": {
+        "route_id": "y0202_upper_dn125_drop",
+        "segment_index": 1
+      },
+      "status": "已绘制"
+    },
+    {
+      "pipe_no": 8,
+      "pipe_code": "LS-08",
+      "name": "Y-0202 右上侧 DN125 下落立管",
+      "dn": 125,
+      "elevation_range_mm": [5000, -900],
+      "source_basis": ["H-H", "P4 左侧裁图"],
+      "plan_anchor": "Y-0202 右上侧 16/23 标记附近",
+      "source_description": "H-H 控制的 DN125 下落立管。",
+      "current_v156_match": {
+        "route_id": "y0202_upper_dn125_drop",
+        "segment_index": 2
+      },
+      "status": "已绘制"
+    },
+    {
+      "pipe_no": 9,
+      "pipe_code": "LS-09",
+      "name": "Y-0202 中部 DN125 短横接入段",
+      "dn": 125,
+      "elevation_mm": -900,
+      "source_basis": ["P4 左侧裁图", "H-H"],
+      "plan_anchor": "H 标记旁、接入 Y-0202 的短接",
+      "source_description": "位于 Y-0202 右侧中部的短 DN125 横管。",
+      "current_v156_match": {
+        "route_id": "y0202_mid_dn125_into_equipment",
+        "segment_index": 1
+      },
+      "status": "已绘制"
+    },
+    {
+      "pipe_no": 10,
+      "pipe_code": "LS-10",
+      "name": "Y-0202/Y-1401 右侧共用 DN150 主平面母线",
+      "dn": 150,
+      "elevation_mm": 1500,
+      "source_basis": ["P4 左侧裁图", "F-F/I-I 关系复核"],
+      "plan_anchor": "F 与 I 两组 DN150 局部链共用的右侧竖向投影线",
+      "source_description": "右侧长 DN150 母线，服务上部 F 组与下部 I 组。",
+      "current_v156_match": {
+        "route_id": "y0202_right_dn150_spine",
+        "segment_index": 1
+      },
+      "status": "已绘制但需复核",
+      "issue_note": "当前 v156 把这条母线整体画成一段；而原图里它很可能被上部/中部/下部局部接点打断，需要进一步核对是否应拆段。"
+    },
+    {
+      "pipe_no": 11,
+      "pipe_code": "LS-11",
+      "name": "F 组 DN150 左侧上翻立管",
+      "dn": 150,
+      "elevation_range_mm": [-600, 2150],
+      "source_basis": ["F-F", "P4 左侧裁图"],
+      "plan_anchor": "Y-0202 右侧上部回弯链左腿",
+      "source_description": "F-F 回弯链左侧立管。",
+      "current_v156_match": {
+        "route_id": "y0202_dn150_upper_return_loop",
+        "segment_index": 1
+      },
+      "status": "已绘制"
+    },
+    {
+      "pipe_no": 12,
+      "pipe_code": "LS-12",
+      "name": "F 组 DN150 顶部 300 短横段",
+      "dn": 150,
+      "elevation_mm": 2150,
+      "source_basis": ["F-F", "P4 左侧裁图"],
+      "plan_anchor": "Y-0202 右侧上部回弯链顶部",
+      "source_description": "F-F 顶部可见 300 长 DN150 横段。",
+      "current_v156_match": {
+        "route_id": "y0202_dn150_upper_return_loop",
+        "segment_index": 2
+      },
+      "status": "已绘制"
+    },
+    {
+      "pipe_no": 13,
+      "pipe_code": "LS-13",
+      "name": "F 组 DN150 右侧回落段",
+      "dn": 150,
+      "elevation_range_mm": [2150, 1500],
+      "source_basis": ["F-F", "P4 左侧裁图"],
+      "plan_anchor": "F 组顶部短横段右端回落到右侧 DN150 母线",
+      "source_description": "F-F 右侧回落段。",
+      "current_v156_match": {
+        "route_id": "y0202_dn150_upper_return_loop",
+        "segment_index": 3
+      },
+      "status": "已绘制但需复核",
+      "issue_note": "这段与 LS-10 的主母线在平面上高度耦合，当前虽然有对应落图，但需复核它到底是独立回落段还是应并入母线分段表达。"
+    },
+    {
+      "pipe_no": 14,
+      "pipe_code": "LS-14",
+      "name": "I 组 DN150 上部 500 短横段",
+      "dn": 150,
+      "elevation_mm": 4500,
+      "source_basis": ["I-I", "P4 左侧裁图"],
+      "plan_anchor": "Y-0202 下方、Y-1401 上方的 I 组顶部",
+      "source_description": "I-I 顶部 DN150 短横段。",
+      "current_v156_match": {
+        "route_id": "y0202_y1401_between_dn150_lower_loop",
+        "segment_index": 1
+      },
+      "status": "已绘制"
+    },
+    {
+      "pipe_no": 15,
+      "pipe_code": "LS-15",
+      "name": "I 组 DN150 下落立管",
+      "dn": 150,
+      "elevation_range_mm": [4500, -600],
+      "source_basis": ["I-I", "P4 左侧裁图"],
+      "plan_anchor": "I 组顶部短横段右端下落到下部回弯链",
+      "source_description": "I-I 主下落立管。",
+      "current_v156_match": {
+        "route_id": "y0202_y1401_between_dn150_lower_loop",
+        "segment_index": 2
+      },
+      "status": "已绘制"
+    },
+    {
+      "pipe_no": 16,
+      "pipe_code": "LS-16",
+      "name": "Y-0202 与 Y-1401 之间 DN150 下部水平段",
+      "dn": 150,
+      "elevation_mm": -600,
+      "source_basis": ["P4 左侧裁图", "I-I"],
+      "plan_anchor": "下部 1300+900+600 尺寸链对应的主水平段",
+      "source_description": "位于 Y-0202 下方、Y-1401 上方的长 DN150 水平段。",
+      "current_v156_match": {
+        "route_id": "y0202_y1401_between_dn150_lower_loop",
+        "segment_index": 3
+      },
+      "status": "已绘制"
+    },
+    {
+      "pipe_no": 17,
+      "pipe_code": "LS-17",
+      "name": "I 组 DN150 下部 +Y 短接段",
+      "dn": 150,
+      "elevation_mm": -600,
+      "source_basis": ["I-I", "P4 左侧裁图"],
+      "plan_anchor": "下部回弯链右端从母线向 +Y 接出的短段",
+      "source_description": "I-I 下部沿 +Y 接出的短接。",
+      "current_v156_match": {
+        "route_id": "y0202_y1401_between_dn150_lower_loop",
+        "segment_index": 4
+      },
+      "status": "已绘制"
+    },
+    {
+      "pipe_no": 18,
+      "pipe_code": "LS-18",
+      "name": "Y-1401 右侧 DN25 竖向小口径管",
+      "dn": 25,
+      "elevation_mm": 200,
+      "elevation_note": "当前仅按平面簇先落粗标高，未完成细分高程闭环。",
+      "source_basis": ["P4 左侧裁图"],
+      "plan_anchor": "Y-1401 右侧外缘",
+      "source_description": "Y-1401 右侧可见 DN25 竖向小口径链。",
+      "current_v156_match": {
+        "route_id": "y1401_small_dn25_cluster",
+        "segment_index": 1
+      },
+      "status": "已绘制但需复核",
+      "issue_note": "目前只是按单根直段粗恢复，尚未恢复与相邻小口径件/接点的完整串联关系。"
+    },
+    {
+      "pipe_no": 19,
+      "pipe_code": "LS-19",
+      "name": "Y-1401 右侧 DN20 水平小口径管",
+      "dn": 20,
+      "elevation_mm": 200,
+      "elevation_note": "当前仅按平面簇先落粗标高，未完成细分高程闭环。",
+      "source_basis": ["P4 左侧裁图"],
+      "plan_anchor": "Y-1401 右侧中上部",
+      "source_description": "Y-1401 右侧可见 DN20 水平短接。",
+      "current_v156_match": {
+        "route_id": "y1401_small_dn20_cluster",
+        "segment_index": 1
+      },
+      "status": "已绘制但需复核",
+      "issue_note": "当前只是单根水平占位，尚未核对是否还应在端部继续分段或连到 DN25/DN15 簇。"
+    },
+    {
+      "pipe_no": 20,
+      "pipe_code": "LS-20",
+      "name": "Y-1401 下侧 DN15 水平小口径管",
+      "dn": 15,
+      "elevation_mm": 200,
+      "elevation_note": "当前仅按平面簇先落粗标高，未完成细分高程闭环。",
+      "source_basis": ["P4 左侧裁图"],
+      "plan_anchor": "Y-1401 下侧偏右",
+      "source_description": "Y-1401 下侧偏右的 DN15 短接。",
+      "current_v156_match": {
+        "route_id": "y1401_small_dn15_cluster",
+        "segment_index": 1
+      },
+      "status": "已绘制但需复核",
+      "issue_note": "当前只是单段表达，未把该小口径链与附近 2 号件局部关系完全闭环。"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "basis": "A-A item 25/26 pump-face mates",
+  "placements": {
+    "P-0204": {
+      "tag": "P-0204",
+      "origin_xy": [
+        5790.0,
+        12350.0
+      ],
+      "flow_axis": "y",
+      "face_to_face_mm": 1000.0,
+      "suction_port_mm": [
+        5790.0,
+        11850.0,
+        535.0
+      ],
+      "discharge_port_mm": [
+        5790.0,
+        12850.0,
+        510.0
+      ],
+      "suction_port_z_mm": 535.0,
+      "discharge_port_z_mm": 510.0,
+      "suction_dn": 250,
+      "discharge_dn": 150,
+      "mates": {
+        "item_25": {
+          "item_no": 25,
+          "pump_face_end": "small",
+          "dn": 250,
+          "y_mm": 11850.0,
+          "elevation_mm": 535.0
+        },
+        "item_26": {
+          "item_no": 26,
+          "pump_face_end": "small",
+          "dn": 150,
+          "y_mm": 12850.0,
+          "elevation_mm": 510.0
+        }
+      },
+      "upper_anchor_x_mm": 5790.0,
+      "upper_anchor_reference": "top_wall_dn300_sleeve_4",
+      "route_id": "aa_preview_second_embedded_pipe"
+    },
+    "P-0203": {
+      "tag": "P-0203",
+      "origin_xy": [
+        9090.0,
+        12350.0
+      ],
+      "flow_axis": "y",
+      "face_to_face_mm": 1000.0,
+      "suction_port_mm": [
+        9090.0,
+        11850.0,
+        535.0
+      ],
+      "discharge_port_mm": [
+        9090.0,
+        12850.0,
+        510.0
+      ],
+      "suction_port_z_mm": 535.0,
+      "discharge_port_z_mm": 510.0,
+      "suction_dn": 250,
+      "discharge_dn": 150,
+      "mates": {
+        "item_25": {
+          "item_no": 25,
+          "pump_face_end": "small",
+          "dn": 250,
+          "y_mm": 11850.0,
+          "elevation_mm": 535.0
+        },
+        "item_26": {
+          "item_no": 26,
+          "pump_face_end": "small",
+          "dn": 150,
+          "y_mm": 12850.0,
+          "elevation_mm": 510.0
+        }
+      },
+      "upper_anchor_x_mm": 9090.0,
+      "upper_anchor_reference": "top_wall_dn300_sleeve_3",
+      "route_id": "aa_preview_third_embedded_plate"
+    },
+    "P-0202": {
+      "tag": "P-0202",
+      "origin_xy": [
+        12390.0,
+        12350.0
+      ],
+      "flow_axis": "y",
+      "face_to_face_mm": 1000.0,
+      "suction_port_mm": [
+        12390.0,
+        11850.0,
+        535.0
+      ],
+      "discharge_port_mm": [
+        12390.0,
+        12850.0,
+        510.0
+      ],
+      "suction_port_z_mm": 535.0,
+      "discharge_port_z_mm": 510.0,
+      "suction_dn": 250,
+      "discharge_dn": 150,
+      "mates": {
+        "item_25": {
+          "item_no": 25,
+          "pump_face_end": "small",
+          "dn": 250,
+          "y_mm": 11850.0,
+          "elevation_mm": 535.0
+        },
+        "item_26": {
+          "item_no": 26,
+          "pump_face_end": "small",
+          "dn": 150,
+          "y_mm": 12850.0,
+          "elevation_mm": 510.0
+        }
+      },
+      "upper_anchor_x_mm": 12390.0,
+      "upper_anchor_reference": "top_wall_dn300_sleeve_2",
+      "route_id": "aa_preview_fourth_embedded_plate"
+    },
+    "P-0201": {
+      "tag": "P-0201",
+      "origin_xy": [
+        15690.0,
+        12350.0
+      ],
+      "flow_axis": "y",
+      "face_to_face_mm": 1000.0,
+      "suction_port_mm": [
+        15690.0,
+        11850.0,
+        535.0
+      ],
+      "discharge_port_mm": [
+        15690.0,
+        12850.0,
+        510.0
+      ],
+      "suction_port_z_mm": 535.0,
+      "discharge_port_z_mm": 510.0,
+      "suction_dn": 250,
+      "discharge_dn": 150,
+      "mates": {
+        "item_25": {
+          "item_no": 25,
+          "pump_face_end": "small",
+          "dn": 250,
+          "y_mm": 11850.0,
+          "elevation_mm": 535.0
+        },
+        "item_26": {
+          "item_no": 26,
+          "pump_face_end": "small",
+          "dn": 150,
+          "y_mm": 12850.0,
+          "elevation_mm": 510.0
+        }
+      },
+      "upper_anchor_x_mm": 15690.0,
+      "upper_anchor_reference": "top_wall_dn300_sleeve_1",
+      "route_id": "aa_preview_fifth_embedded_plate"
+    }
+  }
+}

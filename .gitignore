@@ -1,0 +1,33 @@
+# Python environments and caches
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Secrets
+.env
+.env.*
+
+# Logs and CAD temp files
+*.log
+*.bak
+*.dwl
+*.dwl2
+
+# Local output except the circulating-water sample versions
+CAD-MCP/output/**
+!CAD-MCP/output/循环水/
+!CAD-MCP/output/循环水/shared/
+!CAD-MCP/output/循环水/shared/**
+!CAD-MCP/output/循环水/v216/
+!CAD-MCP/output/循环水/v216/**
+!CAD-MCP/output/循环水/设备图/
+!CAD-MCP/output/循环水/设备图/v41/
+!CAD-MCP/output/循环水/设备图/v41/**
+
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store

@@ -1,0 +1,1510 @@
+{
+  "topic": "循环水",
+  "source_pdf": "F:\\毕业论文\\管道布置图\\PDF\\PDF\\循环水.pdf",
+  "page_roles": {
+    "page_3": "设备平面布置图",
+    "page_4": "管道平面布置图",
+    "page_5": "剖面图"
+  },
+  "base_view_strategy": {
+    "xy_basis": "page_4 管道平面布置图",
+    "z_basis": "page_5 各剖面图",
+    "context_basis": "page_3 设备平面布置图",
+    "wcs_origin_definition": "以循环水池左下角外轮廓投影点为 [0,0,0]，X 向右，Y 向上，Z 向上。"
+  },
+  "dimension_read_policy": {
+    "policy": "脚本直接读取全部尺寸台账，不再区分 key_dimensions。",
+    "script_sources": ["page_dimension_ledger", "section_info.sections", "section_info.pipe_runs", "section_info.connection_details"],
+    "note": "dimension_info 只保留页面/平面尺寸台账；所有剖面相关标高、局部尺寸、剖面方向和局部构件信息统一去 section_info 中读取。model_input 中的坐标与高程仅是读取这些台账后的派生结果，不得替代对原始台账的读取。"
+  },
+  "page_dimension_ledger": [
+    {
+      "page": "page_3",
+      "view_name": "设备平面布置图",
+      "entries": [
+        {"label": "设备平面总长度", "raw_text": "17500", "value_mm": 17500, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.96},
+        {"label": "设备平面总宽度", "raw_text": "10000", "value_mm": 10000, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.95},
+        {"label": "设备上部带宽", "raw_text": "2800", "value_mm": 2800, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.9},
+        {"label": "设备总平面宽向尺寸", "raw_text": "7200", "value_mm": 7200, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.92},
+        {"label": "设备下部边带宽", "raw_text": "1500", "value_mm": 1500, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.82},
+        {"label": "池体模块一长度", "raw_text": "4200", "value_mm": 4200, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.95},
+        {"label": "池体模块二长度", "raw_text": "4200", "value_mm": 4200, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.95},
+        {"label": "池体模块三长度", "raw_text": "4200", "value_mm": 4200, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.95},
+        {"label": "池体模块四长度", "raw_text": "4200", "value_mm": 4200, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.95},
+        {"label": "Y-0202 外廓水平尺寸", "raw_text": "2700", "value_mm": 2700, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.86},
+        {"label": "Y-1401 外廓竖向尺寸", "raw_text": "2000", "value_mm": 2000, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.86},
+        {"label": "Y-1401 左侧竖向分段", "raw_text": "1400", "value_mm": 1400, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.84},
+        {"label": "Y-1401 底部水平分段", "raw_text": "1300", "value_mm": 1300, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.84},
+        {"label": "左侧下部边带尺寸", "raw_text": "1500", "value_mm": 1500, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.8},
+        {"label": "上部设备中心距链 1", "raw_text": "1900", "value_mm": 1900, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.82},
+        {"label": "上部设备中心距链 2", "raw_text": "1400", "value_mm": 1400, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.82},
+        {"label": "上部设备中心距链 3", "raw_text": "1900", "value_mm": 1900, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.82},
+        {"label": "上部设备中心距链 4", "raw_text": "1400", "value_mm": 1400, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.82},
+        {"label": "上部设备中心距链 5", "raw_text": "1900", "value_mm": 1900, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.82},
+        {"label": "上部设备中心距链 6", "raw_text": "1600", "value_mm": 1600, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.82},
+        {"label": "上部设备中心距链 7", "raw_text": "1900", "value_mm": 1900, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.82},
+        {"label": "上部设备中心距链 8", "raw_text": "1400", "value_mm": 1400, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.82},
+        {"label": "上部设备中心距链 9", "raw_text": "1400", "value_mm": 1400, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.8},
+        {"label": "中部平面尺寸链 1", "raw_text": "1000", "value_mm": 1000, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.86},
+        {"label": "中部平面尺寸链 2", "raw_text": "1590", "value_mm": 1590, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.86},
+        {"label": "中部平面尺寸链 3", "raw_text": "3300", "value_mm": 3300, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.88},
+        {"label": "中部平面尺寸链 4", "raw_text": "1650", "value_mm": 1650, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.88},
+        {"label": "中部平面尺寸链 5", "raw_text": "1650", "value_mm": 1650, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.88},
+        {"label": "中部平面尺寸链 6", "raw_text": "2100", "value_mm": 2100, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.88},
+        {"label": "中部平面尺寸链 7", "raw_text": "1400", "value_mm": 1400, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.86},
+        {"label": "中部平面尺寸链 8", "raw_text": "3300", "value_mm": 3300, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.88},
+        {"label": "中部平面尺寸链 9", "raw_text": "1400", "value_mm": 1400, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.84},
+        {"label": "中部平面尺寸链 10", "raw_text": "1650", "value_mm": 1650, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.84},
+        {"label": "右侧详图总长", "raw_text": "900", "value_mm": 900, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.8},
+        {"label": "右侧详图分段 1", "raw_text": "600", "value_mm": 600, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.78},
+        {"label": "右侧详图分段 2", "raw_text": "605", "value_mm": 605, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.78},
+        {"label": "右侧详图分段 3", "raw_text": "390", "value_mm": 390, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.78},
+        {"label": "右侧详图总高", "raw_text": "1000", "value_mm": 1000, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.8},
+        {"label": "右侧详图局部高度", "raw_text": "150", "value_mm": 150, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.72},
+        {"label": "蓄水池上壁 DN300 套管距右内壁", "raw_text": "1510", "value_mm": 1510, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.94},
+        {"label": "蓄水池上壁 DN300 套管中心距", "raw_text": "3300", "value_mm": 3300, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.94},
+        {"label": "蓄水池上壁 DN300 套管中心标高", "raw_text": "+0.535", "value_mm": 535, "dimension_type": "elevation", "orientation": "vertical", "confidence": 0.92},
+        {"label": "蓄水池上壁 DN200 套管距左内壁", "raw_text": "1000", "value_mm": 1000, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.92},
+        {"label": "蓄水池上壁 DN200 套管中心标高", "raw_text": "+0.400", "value_mm": 400, "dimension_type": "elevation", "orientation": "vertical", "confidence": 0.9},
+        {"label": "左侧墙壁 DN200 套管距中间隔板", "raw_text": "1500(含400厚隔板)", "value_mm": 1500, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.9},
+        {"label": "左侧墙壁 DN200 套管中心标高", "raw_text": "-0.700", "value_mm": -700, "dimension_type": "elevation", "orientation": "vertical", "confidence": 0.92},
+        {"label": "左上角集水坑平面长度", "raw_text": "1000", "value_mm": 1000, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.95},
+        {"label": "左上角集水坑平面宽度", "raw_text": "1000", "value_mm": 1000, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.95},
+        {"label": "左上角集水坑底标高", "raw_text": "-2.400", "value_mm": -2400, "dimension_type": "elevation", "orientation": "vertical", "confidence": 0.96},
+        {"label": "池顶预埋钢板下边最右块距右内壁", "raw_text": "3000", "value_mm": 3000, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.97},
+        {"label": "池顶预埋钢板下边中心距 1", "raw_text": "3950", "value_mm": 3950, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.97},
+        {"label": "池顶预埋钢板下边中心距 2", "raw_text": "1800", "value_mm": 1800, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.97},
+        {"label": "池顶预埋钢板下边中心距 3", "raw_text": "1800", "value_mm": 1800, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.97},
+        {"label": "池顶预埋钢板下边中心距 4", "raw_text": "3900", "value_mm": 3900, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.97},
+        {"label": "池顶预埋钢板左下块距下内壁", "raw_text": "1000", "value_mm": 1000, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.95},
+        {"label": "池顶预埋钢板左上块距中间隔板下边", "raw_text": "800", "value_mm": 800, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.95},
+        {"label": "池顶预埋钢板上边块距右内壁", "raw_text": "6210", "value_mm": 6210, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.96},
+        {"label": "池顶 DN50 法兰钢管距右内壁", "raw_text": "9760", "value_mm": 9760, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.97},
+        {"label": "池顶 DN50 法兰钢管距前内壁", "raw_text": "400", "value_mm": 400, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.96},
+        {"label": "池顶 DN50 法兰钢管高出池顶", "raw_text": "100", "value_mm": 100, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.96},
+        {"label": "池顶直径300开孔距右内壁", "raw_text": "6210", "value_mm": 6210, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.97},
+        {"label": "池顶直径300开孔距前内壁", "raw_text": "600", "value_mm": 600, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.96},
+        {"label": "池顶直径300开孔直径", "raw_text": "300", "value_mm": 300, "dimension_type": "diameter", "orientation": "plan", "confidence": 0.97}
+      ]
+    },
+    {
+      "page": "page_4",
+      "view_name": "管道平面布置图",
+      "entries": [
+        {"label": "管道平面总长度", "raw_text": "17500", "value_mm": 17500, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.96},
+        {"label": "右侧竖向总尺寸", "raw_text": "5000", "value_mm": 5000, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.92},
+        {"label": "右侧中部竖向尺寸", "raw_text": "2800", "value_mm": 2800, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.9},
+        {"label": "塔区总宽向尺寸", "raw_text": "7200", "value_mm": 7200, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.9},
+        {"label": "左上外接段长度", "raw_text": "2500", "value_mm": 2500, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.9},
+        {"label": "左上局部水平尺寸", "raw_text": "1000", "value_mm": 1000, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.88},
+        {"label": "中上局部水平尺寸", "raw_text": "1590", "value_mm": 1590, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.88},
+        {"label": "中上局部水平尺寸", "raw_text": "650", "value_mm": 650, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.86},
+        {"label": "中上局部竖向尺寸", "raw_text": "1100", "value_mm": 1100, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.86},
+        {"label": "中部主尺寸链 1", "raw_text": "3300", "value_mm": 3300, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.9},
+        {"label": "中部主尺寸链 2", "raw_text": "1650", "value_mm": 1650, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.9},
+        {"label": "中部主尺寸链 3", "raw_text": "1650", "value_mm": 1650, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.9},
+        {"label": "中部主尺寸链 4", "raw_text": "2100", "value_mm": 2100, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.9},
+        {"label": "中部主尺寸链 5", "raw_text": "1400", "value_mm": 1400, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.88},
+        {"label": "中部主尺寸链 6", "raw_text": "3300", "value_mm": 3300, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.9},
+        {"label": "中部主尺寸链 7", "raw_text": "1510", "value_mm": 1510, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.86},
+        {"label": "冷却塔中心距 1", "raw_text": "4200", "value_mm": 4200, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.95},
+        {"label": "冷却塔中心距 2", "raw_text": "2100", "value_mm": 2100, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.92},
+        {"label": "冷却塔中心距 3", "raw_text": "4200", "value_mm": 4200, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.95},
+        {"label": "冷却塔中心距 4", "raw_text": "3150", "value_mm": 3150, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.9},
+        {"label": "左下外接段长度", "raw_text": "2500", "value_mm": 2500, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.9},
+        {"label": "左下局部长度 1", "raw_text": "1300", "value_mm": 1300, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.84},
+        {"label": "左下局部长度 2", "raw_text": "900", "value_mm": 900, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.84},
+        {"label": "左下局部长度 3", "raw_text": "600", "value_mm": 600, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.84},
+        {"label": "左下局部高度", "raw_text": "2200", "value_mm": 2200, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.84},
+        {"label": "左下局部短接长度", "raw_text": "300", "value_mm": 300, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.82},
+        {"label": "左下局部短接长度", "raw_text": "400", "value_mm": 400, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.82},
+        {"label": "底部局部偏移 1", "raw_text": "500", "value_mm": 500, "dimension_type": "distance", "orientation": "horizontal", "confidence": 0.82},
+        {"label": "底部局部偏移 2", "raw_text": "1000", "value_mm": 1000, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.82},
+        {"label": "上部 DN500 主管中心距蓄水池上内壁", "raw_text": "5000", "value_mm": 5000, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.98},
+        {"label": "上部 DN500 主管中心标高", "raw_text": "-1.200", "value_mm": -1200, "dimension_type": "elevation", "orientation": "vertical", "confidence": 0.98},
+        {"label": "下部 DN450 主管中心距蓄水池下内壁", "raw_text": "1000", "value_mm": 1000, "dimension_type": "distance", "orientation": "vertical", "confidence": 0.98},
+        {"label": "下部 DN450 主管中心标高", "raw_text": "-1.200", "value_mm": -1200, "dimension_type": "elevation", "orientation": "vertical", "confidence": 0.98},
+        {"label": "顶部支路管内底标高", "raw_text": "-0.710", "value_mm": -710, "dimension_type": "elevation", "orientation": "vertical", "confidence": 0.85},
+        {"label": "中部支路管内底标高", "raw_text": "-0.720", "value_mm": -720, "dimension_type": "elevation", "orientation": "vertical", "confidence": 0.85},
+        {"label": "左侧中部管内底标高", "raw_text": "-0.830", "value_mm": -830, "dimension_type": "elevation", "orientation": "vertical", "confidence": 0.85},
+        {"label": "左侧下部管内底标高", "raw_text": "-0.850", "value_mm": -850, "dimension_type": "elevation", "orientation": "vertical", "confidence": 0.85},
+        {"label": "中部局部标高", "raw_text": "-1.400", "value_mm": -1400, "dimension_type": "elevation", "orientation": "vertical", "confidence": 0.9},
+        {"label": "地坪基准标高", "raw_text": "±0.000", "value_mm": 0, "dimension_type": "elevation", "orientation": "vertical", "confidence": 0.95},
+        {"label": "上部 DN200 管坡度", "raw_text": "i=0.003", "value_ratio": 0.003, "dimension_type": "slope", "orientation": "horizontal", "confidence": 0.88},
+        {"label": "中部 DN200 管坡度", "raw_text": "i=0.003", "value_ratio": 0.003, "dimension_type": "slope", "orientation": "horizontal", "confidence": 0.88},
+        {"label": "上部 DN200 管长", "raw_text": "L=7m", "value_mm": 7000, "dimension_type": "run_length", "orientation": "horizontal", "confidence": 0.9},
+        {"label": "中部 DN200 管长", "raw_text": "L=7m", "value_mm": 7000, "dimension_type": "run_length", "orientation": "horizontal", "confidence": 0.9}
+      ]
+    }
+  ],
+  "model_input": {
+    "plan_reference": {
+      "origin": [0.0, 0.0, 0.0],
+      "basin_outline_center": [8750.0, 5000.0, 950.0],
+      "basin_length": 17500.0,
+      "basin_width": 10000.0,
+      "basin_height": 1900.0,
+      "basin_top_elevation": 1900.0,
+      "basin_bottom_elevation": 0.0,
+      "basin_wall_thickness": 300.0,
+      "basin_bottom_thickness": 300.0,
+      "basin_width_zones": [
+        {
+          "zone_id": "main_basin_zone",
+          "y_start": 0.0,
+          "y_end": 7200.0,
+          "top_elevation": 1900.0,
+          "bottom_elevation": 0.0,
+          "basis": "P3 宽向 7200 主池区；B-B 确认池顶 1.900、池底 0.000。"
+        },
+        {
+          "zone_id": "partition_wall_zone",
+          "y_start": 7200.0,
+          "y_end": 7600.0,
+          "wall_thickness_mm": 400.0,
+          "top_elevation": 1900.0,
+          "bottom_elevation": -1400.0,
+          "basis": "A-A 剖面在宽向 7200 后为一段 400 厚分隔壁。"
+        },
+        {
+          "zone_id": "upper_deep_basin_zone",
+          "y_start": 7600.0,
+          "y_end": 10000.0,
+          "top_elevation": 1900.0,
+          "bottom_elevation": -1400.0,
+          "basis": "A-A 剖面显示分隔壁后为 2400 宽池格，池顶 1.900、池底 -1.400。"
+        }
+      ],
+      "partition_wall_grating_layout": {
+        "count": 5,
+        "reference_edge": "right",
+        "edge_offset_mm": 1650.0,
+        "grating_length_mm": 1400.0,
+        "clear_spacing_mm": 1800.0,
+        "band_width_mm": 400.0,
+        "top_elevation_mm": 1900.0,
+        "thickness_mm": 30.0,
+        "basis": "P3 设备平面布置图中分隔壁上方尺寸链显示：从最右侧起先留 1650，再按 1400 格栅与 1800 净间隔交替布置，共 5 组。"
+      },
+      "partition_wall_gratings": [
+        {
+          "grating_id": "partition_grating_1",
+          "center": [15150.0, 7400.0, 1885.0],
+          "size_mm": [1400.0, 400.0, 30.0],
+          "basis": "第一块钢格栅格网；右侧净留 1650，单块长 1400。"
+        },
+        {
+          "grating_id": "partition_grating_2",
+          "center": [11950.0, 7400.0, 1885.0],
+          "size_mm": [1400.0, 400.0, 30.0],
+          "basis": "第二块钢格栅格网；与相邻格栅净间隔 1800。"
+        },
+        {
+          "grating_id": "partition_grating_3",
+          "center": [8750.0, 7400.0, 1885.0],
+          "size_mm": [1400.0, 400.0, 30.0],
+          "basis": "第三块钢格栅格网；与相邻格栅净间隔 1800。"
+        },
+        {
+          "grating_id": "partition_grating_4",
+          "center": [5550.0, 7400.0, 1885.0],
+          "size_mm": [1400.0, 400.0, 30.0],
+          "basis": "第四块钢格栅格网；与相邻格栅净间隔 1800。"
+        },
+        {
+          "grating_id": "partition_grating_5",
+          "center": [2350.0, 7400.0, 1885.0],
+          "size_mm": [1400.0, 400.0, 30.0],
+          "basis": "第五块钢格栅格网；左侧剩余净距与右侧同为 1650。"
+        }
+      ],
+      "wall_sleeves": [
+        {
+          "sleeve_id": "top_wall_dn300_sleeve_1",
+          "dn": 300,
+          "center": [15690.0, 9850.0, 535.0],
+          "axis": "y",
+          "wall_reference": "top_outer_wall",
+          "source_view": "page_3",
+          "reference_edge": "right_inner_wall",
+          "offset_mm": 1510.0,
+          "sequence_index": 1,
+          "spacing_mm": 3300.0,
+          "center_elevation_mm": 535.0,
+          "basis": "P3 设备平面布置图：蓄水池上部墙壁第一只 DN300 刚性防水套管，距右侧墙壁内壁 1510，管中心标高 +0.535。"
+        },
+        {
+          "sleeve_id": "top_wall_dn300_sleeve_2",
+          "dn": 300,
+          "center": [12390.0, 9850.0, 535.0],
+          "axis": "y",
+          "wall_reference": "top_outer_wall",
+          "source_view": "page_3",
+          "reference_edge": "right_inner_wall",
+          "offset_mm": 4810.0,
+          "sequence_index": 2,
+          "spacing_mm": 3300.0,
+          "center_elevation_mm": 535.0,
+          "basis": "P3 设备平面布置图：蓄水池上部墙壁第二只 DN300 刚性防水套管；在首只基础上向左每隔 3300 布置。"
+        },
+        {
+          "sleeve_id": "top_wall_dn300_sleeve_3",
+          "dn": 300,
+          "center": [9090.0, 9850.0, 535.0],
+          "axis": "y",
+          "wall_reference": "top_outer_wall",
+          "source_view": "page_3",
+          "reference_edge": "right_inner_wall",
+          "offset_mm": 8110.0,
+          "sequence_index": 3,
+          "spacing_mm": 3300.0,
+          "center_elevation_mm": 535.0,
+          "basis": "P3 设备平面布置图：蓄水池上部墙壁第三只 DN300 刚性防水套管；延续 3300 中心距。"
+        },
+        {
+          "sleeve_id": "top_wall_dn300_sleeve_4",
+          "dn": 300,
+          "center": [5790.0, 9850.0, 535.0],
+          "axis": "y",
+          "wall_reference": "top_outer_wall",
+          "source_view": "page_3",
+          "reference_edge": "right_inner_wall",
+          "offset_mm": 11410.0,
+          "sequence_index": 4,
+          "spacing_mm": 3300.0,
+          "center_elevation_mm": 535.0,
+          "basis": "P3 设备平面布置图：蓄水池上部墙壁第四只 DN300 刚性防水套管；延续 3300 中心距。"
+        },
+        {
+          "sleeve_id": "top_wall_dn300_sleeve_5",
+          "dn": 300,
+          "center": [2490.0, 9850.0, 535.0],
+          "axis": "y",
+          "wall_reference": "top_outer_wall",
+          "source_view": "page_3",
+          "reference_edge": "right_inner_wall",
+          "offset_mm": 14710.0,
+          "sequence_index": 5,
+          "spacing_mm": 3300.0,
+          "center_elevation_mm": 535.0,
+          "basis": "P3 设备平面布置图：蓄水池上部墙壁第五只 DN300 刚性防水套管；延续 3300 中心距。"
+        },
+        {
+          "sleeve_id": "top_wall_dn200_sleeve_1",
+          "dn": 200,
+          "center": [1300.0, 9850.0, 400.0],
+          "axis": "y",
+          "wall_reference": "top_outer_wall",
+          "source_view": "page_3",
+          "reference_edge": "left_inner_wall",
+          "offset_mm": 1000.0,
+          "center_elevation_mm": 400.0,
+          "basis": "P3 设备平面布置图：蓄水池上部墙壁另有一只 DN200 刚性防水套管，距左侧墙壁内壁 1000，管中心标高 +0.400。"
+        },
+        {
+          "sleeve_id": "left_wall_dn200_sleeve_1",
+          "dn": 200,
+          "center": [150.0, 8700.0, -700.0],
+          "axis": "x",
+          "wall_reference": "left_outer_wall",
+          "source_view": "page_3",
+          "reference_feature": "partition_wall_zone",
+          "offset_mm": 1500.0,
+          "includes_partition_thickness_mm": 400.0,
+          "center_elevation_mm": -700.0,
+          "basis": "P3 设备平面布置图：左侧墙壁上一只 DN200 刚性防水套管，离中间隔板 1500（包含中间隔板 400 厚度），管中心标高 -0.700；据此取 y=7200+1500=8700。"
+        }
+      ],
+      "embedded_plates": [
+        {
+          "plate_id": "bottom_embedded_plate_1",
+          "center": [14200.0, 150.0, 1905.0],
+          "size_mm": [300.0, 300.0, 10.0],
+          "anchor_edge": "bottom_outer_wall_centerline",
+          "reference_edge": "right_inner_wall",
+          "offset_mm": 3000.0,
+          "basis": "P3 设备平面布置图：池顶预埋钢板 300x300x10；蓄水池下边共 5 个，最右块距右边内壁 3000。板件沿池顶边带布置，按池壁中心线 y=150 落位。"
+        },
+        {
+          "plate_id": "bottom_embedded_plate_2",
+          "center": [10250.0, 150.0, 1905.0],
+          "size_mm": [300.0, 300.0, 10.0],
+          "anchor_edge": "bottom_outer_wall_centerline",
+          "reference_feature": "bottom_embedded_plate_1",
+          "spacing_mm": 3950.0,
+          "basis": "P3 设备平面布置图：第二块下边预埋钢板在第一块左侧 3950。"
+        },
+        {
+          "plate_id": "bottom_embedded_plate_3",
+          "center": [8450.0, 150.0, 1905.0],
+          "size_mm": [300.0, 300.0, 10.0],
+          "anchor_edge": "bottom_outer_wall_centerline",
+          "reference_feature": "bottom_embedded_plate_2",
+          "spacing_mm": 1800.0,
+          "basis": "P3 设备平面布置图：第三块下边预埋钢板在第二块左侧 1800。"
+        },
+        {
+          "plate_id": "bottom_embedded_plate_4",
+          "center": [6650.0, 150.0, 1905.0],
+          "size_mm": [300.0, 300.0, 10.0],
+          "anchor_edge": "bottom_outer_wall_centerline",
+          "reference_feature": "bottom_embedded_plate_3",
+          "spacing_mm": 1800.0,
+          "basis": "P3 设备平面布置图：第四块下边预埋钢板在第三块左侧 1800。按用户本轮最新更正，A-A 复制路由仅移动泵两侧及泵上方管道，下方 DN500 主管上的接口列位不跟随上部套管横移，因此该预埋钢板恢复保持原始中心 x=6650。"
+        },
+        {
+          "plate_id": "bottom_embedded_plate_5",
+          "center": [2750.0, 150.0, 1905.0],
+          "size_mm": [300.0, 300.0, 10.0],
+          "anchor_edge": "bottom_outer_wall_centerline",
+          "reference_feature": "bottom_embedded_plate_4",
+          "spacing_mm": 3900.0,
+          "basis": "P3 设备平面布置图：第五块下边预埋钢板在第四块左侧 3900。"
+        },
+        {
+          "plate_id": "left_embedded_plate_1",
+          "center": [150.0, 6400.0, 1905.0],
+          "size_mm": [300.0, 300.0, 10.0],
+          "anchor_edge": "left_outer_wall_centerline",
+          "reference_feature": "partition_wall_zone_lower_edge",
+          "offset_mm": 800.0,
+          "basis": "P3 设备平面布置图：左边第一块池顶预埋钢板位于中间隔板下边 800；中间隔板下边界取 y=7200，据此落位到 y=6400。按用户最新反馈，这里才是左壁“第一块”预埋钢板的编号语义。"
+        },
+        {
+          "plate_id": "left_embedded_plate_2",
+          "center": [150.0, 1300.0, 1905.0],
+          "size_mm": [300.0, 300.0, 10.0],
+          "anchor_edge": "left_outer_wall_centerline",
+          "reference_edge": "bottom_inner_wall",
+          "offset_mm": 1000.0,
+          "basis": "P3 设备平面布置图：左边第二块池顶预埋钢板距下边内壁 1000，按左侧池壁中心线 x=150 落位。按用户最新反馈，这里才是左壁“第二块”预埋钢板的编号语义。"
+        },
+        {
+          "plate_id": "top_embedded_plate_1",
+          "center": [10990.0, 9850.0, 1905.0],
+          "size_mm": [300.0, 300.0, 10.0],
+          "anchor_edge": "top_outer_wall_centerline",
+          "reference_edge": "right_inner_wall",
+          "offset_mm": 6210.0,
+          "basis": "P3 设备平面布置图：上边一块池顶预埋钢板距右边内壁 6210，按上侧池壁中心线 y=9850 落位。该块为 300x300x10 预埋钢板，恢复为正常保留对象。"
+        }
+      ],
+      "top_flange_pipes": [],
+      "top_openings": [
+        {
+          "opening_id": "top_opening_dn300_1",
+          "center": [10990.0, 9100.0, 1900.0],
+          "center_elevation_mm": 1900.0,
+          "diameter_mm": 300.0,
+          "reference_edge_x": "right_inner_wall",
+          "offset_x_mm": 6210.0,
+          "reference_edge_y": "front_inner_wall",
+          "offset_y_mm": 600.0,
+          "proxy_ring_band_mm": 20.0,
+          "proxy_height_mm": 20.0,
+          "basis": "P3 设备平面布置图：距离蓄水池右边内壁 6210、前面内壁 600 处有一个直径 300 的池顶开孔；按用户最新更正，开孔中心标高继续保持为 +1.900，不做下调。当前设备图模型为开口池体，无整块顶板可直接扣孔，因此先按顶面圆环代理表达开孔位置与孔径。"
+        }
+      ],
+      "sump_pits": [
+        {
+          "pit_id": "upper_left_sump_pit_1",
+          "center": [800.0, 8100.0, -1750.0],
+          "size_mm": [1600.0, 1600.0, 1300.0],
+          "top_elevation_mm": -1100.0,
+          "bottom_elevation_mm": -2400.0,
+          "wall_thickness_mm": 300.0,
+          "bottom_thickness_mm": 300.0,
+          "anchor_rule": "flush_inner_bottom_edge_to_partition_wall_top_edge",
+          "host_zone_id": "upper_deep_basin_zone",
+          "shared_edges": [],
+          "basis": "按最新人工校核，集水坑内净边长应为 1000，不含四周 300 壁厚，因此外轮廓保持 1600x1600。左侧壁厚继续压在蓄水池左侧 300 厚池壁下方，左外边保持落到 x=0。另按“集水坑下边壁厚也应在分隔板壁厚下面”处理，将坑体整体下移 300，使外轮廓下边落到 y=7300，而坑口内边下边仍对应 y=7600，与分隔板上边贴合，因此中心修正为 (800, 8100)。其底部外壁标高仍为 -2.400，底板厚 300，因此坑底内表面标高为 -2.100；所在上部深池区池底内表面标高为 -1.100，据此坑体外高取 1300。"
+        }
+      ],
+      "basin_internal_cells": [
+        {
+          "cell_id": "basin_cell_1",
+          "center": [2450.0, 3600.0, 750.0],
+          "size_mm": [4200.0, 4200.0, 1500.0],
+          "wall_thickness_mm": 300.0,
+          "bottom_thickness_mm": 300.0,
+          "draw_in_equipment_model": false,
+          "top_elevation_mm": 1500.0,
+          "bottom_elevation_mm": 0.0,
+          "basis": "该 4200x4200 方盒子位置本轮改作为冷却塔/预留塔位锚点，不再单独绘制内部方盒子；左起第一格对应预留塔位。"
+        },
+        {
+          "cell_id": "basin_cell_2",
+          "center": [6650.0, 3600.0, 750.0],
+          "size_mm": [4200.0, 4200.0, 1500.0],
+          "wall_thickness_mm": 300.0,
+          "bottom_thickness_mm": 300.0,
+          "draw_in_equipment_model": false,
+          "top_elevation_mm": 1500.0,
+          "bottom_elevation_mm": 0.0,
+          "basis": "该 4200x4200 方盒子位置本轮改作为冷却塔塔位锚点，不再单独绘制内部方盒子；对应 CT-0203。"
+        },
+        {
+          "cell_id": "basin_cell_3",
+          "center": [10850.0, 3600.0, 750.0],
+          "size_mm": [4200.0, 4200.0, 1500.0],
+          "wall_thickness_mm": 300.0,
+          "bottom_thickness_mm": 300.0,
+          "draw_in_equipment_model": false,
+          "top_elevation_mm": 1500.0,
+          "bottom_elevation_mm": 0.0,
+          "basis": "该 4200x4200 方盒子位置本轮改作为冷却塔塔位锚点，不再单独绘制内部方盒子；对应 CT-0202。"
+        },
+        {
+          "cell_id": "basin_cell_4",
+          "center": [15050.0, 3600.0, 750.0],
+          "size_mm": [4200.0, 4200.0, 1500.0],
+          "wall_thickness_mm": 300.0,
+          "bottom_thickness_mm": 300.0,
+          "draw_in_equipment_model": false,
+          "top_elevation_mm": 1500.0,
+          "bottom_elevation_mm": 0.0,
+          "basis": "该 4200x4200 方盒子位置本轮改作为冷却塔塔位锚点，不再单独绘制内部方盒子；对应 CT-0201。"
+        }
+      ]
+    },
+    "equipment_centers": {
+      "cooling_towers": [
+        {"tag": "CT-0203", "center": [6350.0, 3600.0, 3300.0], "basis": "按最新人工约束统一修正冷却塔阵列：为满足最右侧实线冷却塔 CT-0201 外轮廓右边距蓄水池右内壁 350，三台实塔整体向左平移 300，CT-0203 中心同步改为 x=6350，以保持 4200 节距不重叠。"},
+        {"tag": "CT-0202", "center": [10550.0, 3600.0, 3300.0], "basis": "按最新人工约束统一修正冷却塔阵列：三台实塔整体向左平移 300，CT-0202 中心同步改为 x=10550，以保持 4200 节距不重叠。"},
+        {"tag": "CT-0201", "center": [14750.0, 3600.0, 3300.0], "basis": "按最新人工约束统一修正冷却塔阵列：最右侧实线冷却塔 CT-0201 外轮廓右边距离蓄水池右侧内壁 350，因此以右内壁 x=17200 反算其中心 x=14750，并带动三台实塔整体左移。"}
+      ],
+      "cooling_tower_template": {
+        "kind": "逆流式玻璃钢冷却塔",
+        "model": "DFDNP-300",
+        "actual_count": 3,
+        "reserve_count": 1,
+        "plan_bay_size_mm": [4200.0, 4200.0],
+        "body_plan_size_mm": [4200.0, 4200.0],
+        "louver_band_size_mm": [4200.0, 4200.0],
+        "top_cap_size_mm": [4200.0, 4200.0],
+        "base_elevation_mm": 1500.0,
+        "lower_body_height_mm": 650.0,
+        "louver_band_height_mm": 980.0,
+        "upper_body_height_mm": 1450.0,
+        "top_cap_height_mm": 120.0,
+        "fan_cowl_diameter_mm": 2200.0,
+        "fan_cowl_height_mm": 180.0,
+        "fan_vent_diameter_mm": 220.0,
+        "fan_vent_height_mm": 120.0,
+        "louver_slat_count": 5,
+        "louver_slat_thickness_mm": 35.0,
+        "upper_panel_rib_count": 6,
+        "upper_panel_rib_thickness_mm": 35.0,
+        "plan_basis": "P5 俯视图显示四个连续 4200x4200 方盒子，其中左起第一格为虚线预留位，右侧三格为实线真实冷却塔；当前以 CT-0201 右侧外轮廓距池体右内壁 350 为控制条件，三台实塔整体向左平移 300，并保持三台之间 4200 的中心节距，塔体俯视长宽均取 4200。",
+        "front_basis": "P6 的 A-A 主视显示逆流式玻璃钢冷却塔塔底落在 +1.500 平台上，立面由较矮底座、较高百叶带、较高上塔身、薄顶帽和居中的小型顶部风机罩组成；本轮按用户要求保持塔体上下等宽，并补加百叶横向分带与上塔身竖向分格。"
+      },
+      "reserved_cooling_tower_slot": {
+        "center": [2450.0, 3600.0, 3300.0],
+        "plan_bay_size_mm": [4200.0, 4200.0],
+        "status": "reserved_not_drawn",
+        "basis": "P2 流程图和 P5 俯视图均显示左起第一格为虚线预留塔位，本轮设备图不绘制。"
+      },
+      "pump_foundation_template": {
+        "plan_size_mm": [1900.0, 1000.0],
+        "height_mm": 700.0,
+        "top_elevation_mm": 150.0,
+        "bottom_elevation_mm": -550.0,
+        "orientation": "length_along_x",
+        "preformed_holes": {
+          "count": 6,
+          "opening_plan_size_mm": [130.0, 130.0],
+          "opening_depth_mm": 500.0,
+          "column_center_x_from_left_mm": [300.0, 905.0, 1510.0],
+          "row_center_y_from_bottom_mm": [220.0, 780.0],
+          "layout_basis": "根据 P3 右侧泵基础平面图读取：长度方向中心链 300/605/605/390，总长 1900；宽度方向中心链 220/560/220，总宽 1000；平面图可直接确认 6 个预留洞的孔口长宽为 130x130 和孔位阵列。",
+          "depth_basis": "根据 P3 右侧泵基础剖面图读取：预留洞自基础顶面向下 500。"
+        },
+        "hole_layout_note": "P3 右侧基础平面图可读 6 个预留孔；长度方向尺寸链为 300/605/605/390，总长 1900；宽度方向为 220/560/220，总宽 1000。",
+        "section_note": "P3 右侧基础剖面图可确认基础顶标高 +0.150；本轮人工测量补充基础底标高为 -0.550，因此基础总高为 700；预留洞深 500。",
+        "basis": "P3 页右侧 P-0201~04 泵基础平面图与剖面图。"
+      },
+      "pump_layout_reference": {
+        "reference_side": "basin_top",
+        "clear_distance_mm": 1850.0,
+        "clear_spacing_mm": 1400.0,
+        "order_from_right": ["P-0201", "P-0202", "P-0203", "P-0204"],
+        "rightmost_pump_right_face_aligns_with_basin_inner_wall": true,
+        "basis": "P3 设备平面布置图右侧竖向尺寸链显示泵基础位于蓄水池上方，并与池顶之间保留 1850 净距；本轮人工复核再追加约束：最右侧 P-0201 的最右边与蓄水池右侧内壁对齐。"
+      },
+      "pumps": [
+        {"tag": "P-0201", "center": [16250.0, 12350.0, -200.0], "size_mm": [1900.0, 1000.0, 700.0], "top_elevation_mm": 150.0, "bottom_elevation_mm": -550.0, "basis": "最右侧泵基础；按本轮约束使其最右侧与蓄水池右侧内壁 x=17200 对齐，因此中心位于 16250；顶标高 +0.150，底标高 -0.550。"},
+        {"tag": "P-0202", "center": [12950.0, 12350.0, -200.0], "size_mm": [1900.0, 1000.0, 700.0], "top_elevation_mm": 150.0, "bottom_elevation_mm": -550.0, "basis": "从右往左第二台泵基础；在 P-0201 左侧按 1400 净间隔布置；顶标高 +0.150，底标高 -0.550。"},
+        {"tag": "P-0203", "center": [9650.0, 12350.0, -200.0], "size_mm": [1900.0, 1000.0, 700.0], "top_elevation_mm": 150.0, "bottom_elevation_mm": -550.0, "basis": "从右往左第三台泵基础；在 P-0202 左侧按 1400 净间隔布置；顶标高 +0.150，底标高 -0.550。"},
+        {"tag": "P-0204", "center": [6350.0, 12350.0, -200.0], "size_mm": [1900.0, 1000.0, 700.0], "top_elevation_mm": 150.0, "bottom_elevation_mm": -550.0, "basis": "从右往左第四台泵基础；在 P-0203 左侧按 1400 净间隔布置；顶标高 +0.150，底标高 -0.550。"}
+      ],
+      "vertical_inline_pump_template": {
+        "enabled": true,
+        "style": "vertical_inline",
+        "reference_model": "ISG300-250A / user photo proxy",
+        "place_by_aa_item_25_26": true,
+        "flow_axis": "y",
+        "face_to_face_mm": 1000.0,
+        "item_25_pump_face_y_mm": 11850.0,
+        "item_25_pump_face_elevation_mm": 535.0,
+        "item_26_pump_face_y_mm": 12850.0,
+        "item_26_pump_face_elevation_mm": 510.0,
+        "port_center_elevation_mm": 522.5,
+        "include_base_plate": false,
+        "include_reducers": false,
+        "include_stubs": false,
+        "suction_dn": 250,
+        "discharge_dn": 150,
+        "basis": "泵口直接贴合 A-A 既有件25/26 的泵侧端面，不改剖面骨架、不重画异径管。件25：DN300x250，大端11550/小端11850，泵侧为小端 DN250 @ y=11850、z=+0.535。件26：DN250x150，按现绘法大端13100/小端12850（axis=-y），泵侧为小端 DN150 @ y=12850、z=+0.510。泵中心 y=12350，面距1000；平面 x 取各 A-A 组 upper_anchor_x（与25/26共线），不以泵基础中心替代。"
+      },
+      "auxiliary_equipments": [
+        {
+          "tag": "Y-0202",
+          "center_xy": [-3350.0, 5850.0],
+          "bottom_y_mm": 4500.0,
+          "top_y_mm": 7200.0,
+          "plan_size_mm": [2700.0, 2700.0],
+          "proxy_height_mm": 200.0,
+          "top_elevation_mm": 200.0,
+          "bottom_elevation_mm": 0.0,
+          "show_label": false,
+          "left_attachment": {
+            "render_mode": "hollow",
+            "length_mm": 550.0,
+            "width_mm": 1750.0,
+            "wall_thickness_mm": 40.0,
+            "center_offset_y_mm": 0.0,
+            "separator_count": 2,
+            "separator_thickness_mm": 40.0
+          },
+          "label_height_mm": 380.0,
+          "basis": "按用户本轮最新校正执行：Y-0202 与蓄水池隔板下侧在一条直线上。当前设备图基准中隔板下侧为 y=7200，因此将 Y-0202 顶边取 y=7200；结合其平面外廓高度 2700，可得底边 y=4500、中心 y=5850。其右边距蓄水池左外壁 2000，平面外廓尺寸为 2700x2700。三维标高按用户最新要求统一修正为底部标高 0.000、顶部标高 +0.200，因此代理高度改为 200。另按本轮源图复核，在 Y-0202 左侧补一段向左伸出的窄矩形附属段，并以两道横向分隔线分为三格；当前按图形比例以 550 外伸、1750 竖向展开作为设备图代理表达，同时删除设备编号文字。"
+        },
+        {
+          "tag": "TK-0202",
+          "name": "Y-0202顶部接管罐",
+          "shape": "vertical_cylinder",
+          "related_equipment_tag": "Y-0202",
+          "center_xy": [-4300.0, 5850.0],
+          "outer_diameter_mm": 1110.0,
+          "wall_thickness_mm": 10.0,
+          "height_mm": 5000.0,
+          "bottom_elevation_mm": 200.0,
+          "top_elevation_mm": 5200.0,
+          "proxy_height_mm": 5000.0,
+          "plan_size_mm": [1110.0, 1110.0],
+          "bottom_cap": true,
+          "top_cap": false,
+          "show_label": false,
+          "label_height_mm": 380.0,
+          "nozzle_elevation_mm": 4500.0,
+          "basis": "按用户本轮更正：TK-0202 向左移到与上下 I-I 的 DN150 列位共线，平面中心取 (-4300, 5850)；外径改为上下两根顶部 DN150 横管平面间距 1110（原接入点间距），小于此前 2200。罐体按空心壳表达：壁厚 10、底部实心封底、顶部无盖、中间空心。底标高仍为 +0.200，筒高 5000；上下 I-I 顶部横管继续按外壁射线交点自动回算接入。"
+        },
+        {
+          "tag": "Y-1401",
+          "center_xy": [-2150.0, 2400.0],
+          "bottom_y_mm": 1300.0,
+          "top_y_mm": 3500.0,
+          "plan_size_mm": [1300.0, 2200.0],
+          "proxy_height_mm": 200.0,
+          "top_elevation_mm": 200.0,
+          "bottom_elevation_mm": 0.0,
+          "show_label": false,
+          "label_height_mm": 320.0,
+          "basis": "按用户本轮最新校正执行：Y-1401 距蓄水池下侧内壁 1000。当前设备图基准中蓄水池下侧内壁为 y=300，因此 Y-1401 底边取 y=1300；结合其平面外廓高度 2200，可得顶边 y=3500、中心 y=2400。其右边距蓄水池左外壁 1500，平面宽度 1300、高度 2200。三维标高按用户最新要求统一修正为底部标高 0.000、顶部标高 +0.200，因此代理高度改为 200，并删除设备编号文字。"
+        }
+      ]
+    },
+    "pipeline_layout_v2": {
+      "version_tag": "2026-04-09-reinspect-p4-p5-v2",
+      "basis": "重新读取 page_4 管道平面布置图和 page_5 剖面图后，按“设备布置图锚点 + P4 平面走向 + P5 标高模板”重建 3D 配管输入；后续脚本只读取本字段，不再消费旧的 pipe_runs 假设坐标。",
+      "source_images": [
+        "shared/reinspect_p4_p5_v2/循环水_page_4_3x.png",
+        "shared/reinspect_p4_p5_v2/循环水_page_5_3x.png",
+        "shared/reinspect_p4_p5_v2/sections/p4_pump_band.png",
+        "shared/reinspect_p4_p5_v2/sections/p4_left_dn200.png",
+        "shared/reinspect_p4_p5_v2/sections/p5_AA.png",
+        "shared/reinspect_p4_p5_v2/sections/p5_CC.png",
+        "shared/reinspect_p4_p5_v2/sections/p5_DD.png",
+        "shared/reinspect_p4_p5_v2/sections/p5_EE.png",
+        "shared/reinspect_p4_p5_v2/sections/p5_HH.png",
+        "shared/reinspect_p4_p5_v2/sections/p5_II.png"
+      ],
+      "p4_main_header_constraints_v4": {
+        "basis": "按当前最新复核结果，A-A 相关主管仍保持两根横向主管、长度均为 25000；上边主管中心标高 -1.200，距蓄水池上侧内壁 5000；下边主管中心标高 -1.200，距蓄水池下侧内壁 1000。本轮执行“左侧非剖面管道删除版”：继续保留全部剖面试绘，但不再让左侧设备带及蓄水池左侧的 auxiliary_routes 参与 header-only 出图；同时把蓄水池上方不属于剖面试绘的泵主支管和冷却塔下落支管全部关闭。由于 H-H / I-I 等剖面链仍以顶部主管作为锚点，因此上方主管本体继续保留，不作为‘非剖面支管’删除。按用户本轮最新指令，仅把 DN450 主管最右端收紧到蓄水池右侧内壁左边约 700；DN500 主管继续保持上一轮“右端在蓄水池右外壁左边 2650”的水平定位。俯视图中蓄水池上方那个多余立方体代理同步删除。",
+        "reference_edge": "top_and_bottom_inner_walls",
+        "main_run_length_mm": 25000.0,
+        "keep_only_two_main_headers": true,
+        "delete_all_non_header_pipes": true,
+        "section_preview_sections": [
+          "A-A",
+          "B-B",
+          "C-C",
+          "D-D",
+          "E-E",
+          "F-F",
+          "G-G",
+          "H-H",
+          "I-I"
+        ],
+        "draw_auxiliary_routes_in_header_only_mode": true,
+        "enabled_auxiliary_route_ids": [
+          "left_wall_dn200_lower",
+          "left_side_dn300_main",
+          "left_dn350_to_y0202",
+          "y1401_small_dn20_cluster",
+          "y1401_small_dn15_cluster"
+        ],
+        "draw_pump_branch_routes_in_header_only_mode": false,
+        "enabled_pump_branch_tags": [],
+        "draw_tower_drop_routes_in_header_only_mode": false,
+        "enabled_tower_drop_tags": [],
+        "horizontal_anchor": {
+          "mode": "right_end_offset_from_right_outer_wall",
+          "offset_mm": -2650.0
+        },
+        "upper_header": {
+          "header_id": "upper_header_dn450",
+          "dn": 450,
+          "reference_inner_wall": "top",
+          "center_offset_from_inner_wall_mm": 5000.0,
+          "center_elevation_mm": -1200.0,
+          "horizontal_anchor": {
+            "mode": "right_end_offset_from_right_inner_wall",
+            "offset_mm": 700.0
+          },
+          "status": "draw"
+        },
+        "lower_header": {
+          "header_id": "lower_header_dn500",
+          "dn": 500,
+          "reference_inner_wall": "bottom",
+          "center_offset_from_inner_wall_mm": 1000.0,
+          "center_elevation_mm": -1200.0,
+          "horizontal_anchor": {
+            "mode": "right_end_offset_from_right_outer_wall",
+            "offset_mm": -2650.0
+          },
+          "status": "draw"
+        },
+        "delete_legacy_long_pipe_group": true,
+        "deleted_legacy_route_ids": [
+          "left_wall_dn200_upper",
+          "left_wall_dn200_lower",
+          "legacy_bottom_long_run_proxy"
+        ]
+      },
+      "global_headers": [
+        {
+          "header_id": "upper_header_dn450",
+          "dn": 450,
+          "segments": [
+            {"start": [-8500.0, 14700.0, -1200.0], "end": [16500.0, 14700.0, -1200.0]}
+          ],
+          "basis": "按用户最新更正，上边主管才是位于蓄水池上方的 DN450 主干；长度 25000，y 按蓄水池上侧内壁外偏 5000，z 取 -1.200；水平方向按右端在蓄水池右内壁左边 700 定位。"
+        },
+        {
+          "header_id": "lower_header_dn500",
+          "dn": 500,
+          "segments": [
+            {"start": [-10150.0, -700.0, -1200.0], "end": [14850.0, -700.0, -1200.0]}
+          ],
+          "basis": "按用户最新更正，下边主管保留为位于蓄水池下方的 DN500 主干；长度 25000，y 仍按蓄水池下侧内壁外偏 1000，z 取 -1.200；本轮不移动，继续保持右端在蓄水池右外壁左边 2650 的水平定位。"
+        }
+      ],
+      "section_preview_routes": [
+        {
+          "route_id": "aa_preview_second_embedded_pipe",
+          "section": "A-A",
+          "route_kind": "aa_main_section_slice",
+          "enabled": true,
+          "use_section_route_anchor_x": false,
+          "anchor_reference": "top_wall_dn300_sleeve_4",
+          "anchor_x_mm": 5790.0,
+          "upper_anchor_reference": "top_wall_dn300_sleeve_4",
+          "upper_anchor_x_mm": 5790.0,
+          "base_header_id": "lower_header_dn500",
+          "left_header_id": "lower_header_dn500",
+          "left_header_proxy_dn": 500,
+          "left_header_item_no": 13,
+          "left_branch_dn": 250,
+          "left_valve_item_no": 4,
+          "left_valve_center_elevation_mm": 1200.0,
+          "left_valve_structure_length_mm": 76.0,
+          "left_valve_pn": 10.0,
+          "left_top_horizontal_elevation_mm": 2000.0,
+          "left_top_elbow_item_no": null,
+          "left_top_elbow_rotation_deg": -90.0,
+          "left_top_elbow_rotation_axis": "y",
+          "left_top_elbow_secondary_rotation_deg": 180.0,
+          "left_top_elbow_secondary_rotation_axis": "z",
+          "left_top_horizontal_end_reference": "basin_inner_min_y",
+          "pump_tag": "P-0204",
+          "pump_support_id": "bellmouth_support_proxy_1",
+          "pump_vertical_dn": 300,
+          "pump_vertical_bottom_elevation_mm": 0.0,
+          "pump_vertical_top_elevation_mm": 535.0,
+          "pump_top_elbow_item_no": 19,
+          "pump_top_elbow_rotation_deg": -90.0,
+          "pump_top_elbow_rotation_axis": "y",
+          "pump_top_elbow_secondary_rotation_deg": 180.0,
+          "pump_top_elbow_secondary_rotation_axis": "z",
+          "pump_valve_item_no": 3,
+          "pump_valve_center_offset_from_support_mm": 850.0,
+          "pump_valve_structure_length_mm": 83.0,
+          "pump_valve_pn": 10.0,
+          "pump_reducer_item_no": 25,
+          "pump_reducer_large_dn": 300,
+          "pump_reducer_small_dn": 250,
+          "pump_reducer_length_mm": 300.0,
+          "pump_reducer_large_end_offset_from_pump_left_edge_mm": 450.0,
+          "right_header_id": "lower_header_dn500",
+          "right_header_proxy_dn": 450,
+          "right_header_item_no": 14,
+          "right_branch_dn": 250,
+          "right_valve_item_no": 8,
+          "right_valve_center_offset_from_right_header_mm": 900.0,
+          "right_valve_structure_length_mm": 76.0,
+          "right_valve_pn": 10.0,
+          "right_riser_top_elevation_mm": 510.0,
+          "right_elbow_item_no": 20,
+          "right_elbow_rotation_deg": -90.0,
+          "right_elbow_rotation_axis": "y",
+          "support_item_no": 29,
+          "basis": "按用户当前要求，下部回到 V81、上部回到 V79。对于第一组来说，这两版在该列位上共用 top_wall_dn300_sleeve_4 x=5790，因此当前继续保留 P-0204 上方的 V79 泵链位置，同时保持 V81 的下部列位。"
+        },
+        {
+          "route_id": "aa_preview_third_embedded_plate",
+          "section": "A-A",
+          "route_kind": "aa_main_section_slice",
+          "enabled": true,
+          "use_section_route_anchor_x": false,
+          "anchor_reference": "bottom_embedded_plate_3",
+          "anchor_x_mm": 8450.0,
+          "upper_anchor_reference": "top_wall_dn300_sleeve_3",
+          "upper_anchor_x_mm": 9090.0,
+          "right_return_anchor_reference": "bottom_embedded_plate_3",
+          "right_return_anchor_x_mm": 8450.0,
+          "draw_left_lower_branch": false,
+          "draw_right_lower_branch": true,
+          "draw_right_upper_branch": true,
+          "base_header_id": "lower_header_dn500",
+          "left_header_id": "lower_header_dn500",
+          "left_header_proxy_dn": 500,
+          "left_header_item_no": 13,
+          "left_branch_dn": 250,
+          "left_valve_item_no": 4,
+          "left_valve_center_elevation_mm": 1200.0,
+          "left_valve_structure_length_mm": 76.0,
+          "left_valve_pn": 10.0,
+          "left_top_horizontal_elevation_mm": 2000.0,
+          "left_top_elbow_item_no": null,
+          "left_top_elbow_rotation_deg": -90.0,
+          "left_top_elbow_rotation_axis": "y",
+          "left_top_elbow_secondary_rotation_deg": 180.0,
+          "left_top_elbow_secondary_rotation_axis": "z",
+          "left_top_horizontal_end_reference": "basin_inner_min_y",
+          "pump_tag": "P-0203",
+          "pump_support_id": "bellmouth_support_proxy_1",
+          "pump_vertical_dn": 300,
+          "pump_vertical_bottom_elevation_mm": 0.0,
+          "pump_vertical_top_elevation_mm": 535.0,
+          "pump_top_elbow_item_no": 19,
+          "pump_top_elbow_rotation_deg": -90.0,
+          "pump_top_elbow_rotation_axis": "y",
+          "pump_top_elbow_secondary_rotation_deg": 180.0,
+          "pump_top_elbow_secondary_rotation_axis": "z",
+          "pump_valve_item_no": 3,
+          "pump_valve_center_offset_from_support_mm": 850.0,
+          "pump_valve_structure_length_mm": 83.0,
+          "pump_valve_pn": 10.0,
+          "pump_reducer_item_no": 25,
+          "pump_reducer_large_dn": 300,
+          "pump_reducer_small_dn": 250,
+          "pump_reducer_length_mm": 300.0,
+          "pump_reducer_large_end_offset_from_pump_left_edge_mm": 450.0,
+          "right_header_id": "upper_header_dn450",
+          "right_header_proxy_dn": 450,
+          "right_header_item_no": 14,
+          "right_branch_dn": 250,
+          "right_valve_item_no": 8,
+          "right_valve_center_offset_from_right_header_mm": 900.0,
+          "right_valve_structure_length_mm": 76.0,
+          "right_valve_pn": 10.0,
+          "right_riser_top_elevation_mm": 510.0,
+          "right_elbow_item_no": 20,
+          "right_elbow_rotation_deg": -90.0,
+          "right_elbow_rotation_axis": "y",
+          "support_item_no": 29,
+          "basis": "该组复制 A-A 位于 E-E 剖面所在列位 bottom_embedded_plate_3 x=8450。按用户本轮最新更正，本轮只删除其与 DN500 主干相连的下部部分，但右侧保留链必须真实接回上方 DN450 主管，因此当前左侧下部 DN500 支路继续关闭；右侧则恢复为接向 `upper_header_dn450` 的完整可见连接链，不再只保留上部零件而把 14 号三通和连接管段静默吃掉。"
+        },
+        {
+          "route_id": "aa_preview_fourth_embedded_plate",
+          "section": "A-A",
+          "route_kind": "aa_main_section_slice",
+          "enabled": true,
+          "use_section_route_anchor_x": false,
+          "anchor_reference": "bottom_embedded_plate_2",
+          "anchor_x_mm": 10250.0,
+          "upper_anchor_reference": "top_wall_dn300_sleeve_2",
+          "upper_anchor_x_mm": 12390.0,
+          "right_return_anchor_reference": "bottom_embedded_plate_2",
+          "right_return_anchor_x_mm": 10250.0,
+          "base_header_id": "lower_header_dn500",
+          "left_header_id": "lower_header_dn500",
+          "left_header_proxy_dn": 500,
+          "left_header_item_no": 13,
+          "left_branch_dn": 250,
+          "left_valve_item_no": 4,
+          "left_valve_center_elevation_mm": 1200.0,
+          "left_valve_structure_length_mm": 76.0,
+          "left_valve_pn": 10.0,
+          "left_top_horizontal_elevation_mm": 2000.0,
+          "left_top_elbow_item_no": null,
+          "left_top_elbow_rotation_deg": -90.0,
+          "left_top_elbow_rotation_axis": "y",
+          "left_top_elbow_secondary_rotation_deg": 180.0,
+          "left_top_elbow_secondary_rotation_axis": "z",
+          "left_top_horizontal_end_reference": "basin_inner_min_y",
+          "pump_tag": "P-0202",
+          "pump_support_id": "bellmouth_support_proxy_1",
+          "pump_vertical_dn": 300,
+          "pump_vertical_bottom_elevation_mm": 0.0,
+          "pump_vertical_top_elevation_mm": 535.0,
+          "pump_top_elbow_item_no": 19,
+          "pump_top_elbow_rotation_deg": -90.0,
+          "pump_top_elbow_rotation_axis": "y",
+          "pump_top_elbow_secondary_rotation_deg": 180.0,
+          "pump_top_elbow_secondary_rotation_axis": "z",
+          "pump_valve_item_no": 3,
+          "pump_valve_center_offset_from_support_mm": 850.0,
+          "pump_valve_structure_length_mm": 83.0,
+          "pump_valve_pn": 10.0,
+          "pump_reducer_item_no": 25,
+          "pump_reducer_large_dn": 300,
+          "pump_reducer_small_dn": 250,
+          "pump_reducer_length_mm": 300.0,
+          "pump_reducer_large_end_offset_from_pump_left_edge_mm": 450.0,
+          "right_header_id": "lower_header_dn500",
+          "right_header_proxy_dn": 450,
+          "right_header_item_no": 14,
+          "right_branch_dn": 250,
+          "right_valve_item_no": 8,
+          "right_valve_center_offset_from_right_header_mm": 900.0,
+          "right_valve_structure_length_mm": 76.0,
+          "right_valve_pn": 10.0,
+          "right_riser_top_elevation_mm": 510.0,
+          "right_elbow_item_no": 20,
+          "right_elbow_rotation_deg": -90.0,
+          "right_elbow_rotation_axis": "y",
+          "support_item_no": 29,
+          "basis": "本轮先按 v107 代码基线执行，再按用户当前更正只处理复制出来的另外三组 A-A：上部泵链继续挂回对应防水套管 top_wall_dn300_sleeve_2 x=12390；但右侧 item14 回接三通与其下落立管继续保留在下方 DN500 主干侧原列位 bottom_embedded_plate_2 x=10250，避免出现多余横管或三通支口丢失。"
+        },
+        {
+          "route_id": "aa_preview_fourth_embedded_plate_dn200_plan_drop",
+          "section": "A-A",
+          "route_kind": "aa_dn200_plan_external_connection",
+          "enabled": true,
+          "source_aa_route_id": "aa_preview_fourth_embedded_plate",
+          "source_x_reference": "upper_anchor_x_mm",
+          "connection_x_offset_from_source_anchor_mm": -1400.0,
+          "base_header_id": "upper_header_dn450",
+          "branch_dn": 200,
+          "tee_proxy_run_dn": 450,
+          "turn_up_y_source_node_id": "aa_p0204_valve_3",
+          "top_elevation_mm": 1900.0,
+          "target_y_mm": 9100.0,
+          "through_embedded_plate_id": "top_embedded_plate_1",
+          "target_opening_id": "top_opening_dn300_1",
+          "drop_end_elevation_mm": -1400.0,
+          "draw_fittings": true,
+          "basis": "新增 DN200 外接链按用户本轮最新描述重构为完整串联链：`DN450x200三通 + 横管 + 弯头 + 竖管 + 弯头 + 横管 + 弯头 + 竖管`。当前仍取从左往右第三个 A-A，即 aa_preview_fourth_embedded_plate，并按其上部可见列位 `upper_anchor_x_mm=12390` 左侧 1400 锁定新链固定 x=10990。三通后先沿 y 方向走到 A-A 复制面 3 号蝶阀统一 y=10650，再经第一只弯头上翻；中间竖管一直上翻到池顶控制标高 +1.900；第二只弯头后，顶部横管沿同一 x 列位经过池顶预埋钢板 `top_embedded_plate_1 (10990,9850,1905)`，继续到池顶开孔 `top_opening_dn300_1 (10990,9100,1900)`；最后经第三只弯头下翻，通过池顶开孔一直落到池底内壁。"
+        },
+        {
+          "route_id": "aa_preview_fifth_embedded_plate",
+          "section": "A-A",
+          "route_kind": "aa_main_section_slice",
+          "enabled": true,
+          "use_section_route_anchor_x": false,
+          "anchor_reference": "bottom_embedded_plate_1",
+          "anchor_x_mm": 14200.0,
+          "upper_anchor_reference": "top_wall_dn300_sleeve_1",
+          "upper_anchor_x_mm": 15690.0,
+          "right_return_anchor_reference": "bottom_embedded_plate_1",
+          "right_return_anchor_x_mm": 14200.0,
+          "base_header_id": "lower_header_dn500",
+          "left_header_id": "lower_header_dn500",
+          "left_header_proxy_dn": 500,
+          "left_header_item_no": 13,
+          "left_branch_dn": 250,
+          "left_valve_item_no": 4,
+          "left_valve_center_elevation_mm": 1200.0,
+          "left_valve_structure_length_mm": 76.0,
+          "left_valve_pn": 10.0,
+          "left_top_horizontal_elevation_mm": 2000.0,
+          "left_top_elbow_item_no": null,
+          "left_top_elbow_rotation_deg": -90.0,
+          "left_top_elbow_rotation_axis": "y",
+          "left_top_elbow_secondary_rotation_deg": 180.0,
+          "left_top_elbow_secondary_rotation_axis": "z",
+          "left_top_horizontal_end_reference": "basin_inner_min_y",
+          "pump_tag": "P-0201",
+          "pump_support_id": "bellmouth_support_proxy_1",
+          "pump_vertical_dn": 300,
+          "pump_vertical_bottom_elevation_mm": 0.0,
+          "pump_vertical_top_elevation_mm": 535.0,
+          "pump_top_elbow_item_no": 19,
+          "pump_top_elbow_rotation_deg": -90.0,
+          "pump_top_elbow_rotation_axis": "y",
+          "pump_top_elbow_secondary_rotation_deg": 180.0,
+          "pump_top_elbow_secondary_rotation_axis": "z",
+          "pump_valve_item_no": 3,
+          "pump_valve_center_offset_from_support_mm": 850.0,
+          "pump_valve_structure_length_mm": 83.0,
+          "pump_valve_pn": 10.0,
+          "pump_reducer_item_no": 25,
+          "pump_reducer_large_dn": 300,
+          "pump_reducer_small_dn": 250,
+          "pump_reducer_length_mm": 300.0,
+          "pump_reducer_large_end_offset_from_pump_left_edge_mm": 450.0,
+          "right_header_id": "lower_header_dn500",
+          "right_header_proxy_dn": 450,
+          "right_header_item_no": 14,
+          "right_branch_dn": 250,
+          "right_valve_item_no": 8,
+          "right_valve_center_offset_from_right_header_mm": 900.0,
+          "right_valve_structure_length_mm": 76.0,
+          "right_valve_pn": 10.0,
+          "right_riser_top_elevation_mm": 510.0,
+          "right_elbow_item_no": 20,
+          "right_elbow_rotation_deg": -90.0,
+          "right_elbow_rotation_axis": "y",
+          "support_item_no": 29,
+          "basis": "本轮先按 v107 代码基线执行，再按用户当前更正只处理复制出来的另外三组 A-A：上部泵链继续挂回对应防水套管 top_wall_dn300_sleeve_1 x=15690；但右侧 item14 回接三通与其下落立管继续保留在下方 DN500 主干侧原列位 bottom_embedded_plate_1 x=14200，避免出现多余横管或三通支口丢失。"
+        },
+        {
+          "route_id": "cc_preview_left_wall_dn200",
+          "section": "C-C",
+          "route_kind": "cc_dn200_left_wall_section",
+          "enabled": true,
+          "anchor_reference": "left_wall_dn200_sleeve_1",
+          "anchor_x_mm": 150.0,
+          "base_header_id": "lower_header_dn500",
+          "branch_dn": 200,
+          "wall_center_y_mm": 8700.0,
+          "center_elevation_mm": -700.0,
+          "outside_projection_length_mm": 1350.0,
+          "inside_projection_length_mm": 0.0,
+          "valve_item_no": 9,
+          "valve_pn": 10.0,
+          "valve_structure_length_mm": 550.0,
+          "valve_center_offset_from_wall_mm": 650.0,
+          "valve_offset_from_hh_connection_mm": 1000.0,
+          "outside_start_x_mm": -5650.0,
+          "draw_valve_proxy": true,
+          "sleeve_item_no": 31,
+          "right_projection_length_mm": 300.0,
+          "basis": "按 page_5 C-C 剖面和用户本轮最新更正，C-C 的 9 号阀门左侧需接一根 DN200 管直达左侧沿 y / -y 的共用主管列位；因此当前除保留左墙套管 `left_wall_dn200_sleeve_1`(x=150,y=8700,z=-0.700) 与阀门本体外，还把阀门左端外接起点显式锁到左侧共用列位 x=-5650，不再只保留一个独立的外排短 stub。"
+        },
+        {
+          "route_id": "ff_preview_local_dn150",
+          "section": "F-F",
+          "route_kind": "ff_dn150_local_return_preview",
+          "enabled": true,
+          "use_section_route_anchor_x": false,
+          "anchor_reference": "left_embedded_plate_1",
+          "anchor_x_mm": 150.0,
+          "base_header_id": "lower_header_dn500",
+          "branch_dn": 150,
+          "left_vertical_y_mm": 6400.0,
+          "return_span_mm": 600.0,
+          "top_horizontal_length_mm": 300.0,
+          "top_horizontal_center_x_mm": 150.0,
+          "bottom_elevation_mm": -600.0,
+          "top_elevation_mm": 2150.0,
+          "return_drop_bottom_elevation_mm": 1500.0,
+          "left_stub_length_mm": 0.0,
+          "tee_item_no": 18,
+          "elbow_item_no": 22,
+          "draw_fittings": true,
+          "basis": "按用户最新更正，F-F 位于蓄水池左壁第一块预埋钢板对应列位。此前之所以一直改不对，根因是 shared 里把左壁第一/第二块预埋钢板的编号方向写反了，导致 F-F 被错误挂到 y=1300 的下侧带；当前已把左壁“第一块”恢复为上侧 `left_embedded_plate_1`，并将 F-F 剖切列位改到该钢板所在带 y=6400。顶部 DN150 横管继续要求经过该钢板中心 x=150，且可见横直段长度保持 300。用户本轮进一步要求删除三通旁的小短管，因此 `18` 号三通左侧不再保留外露 stub。后续凡是 F-F 剖面位置随这次列位修正而变化，与其相连的平面外接 DN150 管链也必须同步回算，不允许只移动剖面本体。"
+        },
+        {
+          "route_id": "dd_preview_p0204_left_dn200_branch",
+          "section": "D-D",
+          "route_kind": "dd_dn200_turn_preview",
+          "enabled": true,
+          "anchor_reference": "top_wall_dn200_sleeve_1",
+          "anchor_x_mm": 1300.0,
+          "base_header_id": "lower_header_dn500",
+          "pump_tag": "P-0204",
+          "branch_dn": 200,
+          "bottom_elevation_mm": 400.0,
+          "top_elevation_mm": 1650.0,
+          "vertical_direction": "down",
+          "horizontal_elevation_mm": 400.0,
+          "riser_start_elevation_mm": 1650.0,
+          "horizontal_offset_length_mm": 650.0,
+          "sleeve_offset_from_upper_elbow_mm": 650.0,
+          "elbow_corner_distance_mm": 1650.0,
+          "equipment_short_connect_length_mm": 1000.0,
+          "draw_visible_equipment_stub": false,
+          "horizontal_pass_through_reference": "top_wall_dn200_sleeve_1",
+          "horizontal_pass_through_y_mm": 9850.0,
+          "draw_fittings": true,
+          "upper_elbow_item_no": 21,
+          "upper_elbow_rotation_deg": -90.0,
+          "upper_elbow_rotation_axis": "x",
+          "upper_elbow_secondary_rotation_deg": -90.0,
+          "upper_elbow_secondary_rotation_axis": "z",
+          "lower_elbow_item_no": 21,
+          "lower_elbow_rotation_deg": -90.0,
+          "lower_elbow_rotation_axis": "y",
+          "lower_elbow_secondary_rotation_deg": 0.0,
+          "lower_elbow_secondary_rotation_axis": "x",
+          "orifice_item_no": 28,
+          "sleeve_item_no": 31,
+          "basis": "按本轮根据 D-D 局部图重新识读的结果，P-0204 左侧 DN200 典型支路改由从左往右第一个 DN200 防水套管 top_wall_dn200_sleeve_1 驱动：x 锚点锁定 1300，DN200 横管必须经过该套管中心线 y=9850。该局部骨架应按“上部 DN200 立管(+1.650 下落到 +0.400) -> 第一只21号弯头 -> 经套管控制的横管 -> 第二只21号弯头”执行，其中两只弯头理论转角点间距固定为 1650，右侧可见短接不再单独落图；本轮不再把顶部 DN450 三通约束绑到 D-D。"
+        },
+        {
+          "route_id": "ee_preview_third_sleeve",
+          "section": "E-E",
+          "enabled": true,
+          "branch_dn": 250,
+          "anchor_reference": "bottom_embedded_plate_3",
+          "anchor_x_mm": 8450.0,
+          "base_header_id": "lower_header_dn500",
+          "inner_wall_side": "bottom",
+          "top_horizontal_elevation_mm": 2200.0,
+          "right_vertical_bottom_elevation_mm": 1900.0,
+          "right_vertical_center_offset_from_inner_wall_mm": 500.0,
+          "top_horizontal_over_anchor_reference": "bottom_embedded_plate_3",
+          "top_horizontal_over_anchor_basis": "E-E 剖面位于从左到右第三个预埋钢板正上方，这表明顶部 DN250 横管在平面上应与第三个预埋钢板中线重合，因此 x 锚点改锁定到 bottom_embedded_plate_3。",
+          "draw_fittings": true,
+          "tee_proxy_run_dn": 450,
+          "tee_branch_center_to_end_mm": 308.0,
+          "valve_item_no": 4,
+          "valve_center_elevation_mm": 1200.0,
+          "valve_structure_length_mm": 76.0,
+          "valve_pn": 10.0,
+          "fitting_item_no": 13,
+          "fitting_specification": "DN500x250",
+          "elbow_item_no": 20,
+          "left_elbow_connection_trim_mm": 409.5,
+          "right_elbow_connection_trim_mm": null,
+          "right_elbow_type": "SR",
+          "left_elbow_rotation_deg": -90.0,
+          "left_elbow_rotation_axis": "y",
+          "left_elbow_secondary_rotation_deg": 180.0,
+          "left_elbow_secondary_rotation_axis": "z",
+          "right_elbow_rotation_deg": -90.0,
+          "right_elbow_rotation_axis": "y",
+          "right_elbow_center_drop_mm": 0.0,
+          "basis": "按当前 E-E 剖面截图恢复完整回弯链：保留左侧 DN250 上翻弯头、顶部横管、右侧 20 号弯头和右侧回落短管。顶部 DN250 横管的 x 锚点锁定在第三个预埋钢板 bottom_embedded_plate_3 x=8450 正上方；右侧回落短管继续执行“中心距蓄水池下侧内壁 500、底标高 +1.900”。当‘保留 v34 主体位置’与‘右侧弯头-短竖管精确连接且零重叠’冲突时，本轮按用户确认优先保留精确连接，因此允许右侧弯头与顶部横段一起调整，并将右侧弯头按更紧凑的标准件类型单独执行。 "
+        },
+        {
+          "route_id": "gg_preview_first_embedded_pipe",
+          "section": "G-G",
+          "route_kind": "gg_dn100_local_loop",
+          "enabled": true,
+          "anchor_reference": "bottom_embedded_plate_5",
+          "anchor_x_mm": 2750.0,
+          "base_header_id": "lower_header_dn500",
+          "right_riser_dn": 250,
+          "branch_dn": 100,
+          "header_circle_elevation_mm": -1200.0,
+          "top_horizontal_elevation_mm": 1000.0,
+          "bottom_horizontal_elevation_mm": -650.0,
+          "left_vertical_center_offset_from_right_riser_mm": 1000.0,
+          "bottom_stub_length_mm": 500.0,
+          "draw_bottom_stub": false,
+          "plan_external_outlet_length_mm": 8400.0,
+          "plan_external_second_elbow_offset_from_base_header_mm": 1500.0,
+          "draw_fittings": true,
+          "header_tee_item_no": 13,
+          "header_tee_proxy_run_dn": 450,
+          "header_tee_branch_center_to_end_mm": 308.0,
+          "header_tee_specification": "DN500x250",
+          "riser_tee_item_no": 17,
+          "riser_tee_run_dn": 250,
+          "riser_tee_branch_dn": 100,
+          "valve_item_no": 7,
+          "valve_center_offset_from_right_riser_mm": 500.0,
+          "valve_structure_length_mm": 56.0,
+          "valve_pn": 10.0,
+          "elbow_item_no": 24,
+          "top_elbow_rotation_deg": -90.0,
+          "top_elbow_rotation_axis": "y",
+          "top_elbow_secondary_rotation_deg": 180.0,
+          "top_elbow_secondary_rotation_axis": "z",
+          "bottom_elbow_rotation_deg": 90.0,
+          "bottom_elbow_rotation_axis": "y",
+          "bottom_elbow_secondary_rotation_deg": 0.0,
+          "bottom_elbow_secondary_rotation_axis": "x",
+          "basis": "按当前 G-G 剖面与局部平面裁图复核，这组局部典型应挂到从左到右第一个预埋钢板正上方，对应 shared 锚点 bottom_embedded_plate_5 x=2750。底部圆按 DN450 主管截面、标高 -1.200 记录；右侧 DN250 立管通过 13 号异径三通接主管，在标高 +1.000 处通过 17 号 DN250x100 异径三通接出上方 DN100 横管。左侧 DN100 立管中心距右侧 DN250 立管 1000，下端在 -0.650 处通过 24 号弯头转出。根据用户本轮最新更正，这只底部弯头的后续管道应沿 -X 一直延伸到左侧沿 y / -y 的共用主管列位 x=-5650，不再只保留一小段 500 的短外接。"
+        },
+        {
+          "route_id": "bb_preview_local_dn100",
+          "section": "B-B",
+          "route_kind": "bb_dn100_bottom_elbow_preview",
+          "enabled": true,
+          "anchor_reference": "left_embedded_plate_2",
+          "anchor_x_mm": -400.0,
+          "base_header_id": "lower_header_dn500",
+          "branch_dn": 100,
+          "section_plane_y_mm": 1300.0,
+          "top_elevation_mm": 2050.0,
+          "bottom_elevation_mm": -500.0,
+          "top_horizontal_elevation_mm": 2050.0,
+          "top_horizontal_length_mm": 420.0,
+          "valve_chain_gap_mm": 60.0,
+          "right_elbow_connection_trim_mm": null,
+          "right_drop_bottom_elevation_mm": 1800.0,
+          "valve_2_connection_type": "flanged",
+          "plan_external_target_offset_from_base_header_mm": 4000.0,
+          "valve_7_pn": 10.0,
+          "valve_2_pn": 10.0,
+          "draw_fittings": true,
+          "elbow_item_no": 24,
+          "basis": "按用户最新更正，B-B 位于蓄水池左壁第二个预埋钢板对应列位，且左侧 DN100 立管在该预埋钢板左侧 700 处。此前之所以与 F-F 一直呈现“位置反了”，根因是 shared 里把左壁第一/第二块预埋钢板的编号方向写反了；当前已把 B-B 改回左壁“第二块” `left_embedded_plate_2` 所在的下侧带 y=1300。该 700 仍按左内壁 x=300 回算，因此 B-B 主立管列位保持 x=-400。图中 700 不解释为顶部横段长度；若当前顶部短链放不下 7 号蝶阀、2 号球阀和右端短下翻，则必须优先外移右侧弯头、增加顶部短链有效长度，而不是退回只画一根横管。2 号球阀恢复按法兰球阀表达；阀件区最小净空按 `56 + 300 + 3*60` 处理。回到整体后，B-B 左侧 DN100 立管底部还需通过弯头沿 -Y 接出 DN100 横管，终点取下方 DN500 主管所在 y=-700 再向下 4000 的 y=-4700。"
+        },
+        {
+          "route_id": "hh_preview_left_tower_drop",
+          "section": "H-H",
+          "route_kind": "hh_dn125_tower_drop_preview",
+          "enabled": true,
+          "use_section_route_anchor_x": false,
+          "anchor_reference": "Y-0202",
+          "anchor_x_mm": -1700.0,
+          "base_header_id": "upper_header_dn450",
+          "drop_leg_y_mm": 5850.0,
+          "branch_dn": 125,
+          "top_elevation_mm": 5000.0,
+          "bottom_elevation_mm": -900.0,
+          "top_branch_length_mm": 500.0,
+          "header_drop_length_mm": 300.0,
+          "lower_outlet_length_mm": 300.0,
+          "header_tee_proxy_run_dn": 450,
+          "header_branch_item_no": 16,
+          "valve_item_no": 6,
+          "valve_center_elevation_mm": 1200.0,
+          "valve_structure_length_mm": 64.0,
+          "valve_pn": 10.0,
+          "elbow_item_no": 23,
+          "draw_fittings": true,
+          "basis": "按用户最新更正，H-H 本身仍对应 Y-0202 正方形右壁中间处，但总图落位时需略向右外移，避免 DN125 竖管与长方形设备代理重叠；当前将可见 H-H 竖管列位取为 x=-1700，设备中线 y=5850。连接关系收紧为：Y-0202 右侧下部横管从设备右壁接到右端 23 号弯头，再沿 H-H 竖管上行，并在 +1.200 处插入 6 号 DN125 蝶阀；接向 DN450 主管的长连管由 `y0202_upper_dn125_drop` 单独保留其水平接主管段，不再重复绘制同一根长竖向链。标高仍按局部图执行：顶部 +5.000、底部 -0.900。"
+        },
+        {
+          "route_id": "ii_preview_local_dn150",
+          "section": "I-I",
+          "route_kind": "ii_dn150_local_drop_preview",
+          "enabled": true,
+          "use_section_route_anchor_x": false,
+          "anchor_reference": "Y-0202",
+          "anchor_x_mm": -4300.0,
+          "base_header_id": "upper_header_dn450",
+          "branch_dn": 150,
+          "drop_leg_y_mm": 4200.0,
+          "top_elevation_mm": 4500.0,
+          "bottom_elevation_mm": -600.0,
+          "top_branch_length_mm": 500.0,
+          "top_branch_target_equipment_tag": "TK-0202",
+          "top_branch_connect_mode": "tank_shell",
+          "lower_outlet_length_mm": 250.0,
+          "header_tee_proxy_run_dn": 450,
+          "header_branch_item_no": 26,
+          "elbow_item_no": 22,
+          "draw_fittings": true,
+          "basis": "按用户最新更正，I-I 位于 Y-0202 长方形左侧 400、下侧 300 的位置。结合当前设备外廓，Y-0202 左边界为 x=-4700、下边界为 y=4500，因此 I-I 当前取 x=-4300、y=4200。本轮罐体 TK-0202 已左移到同一 DN150 列位，外径按上下顶部横管间距取 1110，空心壳+实心底+无顶盖；上下 I-I 顶部 DN150 横管在 +4.500 自动接到该罐外壁，底部短接与接 F-F 的平面外接链保持不变。"
+        }
+      ],
+      "pump_branch_routes": [
+        {
+          "pump_tag": "P-0204",
+          "upper_branch_dn": 250,
+          "upper_segments": [
+            {"start": [6350.0, 14550.0, 5000.0], "end": [6350.0, 12850.0, 5000.0]},
+            {"start": [6350.0, 12850.0, 5000.0], "end": [6350.0, 12850.0, 1900.0]}
+          ],
+          "lower_branch_dn": 300,
+          "lower_segments": [
+            {"start": [6350.0, 11850.0, 535.0], "end": [6350.0, 11850.0, 0.0]},
+            {"start": [6350.0, 11850.0, 0.0], "end": [6350.0, 10150.0, 0.0]}
+          ],
+          "basis": "P4 显示 P-0204 与上方 DN450 主管、下方 DN500 主管之间分别有一根 DN250 和一根 DN300 主支管；上支管按泵顶边上方约 1700 的平面距离取 y=14550，泵体上接点取 y=12850；下支管按泵体下接点 y=11850 接到底部 DN500 主管。P5 A-A、D-D 提供泵侧 +1.900 与套管/短接 +0.535 的典型高程。"
+        },
+        {
+          "pump_tag": "P-0203",
+          "upper_anchor_reference": "top_wall_dn300_sleeve_3",
+          "upper_anchor_x_mm": 9090.0,
+          "upper_branch_dn": 250,
+          "upper_segments": [
+            {"start": [9650.0, 14550.0, 5000.0], "end": [9650.0, 12850.0, 5000.0]},
+            {"start": [9650.0, 12850.0, 5000.0], "end": [9650.0, 12850.0, 1900.0]}
+          ],
+          "lower_branch_dn": 300,
+          "lower_segments": [
+            {"start": [9650.0, 11850.0, 535.0], "end": [9650.0, 11850.0, 0.0]},
+            {"start": [9650.0, 11850.0, 0.0], "end": [9650.0, 10150.0, 0.0]}
+          ],
+          "basis": "A-A 复制组 1 的上部 DN450 接主管点改与 top_wall_dn300_sleeve_3 x=9090 共线；下部 DN300 仍保留 P-0203 泵基础中心链。"
+        },
+        {
+          "pump_tag": "P-0202",
+          "upper_anchor_reference": "top_wall_dn300_sleeve_2",
+          "upper_anchor_x_mm": 12390.0,
+          "upper_branch_dn": 250,
+          "upper_segments": [
+            {"start": [12950.0, 14550.0, 5000.0], "end": [12950.0, 12850.0, 5000.0]},
+            {"start": [12950.0, 12850.0, 5000.0], "end": [12950.0, 12850.0, 1900.0]}
+          ],
+          "lower_branch_dn": 300,
+          "lower_segments": [
+            {"start": [12950.0, 11850.0, 535.0], "end": [12950.0, 11850.0, 0.0]},
+            {"start": [12950.0, 11850.0, 0.0], "end": [12950.0, 10150.0, 0.0]}
+          ],
+          "basis": "A-A 复制组 2 的上部 DN450 接主管点改与 top_wall_dn300_sleeve_2 x=12390 共线；下部 DN300 仍保留 P-0202 泵基础中心链。"
+        },
+        {
+          "pump_tag": "P-0201",
+          "upper_anchor_reference": "top_wall_dn300_sleeve_1",
+          "upper_anchor_x_mm": 15690.0,
+          "upper_branch_dn": 250,
+          "upper_segments": [
+            {"start": [16250.0, 14550.0, 5000.0], "end": [16250.0, 12850.0, 5000.0]},
+            {"start": [16250.0, 12850.0, 5000.0], "end": [16250.0, 12850.0, 1900.0]}
+          ],
+          "lower_branch_dn": 300,
+          "lower_segments": [
+            {"start": [16250.0, 11850.0, 535.0], "end": [16250.0, 11850.0, 0.0]},
+            {"start": [16250.0, 11850.0, 0.0], "end": [16250.0, 10150.0, 0.0]}
+          ],
+          "basis": "A-A 复制组 3 的上部 DN450 接主管点改与 top_wall_dn300_sleeve_1 x=15690 共线；下部 DN300 仍保留 P-0201 泵基础中心链。"
+        }
+      ],
+      "tower_drop_routes": [
+        {
+          "tower_tag": "CT-0203",
+          "dn": 125,
+          "segments": [
+            {"start": [6350.0, 14550.0, 5000.0], "end": [6350.0, 14550.0, 3200.0]},
+            {"start": [6350.0, 14550.0, 3200.0], "end": [6350.0, 6800.0, 3200.0]}
+          ],
+          "basis": "左侧冷却塔按 H-H 典型剖面采用 DN125；顶部主管标高 +5.000，下落后接塔段按原设备图塔口代理高度 3200 表达。"
+        },
+        {
+          "tower_tag": "CT-0202",
+          "dn": 125,
+          "segments": [
+            {"start": [10550.0, 14550.0, 5000.0], "end": [10550.0, 14550.0, 3200.0]},
+            {"start": [10550.0, 14550.0, 3200.0], "end": [10550.0, 6800.0, 3200.0]}
+          ],
+          "basis": "左中塔按 H-H 典型剖面采用 DN125。"
+        },
+        {
+          "tower_tag": "CT-0201",
+          "dn": 150,
+          "segments": [
+            {"start": [14750.0, 14550.0, 4500.0], "end": [14750.0, 14550.0, 3200.0]},
+            {"start": [14750.0, 14550.0, 3200.0], "end": [14750.0, 6800.0, 3200.0]}
+          ],
+          "basis": "右侧冷却塔按 I-I 典型剖面采用 DN150；该支路顶部高程取 +4.500。"
+        }
+      ],
+      "auxiliary_routes": [
+        {
+          "route_id": "left_wall_dn200_upper",
+          "dn": 200,
+          "use_direct_segments": true,
+          "segments": [
+            {"start": [-5650.0, 11650.0, -710.0], "end": [150.0, 11650.0, -710.0]},
+            {"start": [-5650.0, 11650.0, -710.0], "end": [-5650.0, 10950.0, -710.0]}
+          ],
+          "basis": "按用户本轮最新更正，左侧这组沿 y / -y 的管线与 Y-0202 左侧 DN350 短管在平面上应做到零间距，因此把上部 DN200 的左侧竖向链列位统一收紧到 DN350 左端同一列位 x=-5650；同时保留其右端接向左墙穿墙区的水平段。"
+        },
+        {
+          "route_id": "left_wall_dn200_lower",
+          "dn": 200,
+          "use_direct_segments": true,
+          "segments": [
+            {"start": [-5650.0, 10950.0, -720.0], "end": [1300.0, 10950.0, -720.0]},
+            {"start": [-5650.0, 10950.0, -720.0], "end": [-5650.0, 5850.0, -720.0]}
+          ],
+          "basis": "按用户本轮最新更正，C-C 上方那条上层 DN200 横管与其配套竖段属于多余线，本轮仅保留下方这条 DN200；它继续与左侧沿 y / -y 的共用列位 x=-5650 保持同线，并将右端由原左墙穿墙区继续延长到 D-D 剖面旁的 DN200 套管列位 x=1300。同时，针对 Y-0202 左侧 DN350 短接旁的长管，当前把这根 DN200 竖向段继续下延到 DN350 中心线 y=5850，使该共线长管自该中心线以上部分统一按 DN200 表达。"
+        },
+        {
+          "route_id": "left_side_dn300_main",
+          "dn": 300,
+          "use_direct_segments": true,
+          "segments": [
+            {"start": [-5650.0, 5850.0, -830.0], "end": [-5650.0, -4700.0, -830.0]}
+          ],
+          "basis": "按用户本轮最新更正，Y-0202 左侧 DN350 接入段中线下方对应的是 DN300 管，且这根沿 y / -y 的主管与 DN350 短管在平面上距离为 0。因此将 DN300 主列位改为与 DN350 左端同列的 x=-5650，并继续向下延伸到距蓄水池下侧 4000 处，对应 y=-4700；中心高程按 -0.830 执行。本轮进一步收紧为：该共线长管以 DN350 短接中心线 y=5850 为分界，中心线以下部分才按 DN300 表达。"
+        },
+        {
+          "route_id": "left_dn350_to_y0202",
+          "dn": 350,
+          "use_direct_segments": true,
+          "segments": [
+            {"start": [-5650.0, 5850.0, 100.0], "end": [-5250.0, 5850.0, 100.0]}
+          ],
+          "basis": "按用户最新更正，Y-0202 左侧三格竖排小方块中，位于中间格左侧的 DN350 仅为一段长 400 的短横管，不再沿用上一轮误识读出的长支管。平面仍取中间格中心带 y=5850，并以 Y-0202 左侧附属段外边界 x=-5250 为右端，回算其左端为 x=-5650，从而得到长度 400 的 DN350 短接。其中心标高按用户最新要求改与 Y-0202 设备中心标高一致；当前 Y-0202 底标高 0、顶标高 +200，因此中心标高取 +100。"
+        },
+        {
+          "route_id": "y0202_upper_dn125_drop",
+          "dn": 125,
+          "use_direct_segments": true,
+          "segments": [
+            {"start": [-1700.0, 14550.0, 5000.0], "end": [-1700.0, 5850.0, 5000.0]}
+          ],
+          "basis": "按用户最新更正，H-H 附近那条长竖向链不应再作为独立辅助路线重复表达；因此本轮只保留与 DN450 主管相连的长水平接入段，列位仍取 Y-0202 右侧外偏 300 的 x=-1700，从上部 DN450 主管所在 y=14550 接到 H-H 竖管所在 y=5850。H-H 的本体竖管和底部短横段改由 H-H 剖面链自身表达。"
+        },
+        {
+          "route_id": "y0202_mid_dn125_into_equipment",
+          "dn": 125,
+          "use_direct_segments": true,
+          "segments": [
+            {"start": [-1700.0, 5850.0, -900.0], "end": [-2000.0, 5850.0, -900.0]}
+          ],
+          "basis": "该短横段已并回 H-H 剖面链本体统一表达，本轮保留定义仅作历史记录，不再加入 enabled_auxiliary_route_ids。"
+        },
+        {
+          "route_id": "y0202_right_dn150_spine",
+          "dn": 150,
+          "use_direct_segments": true,
+          "segments": [
+            {"start": [-900.0, 7000.0, 1500.0], "end": [-900.0, 2150.0, 1500.0]}
+          ],
+          "basis": "按 P4 左侧裁图中 F / I 标记共用的右侧 DN150 竖向干线继续收紧：该干线在平面上不只服务 Y-0202 右侧回弯，还继续下探到 Y-1401 右侧小口径组上方，因此本轮把其 y 方向范围从上部 F 组附近延长到 Y-1401 右侧上沿附近；x 仍保持在相对 Y-0202 右边界约 1100 的主列位。"
+        },
+        {
+          "route_id": "y0202_dn150_upper_return_loop",
+          "dn": 150,
+          "use_direct_segments": true,
+          "segments": [
+            {"start": [-1200.0, 6550.0, -600.0], "end": [-1200.0, 6550.0, 2150.0]},
+            {"start": [-1200.0, 6550.0, 2150.0], "end": [-900.0, 6550.0, 2150.0]},
+            {"start": [-900.0, 6550.0, 2150.0], "end": [-900.0, 6550.0, 1500.0]}
+          ],
+          "basis": "按 P4 左侧裁图与 F-F 联合恢复 Y-0202 右侧上部 DN150 回弯链：上部可见横直段长度取 300，平面 y 列位锁在 Y-0202 顶边下方约 650 的局部带；左侧回弯腿位于设备右边界与右侧 DN150 母线之间，顶部高程继承 F-F 的 +2.150，回落端收至 +1.500，不再用旧的 left_embedded_plate_1 剖切表达代替平面列位。"
+        },
+        {
+          "route_id": "y0202_y1401_between_dn150_lower_loop",
+          "dn": 150,
+          "use_direct_segments": true,
+          "segments": [
+            {"start": [-1400.0, 4050.0, 4500.0], "end": [-900.0, 4050.0, 4500.0]},
+            {"start": [-900.0, 4050.0, 4500.0], "end": [-900.0, 4050.0, -600.0]},
+            {"start": [-3700.0, 4050.0, -600.0], "end": [-900.0, 4050.0, -600.0]},
+            {"start": [-900.0, 4050.0, -600.0], "end": [-900.0, 4300.0, -600.0]}
+          ],
+          "basis": "按 P4 左侧裁图与 I-I 联合恢复 Y-0202 下方 / Y-1401 上方的下部 DN150 回弯链：I-I 的 500 顶部短横段、-0.600 底部控制标高和沿 +Y 接出的短段继续由 I-I 提供；平面上则把下部长横段按 page_4 明确可读的 1300+900+600 局部尺寸链展开，右端落在 x=-900 的 DN150 母线上，左端回算为 x=-3700，从而让这组 DN150 真正落在 Y-0202 与 Y-1401 之间，而不是漂到右侧塔区。"
+        },
+        {
+          "route_id": "y1401_small_dn25_cluster",
+          "dn": 25,
+          "use_direct_segments": true,
+          "segments": [
+            {"start": [-900.0, 3050.0, -500.0], "end": [-900.0, 3550.0, -500.0]}
+          ],
+          "basis": "该 DN25 短竖支管为上一轮根据局部俯视初步恢复的历史记录。按用户本轮最新更正，DN20 左上方这根管子属于多余线，因此本轮不再加入 enabled_auxiliary_route_ids，仅保留定义作历史参考。"
+        },
+        {
+          "route_id": "y1401_small_dn20_cluster",
+          "dn": 20,
+          "use_direct_segments": true,
+          "segments": [
+            {"start": [-1500.0, 3050.0, -500.0], "end": [150.0, 3050.0, -500.0]}
+          ],
+          "basis": "按用户本轮最新更正，DN20 这根管子应刚好接在 Y-1401 右边界与蓄水池左侧外壁之间；因此当前把其左端锁到 Y-1401 右边界 x=-1500，右端锁到蓄水池左外壁中心线 x=150，标高按 -0.500 落图。"
+        },
+        {
+          "route_id": "y1401_small_dn15_cluster",
+          "dn": 15,
+          "use_direct_segments": true,
+          "segments": [
+            {"start": [-400.0, 1200.0, -500.0], "end": [-400.0, 3650.0, -500.0]},
+            {"start": [-1950.0, 1750.0, -500.0], "end": [-400.0, 1750.0, -500.0]}
+          ],
+          "basis": "按用户本轮最新更正，当前把与 B-B 剖面朝 y/-y 方向连管同一直线上的 DN15 解释为‘管道2’：其列位与 B-B 外接相同取 x=-400，标高 -0.500，并向上延伸到略高于 Y-1401 顶边的位置。用户进一步要求左侧这根 DN15 还要再往 Y-1401 里面绘制一点，因此将其下部伸出的短横支管（管道3）继续向左延伸到 x=-1950。"
+        }
+      ],
+      "support_proxies_v2": [
+        {
+          "support_id": "bellmouth_support_proxy_1",
+          "center": [6350.0, 10150.0, -400.0],
+          "size_mm": [280.0, 280.0, 600.0],
+          "basis": "A-A 中 item29 吸水喇叭管支架；继续按总图级代理块表达。"
+        }
+      ],
+      "section_only_features_v2": [
+        {
+          "feature_id": "local_d100_section_profile",
+          "dn": 100,
+          "status": "section_only",
+          "basis": "B-B 与 G-G 只稳定给出局部 DN100 高程，不单独提升为全局 3D 主干。"
+        },
+        {
+          "feature_id": "local_d150_section_profile",
+          "dn": 150,
+          "status": "section_only",
+          "basis": "F-F 只稳定给出局部 DN150 典型剖面，不提升为全局主干。"
+        }
+      ]
+    },
+    "elevations": {
+      "ground": 0.0,
+      "bottom_header_center": 0.0,
+      "top_header_left": 5000.0,
+      "top_header_right": 4500.0,
+      "tower_drop_connection": 3200.0,
+      "pump_suction_mid": 1200.0,
+      "pump_suction_top": 1900.0,
+      "pump_discharge_mid": 3600.0,
+      "top_wall_dn300_sleeve_center": 535.0,
+      "top_wall_dn200_sleeve_center": 400.0,
+      "left_sleeve_center": -700.0,
+      "local_d100_top": 2050.0,
+      "local_d150_top": 2150.0
+    },
+    "dimension_annotations": [
+      {
+        "label": "总长度",
+        "dimension_type": "horizontal",
+        "start_point": [0.0, -900.0, 0.0],
+        "end_point": [17500.0, -900.0, 0.0],
+        "text_position": [8750.0, -1800.0, 0.0]
+      },
+      {
+        "label": "总宽度",
+        "dimension_type": "vertical",
+        "start_point": [-1200.0, 0.0, 0.0],
+        "end_point": [-1200.0, 10000.0, 0.0],
+        "text_position": [-2200.0, 5000.0, 0.0]
+      },
+      {
+        "label": "左侧顶部主管高程",
+        "dimension_type": "vertical",
+        "start_point": [18800.0, 8400.0, 0.0],
+        "end_point": [18800.0, 8400.0, 5000.0],
+        "text_position": [19700.0, 8400.0, 2500.0]
+      },
+      {
+        "label": "冷却塔单元间距",
+        "dimension_type": "horizontal",
+        "start_point": [3000.0, 10800.0, 0.0],
+        "end_point": [7200.0, 10800.0, 0.0],
+        "text_position": [5100.0, 11600.0, 0.0]
+      }
+    ]
+  },
+  "unresolved_dimensions": [
+    {
+      "label": "B-B/F-F/G-G 局部骨架的精确全局 XY 锚点",
+      "reason": "当前 PDF 可稳定识别这些局部剖面的标高和局部尺寸，但其在 page_4 上的绝对平面锚点缺少独立总尺寸链，只适合保留为 section-local skeleton。"
+    },
+    {
+      "label": "仪表、柔性接头与阀门细部厚度",
+      "reason": "当前任务目标是总图级主干与剖面闭环，不要求把标准件厚度细模到实体层。"
+    }
+  ]
+}

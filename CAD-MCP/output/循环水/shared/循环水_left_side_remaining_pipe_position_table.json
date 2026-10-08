@@ -1,0 +1,199 @@
+{
+  "topic": "循环水",
+  "source_view": "page_4 管道平面布置图左侧局部",
+  "purpose": "单独锁定蓄水池左侧剩余管线的平面位置，避免继续误复用蓄水池上方的泵支管、塔下落支管或上方主管模板。",
+  "global_rule": [
+    "本表中的全部管线都属于蓄水池左侧局部设备带，不允许再挂到蓄水池上方泵带或冷却塔上方主管带。",
+    "先按本表锁定 XY 平面锚点，再分别从 C-C / H-H / F-F / I-I 继承标高；剖面只负责 Z 和连接顺序，不负责重新决定平面位置。",
+    "没有出现在本表中的上方泵支管、塔下落支管、上方主管复制链，不得作为这些左侧剩余管线的替代 route 家族。"
+  ],
+  "left_side_remaining_pipes": [
+    {
+      "pipe_id": "p4_left_upper_dn200_horizontal",
+      "dn": 200,
+      "zone": "左墙穿墙区上部",
+      "plan_anchor": "左侧 DN200 竖向链上端与 C-C 穿墙区之间的上部水平线",
+      "visual_basis": "P4 左侧局部图中标注 -0.710、L=7m、i=0.003 的上部 DN200 水平管。",
+      "must_not_map_to": [
+        "泵上方 DN250 支管",
+        "顶部 DN450 主管上的塔下落支管"
+      ],
+      "elevation_inheritance": {
+        "primary_section": "C-C",
+        "note": "穿墙中心高程以 C-C 的 -0.700 为主，平面位置不能因 C-C 标高模板而上移到蓄水池上方。"
+      },
+      "confidence": 0.99
+    },
+    {
+      "pipe_id": "p4_left_lower_dn200_horizontal",
+      "dn": 200,
+      "zone": "左墙穿墙区中部",
+      "plan_anchor": "左侧 DN200 竖向链中段与 9 号阀门、31 号套管之间的下部水平线",
+      "visual_basis": "P4 左侧局部图中标注 -0.720、L=7m、i=0.003 的中部 DN200 水平管。",
+      "must_not_map_to": [
+        "泵下方 DN300 支管",
+        "任何顶部主管回接短段"
+      ],
+      "elevation_inheritance": {
+        "primary_section": "C-C",
+        "note": "仍继承 C-C 的穿墙高程语义，但平面必须留在左墙中部局部带。"
+      },
+      "confidence": 0.99
+    },
+    {
+      "pipe_id": "p4_left_dn200_upper_vertical_link",
+      "dn": 200,
+      "zone": "左侧 DN200 竖向链上半段",
+      "plan_anchor": "连接上部 DN200 水平线与中部 DN200 水平线的竖向短段",
+      "visual_basis": "P4 左侧局部图中紧挨两条 DN200 水平线之间、标注 DN200 L=2m 的竖向短管。",
+      "must_not_map_to": [
+        "H-H 下落立管",
+        "I-I 下落立管"
+      ],
+      "elevation_inheritance": {
+        "primary_section": "C-C",
+        "note": "它属于左墙 DN200 穿墙链的一部分，不应被任何 DN125/DN150 剖面接管。"
+      },
+      "confidence": 0.98
+    },
+    {
+      "pipe_id": "p4_left_dn200_lower_vertical_link",
+      "dn": 200,
+      "zone": "左侧 DN200 竖向链下半段",
+      "plan_anchor": "连接中部 DN200 水平线与下方 DN300 主立管/三通位置的竖向短段",
+      "visual_basis": "P4 左侧局部图中中部 DN200 水平线下方、标注 DN200 L=2m 的竖向短管。",
+      "must_not_map_to": [
+        "F-F DN150 回弯立管",
+        "I-I DN150 下落立管"
+      ],
+      "elevation_inheritance": {
+        "primary_section": "C-C",
+        "secondary_reference_sections": ["H-H", "I-I"],
+        "note": "这里只允许借 H-H/I-I 理解相邻设备带关系，不允许把这根 DN200 竖管直接改挂到 H-H/I-I 的列位。"
+      },
+      "confidence": 0.97
+    },
+    {
+      "pipe_id": "p4_left_dn300_vertical_riser",
+      "dn": 300,
+      "zone": "最左侧主立管带",
+      "plan_anchor": "位于 Y-0202 左侧、Y-1401 左上侧的最左一条主立管",
+      "visual_basis": "P4 左侧局部图中标注 DN300 L=8m、并伴随 -0.830 / -0.850 管内底标高的长竖线。",
+      "must_not_map_to": [
+        "四台泵的 DN300 下支管",
+        "A-A 的泵侧立管",
+        "蓄水池上方任何竖向支路"
+      ],
+      "elevation_inheritance": {
+        "primary_section": "I-I",
+        "secondary_reference_sections": ["H-H"],
+        "note": "这是左侧设备带主立管，不是泵区主支管。标高只能在左侧设备带剖面里找，不能套用泵区 +0.535 / +1.900 模板。"
+      },
+      "confidence": 0.96
+    },
+    {
+      "pipe_id": "p4_left_dn350_to_y0202",
+      "dn": 350,
+      "zone": "Y-0202 左侧接入段",
+      "plan_anchor": "由左侧 DN300 主立管向右接入 Y-0202 左边的短横支管",
+      "visual_basis": "P4 左侧局部图中贴着 Y-0202 左边界、直接标注 DN350 的短横段。",
+      "must_not_map_to": [
+        "顶部主管分支异径件",
+        "泵带水平接管"
+      ],
+      "elevation_inheritance": {
+        "primary_section": "I-I",
+        "secondary_reference_sections": ["H-H"],
+        "note": "这条 DN350 是左侧设备带接入 Y-0202 的平面短接，不能因为读取了 H-H/I-I 的标高就被画到上方主管带。"
+      },
+      "confidence": 0.95
+    },
+    {
+      "pipe_id": "p4_y0202_upper_dn125_drop",
+      "dn": 125,
+      "zone": "Y-0202 右上侧局部带",
+      "plan_anchor": "Y-0202 右上方、16/23 号标记附近，从局部上侧接入后下落的 DN125 支管",
+      "visual_basis": "P4 左侧局部图中 H 字上方附近的一段 DN125 立管，贴着 Y-0202 右上侧。",
+      "must_not_map_to": [
+        "CT-0203 / CT-0202 塔下落支管",
+        "蓄水池上方泵带立管"
+      ],
+      "elevation_inheritance": {
+        "primary_section": "H-H",
+        "note": "H-H 只负责这根 DN125 的高程链，不允许再把它解释成塔区下落支管。"
+      },
+      "confidence": 0.95
+    },
+    {
+      "pipe_id": "p4_y0202_mid_dn125_into_equipment",
+      "dn": 125,
+      "zone": "Y-0202 右侧中部",
+      "plan_anchor": "H 标记旁、从局部 DN150 干线接入 Y-0202 的短 DN125 横管",
+      "visual_basis": "P4 左侧局部图中 H 字紧邻的一段短 DN125 横接段。",
+      "must_not_map_to": [
+        "泵区横向短接",
+        "塔区水平接塔段"
+      ],
+      "elevation_inheritance": {
+        "primary_section": "H-H",
+        "note": "平面位置由 H 标记附近局部短接锁定，不是任何上方主管模板的末端。"
+      },
+      "confidence": 0.96
+    },
+    {
+      "pipe_id": "p4_y0202_dn150_upper_return_loop",
+      "dn": 150,
+      "zone": "Y-0202 右侧与下侧",
+      "plan_anchor": "围绕 Y-0202 右侧竖向 DN150 干线、并在 F 标记附近形成回弯的上部 DN150 回路",
+      "visual_basis": "P4 左侧局部图中 F-F 标记上下两处与多只 22 号弯头围出的 DN150 回弯链。",
+      "must_not_map_to": [
+        "顶部主管右侧 DN150 接塔支路",
+        "I-I 下部回弯链"
+      ],
+      "elevation_inheritance": {
+        "primary_section": "F-F",
+        "secondary_reference_sections": ["H-H"],
+        "note": "它是 Y-0202 右侧 DN150 回弯总成，不允许因读取 H-H 而被整体抬到蓄水池上方。"
+      },
+      "confidence": 0.93
+    },
+    {
+      "pipe_id": "p4_y0202_y1401_between_dn150_lower_loop",
+      "dn": 150,
+      "zone": "Y-0202 下方 / Y-1401 上方",
+      "plan_anchor": "I 标记附近、位于 Y-0202 与 Y-1401 之间下部设备带的 DN150 回弯链",
+      "visual_basis": "P4 左侧局部图中 I 标记紧邻的一组 DN150 回弯和下落短接。",
+      "must_not_map_to": [
+        "CT-0201 右侧 DN150 塔下落支路",
+        "F-F 上部 DN150 回弯链"
+      ],
+      "elevation_inheritance": {
+        "primary_section": "I-I",
+        "note": "I-I 必须只服务于左侧下部设备带这组 DN150，不得再回退成右侧塔区模板。"
+      },
+      "confidence": 0.94
+    },
+    {
+      "pipe_id": "p4_y1401_small_dn25_dn20_dn15_cluster",
+      "dn": null,
+      "zone": "Y-1401 右侧与上侧",
+      "plan_anchor": "Y-1401 方框右侧和上侧的一组小口径局部短接",
+      "visual_basis": "P4 左侧局部图中可见 DN25、DN20、DN15 标注，整体紧贴 Y-1401，不在蓄水池上方。",
+      "must_not_map_to": [
+        "任何泵区小口径仪表链",
+        "任何塔区下落链"
+      ],
+      "elevation_inheritance": {
+        "primary_section": "I-I",
+        "note": "当前先只锁平面，不强行细分每一小段的标高；后续要先出左侧局部验证图再拆段。"
+      },
+      "confidence": 0.72
+    }
+  ],
+  "execution_order": [
+    "先只画 left_wall_dn200_upper / lower、left_dn200_upper_vertical_link / lower_vertical_link、left_side_dn300_main、left_dn350_to_y0202，确认左侧主骨架完全留在蓄水池左侧。",
+    "再单独接入 H-H 的两段 DN125：p4_y0202_upper_dn125_drop、p4_y0202_mid_dn125_into_equipment。",
+    "再单独接入 F-F 与 I-I 两组 DN150 回弯链，并与 P4 左侧局部裁图逐项对照。",
+    "最后才处理 Y-1401 旁的小口径簇；在此之前不得用泵带或塔带模板替代。"
+  ]
+}

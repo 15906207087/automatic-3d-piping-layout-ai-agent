@@ -1,0 +1,68 @@
+{
+  "topic": "循环水_泵局部验证",
+  "reference_model": "ISG300-250A vertical inline centrifugal pump (catalog + photo proxy)",
+  "reference_image": "C:\\Users\\chenao\\Desktop\\CAD-2\\CAD-MCP\\output\\循环水\\shared\\循环水_pump_vertical_inline_reference.png",
+  "reference_notes": [
+    "用户给定实体图：立式管道泵，电机在上、蜗壳居中、进出口水平共线、下部支座落底板。",
+    "公开样本 ISG300-250A：面距 L≈1200、总高 H≈1195、口高 h≈300。",
+    "两端仍接 A-A 件25(DN300x250) 与件26(DN250x150)：吸入口 DN300 接 25 大端，排出口 DN250 接 26 大端。",
+    "仅单泵局部验证，不改 A-A 剖面本体。"
+  ],
+  "pump": {
+    "tag": "P-0204",
+    "style": "vertical_inline",
+    "face_to_face_mm": 1200.0,
+    "overall_height_mm": 1195.0,
+    "suction_dn": 300,
+    "discharge_dn": 250,
+    "port_center_z_mm": 300.0,
+    "volute_outer_diameter_mm": 620.0,
+    "volute_height_mm": 360.0,
+    "pedestal": {
+      "bottom_diameter_mm": 280.0,
+      "top_diameter_mm": 220.0,
+      "height_mm": 160.0
+    },
+    "motor": {
+      "diameter_mm": 420.0,
+      "height_mm": 520.0,
+      "fin_count": 8,
+      "fin_thickness_mm": 12.0,
+      "fin_radial_mm": 22.0,
+      "top_cap_height_mm": 40.0,
+      "junction_box": {
+        "length_mm": 180.0,
+        "width_mm": 140.0,
+        "height_mm": 160.0,
+        "offset_y_mm": 250.0
+      }
+    },
+    "adapter_flange": {
+      "diameter_mm": 480.0,
+      "thickness_mm": 30.0
+    },
+    "base": {
+      "length_mm": 520.0,
+      "width_mm": 420.0,
+      "thickness_mm": 40.0
+    }
+  },
+  "item_25": {
+    "item_no": 25,
+    "name": "钢制同心异径管",
+    "specification": "DN300x250",
+    "dn_large": 300,
+    "dn_small": 250,
+    "length_mm": 300.0,
+    "role": "接泵吸入口 DN300；大端贴泵口，小端朝外(-x)"
+  },
+  "item_26": {
+    "item_no": 26,
+    "name": "钢制异径管",
+    "specification": "DN250x150",
+    "dn_large": 250,
+    "dn_small": 150,
+    "length_mm": 250.0,
+    "role": "接泵排出口 DN250；大端贴泵口，小端朝外(+x)"
+  }
+}

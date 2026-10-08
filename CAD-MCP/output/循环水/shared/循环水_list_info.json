@@ -1,0 +1,446 @@
+{
+  "topic": "循环水",
+  "source_pdf": "F:\\毕业论文\\管道布置图\\PDF\\PDF\\循环水.pdf",
+  "page_roles": {
+    "page_1": "设计说明、图例、技术要求页",
+    "page_2": "系统流程/工艺关系页",
+    "page_3": "设备平面布置图",
+    "page_4": "管道平面布置图",
+    "page_5": "剖面图与局部详图"
+  },
+  "view_interpretation": {
+    "page_3": "用于确认循环水池、泵组、冷却塔和附属设备的总体平面尺寸与相对位置。",
+    "page_4": "用于确认 DN500 底部主管、DN450 顶部主管、泵组支路和局部 DN100/DN150/DN200 支路的 XY 走向。",
+    "page_5": "用于确认 A-A/B-B/C-C/D-D/E-E/F-F/G-G/H-H/I-I 各剖面的标高、穿墙关系、局部转折和典型接口做法。"
+  },
+  "supplemental_layout_features": [
+    {
+      "feature_id": "tk0202_tank_above_y0202",
+      "name": "Y-0202顶部接管罐",
+      "tag": "TK-0202",
+      "specification": "立式空心罐 OD1110 x H5000, t=10, 底实心/顶开口",
+      "quantity": 1,
+      "source_views": ["user_request"],
+      "model_status": "layout_approximated",
+      "modeled_as": "读取 dimension_info.model_input.equipment_centers.auxiliary_equipments 中 TK-0202；平面中心左移到 I-I DN150 列位 x=-4300，外径取上下顶部横管间距 1110；空心壳、底部实心、顶部无盖；下侧/上侧 I-I 顶部 DN150 横管接入该罐外壁。",
+      "verified": false
+    },
+    {
+      "feature_id": "pool_top_embedded_plates",
+      "name": "池顶预埋钢板",
+      "specification": "300x300x10",
+      "quantity": 8,
+      "source_views": ["page_3"],
+      "model_status": "layout_approximated",
+      "modeled_as": "直接读取 dimension_info.model_input.plan_reference.embedded_plates，按池顶薄板代理落图。",
+      "verified": true
+    },
+    {
+      "feature_id": "pool_top_dn50_flanged_pipe",
+      "name": "池顶 DN50 法兰钢管",
+      "specification": "DN50",
+      "quantity": 1,
+      "source_views": ["page_3"],
+      "model_status": "layout_approximated",
+      "modeled_as": "直接读取 dimension_info.model_input.plan_reference.top_flange_pipes，按立管+法兰代理落图。",
+      "verified": true
+    },
+    {
+      "feature_id": "pool_top_d300_opening",
+      "name": "池顶开孔",
+      "specification": "直径300",
+      "quantity": 1,
+      "source_views": ["page_3"],
+      "model_status": "layout_approximated",
+      "modeled_as": "直接读取 dimension_info.model_input.plan_reference.top_openings，按圆环代理表达开孔位置和孔径。",
+      "verified": true
+    },
+    {
+      "feature_id": "upper_left_sump_pit",
+      "name": "左上角集水坑",
+      "specification": "1000x1000, 底标高-2.400",
+      "quantity": 1,
+      "source_views": ["page_3", "page_5 C-C"],
+      "model_status": "layout_approximated",
+      "modeled_as": "直接读取 dimension_info.model_input.plan_reference.sump_pits，按局部深坑代理落图。",
+      "verified": true
+    }
+  ],
+  "bom_items": [
+    {
+      "item_no": 1,
+      "name": "DN250 止回阀",
+      "specification": "DN250",
+      "quantity": 4,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 E-E", "page_5 A-A"],
+      "modeled_as": "A-A 右侧独立 DN250 横向连接链中的止回阀位，按止回阀标准件绘制。",
+      "verified": true
+    },
+    {
+      "item_no": 2,
+      "name": "球阀",
+      "specification": "DN100",
+      "quantity": 1,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 B-B"],
+      "modeled_as": "按用户最新指出的 PDF 真值，2号件应为 B-B 局部 DN100 顶部短接链中的球阀，不再按液控蝶阀记录或绘制；当前在局部链和总图中按球阀代理表达。",
+      "verified": true
+    },
+    {
+      "item_no": 3,
+      "name": "D373H-10 进塔手动蝶阀",
+      "specification": "DN300",
+      "quantity": 4,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 A-A"],
+      "modeled_as": "泵出口 DN300 立管上的阀位代理。",
+      "verified": true
+    },
+    {
+      "item_no": 4,
+      "name": "D373H-10 进塔手动蝶阀",
+      "specification": "DN250",
+      "quantity": 4,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 A-A"],
+      "modeled_as": "泵出口提升接塔段上的阀位代理。",
+      "verified": true
+    },
+    {
+      "item_no": 5,
+      "name": "D373H-10 法兰手动蝶阀",
+      "specification": "DN150",
+      "quantity": 2,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 I-I"],
+      "modeled_as": "右侧顶部接塔支路的典型阀位代理。",
+      "verified": true
+    },
+    {
+      "item_no": 6,
+      "name": "D373H-10 法兰手动蝶阀",
+      "specification": "DN125",
+      "quantity": 1,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "section_only",
+      "evidence_views": ["page_4", "page_5 H-H"],
+      "modeled_as": "仅在 H-H 典型剖面中保留，不单独做全局阀体实体。",
+      "verified": true
+    },
+    {
+      "item_no": 7,
+      "name": "D373H-10 法兰式多功能蝶阀",
+      "specification": "DN100",
+      "quantity": 2,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 B-B", "page_5 G-G"],
+      "modeled_as": "在 G-G 局部试绘中按上方 DN100 横管上的阀位代理绘制。",
+      "verified": true
+    },
+    {
+      "item_no": 8,
+      "name": "D373H-10 对夹式多功能蝶阀",
+      "specification": "DN250",
+      "quantity": 4,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 A-A", "page_5 E-E"],
+      "modeled_as": "泵组吸入/出口 DN250 支路上的典型阀位代理。",
+      "verified": true
+    },
+    {
+      "item_no": 9,
+      "name": "Z41X-10 闸阀",
+      "specification": "DN200",
+      "quantity": 1,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 C-C"],
+      "modeled_as": "C-C 局部链当前按左墙 DN200 穿墙典型绘制；由于现有 CAD 库缺少专用闸阀原语，本轮先用法兰阀体代理保持 9号件在局部链中的位置、口径和串联语义。",
+      "verified": true
+    },
+    {
+      "item_no": 10,
+      "name": "压力表",
+      "specification": "Y100 P=1.6",
+      "quantity": 4,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "not_explicitly_modeled",
+      "evidence_views": ["page_4", "page_5 A-A"],
+      "modeled_as": "保留件号闭环，不单独进总图级 3D 骨架。",
+      "verified": false
+    },
+    {
+      "item_no": 11,
+      "name": "VSSJA-2 型双法兰限位伸缩接头",
+      "specification": "DN300",
+      "quantity": 4,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 A-A"],
+      "modeled_as": "按泵出口立管接口长度占位，不单独展开细部。",
+      "verified": true
+    },
+    {
+      "item_no": 12,
+      "name": "VSSJA-2 型双法兰限位伸缩接头",
+      "specification": "DN250",
+      "quantity": 4,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 A-A"],
+      "modeled_as": "按泵组 DN250 段接口长度占位，不单独展开细部。",
+      "verified": true
+    },
+    {
+      "item_no": 13,
+      "name": "钢制异径三通",
+      "specification": "DN500x250",
+      "quantity": 5,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 G-G", "page_5 A-A"],
+      "modeled_as": "底部 DN500 主管接 DN250 立管/支路的全局骨架连接点。",
+      "verified": true
+    },
+    {
+      "item_no": 14,
+      "name": "钢制异径三通",
+      "specification": "DN450x250",
+      "quantity": 5,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 A-A", "page_5 H-H", "page_5 I-I"],
+      "modeled_as": "A-A 右侧回接立管及顶部 DN450 配水主管接 DN250/125/150 下落支路的骨架连接点。",
+      "verified": true
+    },
+    {
+      "item_no": 15,
+      "name": "钢制异径三通",
+      "specification": "DN450x200",
+      "quantity": 1,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4"],
+      "modeled_as": "顶部主管局部异径三通，保留在顶部主管骨架节点中。",
+      "verified": true
+    },
+    {
+      "item_no": 16,
+      "name": "钢制异径三通",
+      "specification": "DN450x125",
+      "quantity": 1,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 H-H"],
+      "modeled_as": "顶部主管接 DN125 支路的全局骨架连接点。",
+      "verified": true
+    },
+    {
+      "item_no": 17,
+      "name": "钢制异径三通",
+      "specification": "DN250x100",
+      "quantity": 1,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 G-G"],
+      "modeled_as": "在 G-G 局部试绘中按 DN250x100 异径三通绘制。",
+      "verified": true
+    },
+    {
+      "item_no": 18,
+      "name": "钢制三通",
+      "specification": "DN150",
+      "quantity": 1,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 F-F"],
+      "modeled_as": "本轮按重新识别后的 F-F 局部试绘实际绘制为 DN150 三通，作为 F-F 回弯链的底部连接件。",
+      "verified": true
+    },
+    {
+      "item_no": 19,
+      "name": "钢制 90 度弯头",
+      "specification": "DN300",
+      "quantity": 4,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 A-A"],
+      "modeled_as": "泵出口 DN300 立管的正交转向表达。",
+      "verified": true
+    },
+    {
+      "item_no": 20,
+      "name": "钢制 90 度弯头",
+      "specification": "DN250",
+      "quantity": 9,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 E-E", "page_5 I-I"],
+      "modeled_as": "DN250 支路、回弯和接塔段的正交转向表达。",
+      "verified": true
+    },
+    {
+      "item_no": 21,
+      "name": "钢制 90 度弯头",
+      "specification": "DN200",
+      "quantity": 5,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 D-D"],
+      "modeled_as": "D-D 典型 DN200 转向段和局部转弯按正交骨架落实。",
+      "verified": true
+    },
+    {
+      "item_no": 22,
+      "name": "钢制 90 度弯头",
+      "specification": "DN150",
+      "quantity": 8,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 F-F", "page_5 I-I"],
+      "modeled_as": "DN150 局部支路与右侧顶部接塔段的正交转向表达。",
+      "verified": true
+    },
+    {
+      "item_no": 23,
+      "name": "钢制 90 度弯头",
+      "specification": "DN125",
+      "quantity": 4,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 H-H"],
+      "modeled_as": "左侧两根冷却塔下落支管的正交转向表达。",
+      "verified": true
+    },
+    {
+      "item_no": 24,
+      "name": "钢制 90 度弯头",
+      "specification": "DN100",
+      "quantity": 6,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 B-B", "page_5 G-G"],
+      "modeled_as": "在 G-G 局部试绘中按两只 DN100 90 度弯头绘制。",
+      "verified": true
+    },
+    {
+      "item_no": 25,
+      "name": "钢制同心异径管",
+      "specification": "DN300x250",
+      "quantity": 4,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 A-A", "page_5 E-E"],
+      "modeled_as": "泵出口 DN300 至 DN250 提升段的总图级变径逻辑。",
+      "verified": true
+    },
+    {
+      "item_no": 26,
+      "name": "钢制异径管",
+      "specification": "DN250x150",
+      "quantity": 4,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 I-I"],
+      "modeled_as": "右侧顶部接塔 DN250 至 DN150 典型变径逻辑。",
+      "verified": true
+    },
+    {
+      "item_no": 27,
+      "name": "钢制盲法兰",
+      "specification": "DN300",
+      "quantity": 4,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "section_only",
+      "evidence_views": ["page_5 A-A"],
+      "modeled_as": "仅在 A-A 局部端部接口处保留，不展开法兰细模。",
+      "verified": true
+    },
+    {
+      "item_no": 28,
+      "name": "钢制制孔口",
+      "specification": "DN200",
+      "quantity": 1,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "section_only",
+      "evidence_views": ["page_4", "page_5 D-D"],
+      "modeled_as": "D-D 典型局部孔口，仅在局部骨架中保留。",
+      "verified": true
+    },
+    {
+      "item_no": 29,
+      "name": "取水喇叭管支架",
+      "specification": "ZB3",
+      "quantity": 4,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_5 A-A"],
+      "modeled_as": "A-A 中按总图级代理块保留支架占位。",
+      "verified": true
+    },
+    {
+      "item_no": 30,
+      "name": "钢制防水套管",
+      "specification": "DN300",
+      "quantity": 5,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_3", "page_4", "page_5 A-A"],
+      "modeled_as": "P3 明确给出蓄水池上壁 5 只 DN300 刚性防水套管的平面位置与中心距；设备图和配管图均按 plan_reference.wall_sleeves 直接落图。",
+      "verified": true
+    },
+    {
+      "item_no": 31,
+      "name": "钢性防水套管",
+      "specification": "DN200",
+      "quantity": 2,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_3", "page_4", "page_5 C-C", "page_5 D-D"],
+      "modeled_as": "P3 明确给出上壁 1 只和左墙 1 只 DN200 刚性防水套管的平面位置；总图模型按 plan_reference.wall_sleeves 直接落图。",
+      "verified": true
+    },
+    {
+      "item_no": 32,
+      "name": "橡胶接头",
+      "specification": "DN500",
+      "quantity": 1,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4"],
+      "modeled_as": "本轮按 dimension_info.pipeline_layout_v2 的 DN500 底部主管左/右外接段代理占位，不再沿用旧 pipe_runs 坐标。",
+      "verified": true
+    },
+    {
+      "item_no": 33,
+      "name": "橡胶接头",
+      "specification": "DN450",
+      "quantity": 1,
+      "material": "未在当前扫描件中稳定辨识",
+      "model_status": "layout_approximated",
+      "evidence_views": ["page_4", "page_5 H-H", "page_5 I-I"],
+      "modeled_as": "本轮按 dimension_info.pipeline_layout_v2 的 DN450 顶部主管端部代理占位，不再沿用旧 pipe_runs 坐标。",
+      "verified": true
+    }
+  ],
+  "closure_rule": {
+    "layout_approximated_meaning": "已经落实到总图级 3D 主干骨架、正交转向或连接代理中。",
+    "section_only_meaning": "已经在剖面级局部骨架中闭环，但不进入全局主干 3D 实体。",
+    "not_explicitly_modeled_meaning": "本轮仅保留件号闭环，不在几何层表达。"
+  },
+  "closure_summary": {
+    "layout_approximated": 24,
+    "section_only": 8,
+    "not_explicitly_modeled": 1,
+    "policy": "本轮改为以“设备锚点 + pipeline_layout_v2 + pipeline_profiles_v2 + 局部剖面模板”闭环；旧 pipe_runs 仅作历史对照，不再作为正式建模输入。",
+    "all_items_closed": true
+  }
+}

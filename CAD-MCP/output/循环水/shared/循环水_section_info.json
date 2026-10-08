@@ -1,0 +1,1185 @@
+{
+  "topic": "循环水",
+  "source_pdf": "F:\\毕业论文\\管道布置图\\PDF\\PDF\\循环水.pdf",
+  "sections": [
+    {
+      "section": "A-A",
+      "source_view": "page_5",
+      "plan_anchor": "page_4 A-A 典型继续按上下分锚点表达；本轮按用户要求采用“下部回到 V81、上部回到 V79”的组合恢复。主典型第一组保持 top_wall_dn300_sleeve_4 x=5790；另外三组上部链路恢复到各自 top_wall_dn300_sleeve_3/2/1，而下部继续沿用 V81 的列位与启停组合。",
+      "purpose": "既作为全局主剖面的高程基准，也作为四台泵上方 A-A 同型管道的复用模板；本轮采用“上部按 V79、下部按 V81”的组合恢复方式。",
+      "cut_line_description": "切线表达 A-A 典型的左侧 DN250 立管、P-0204 泵侧 DN300/DN250 接口链和右侧 DN250 回接立管；其中上部泵侧链路恢复为 V79 的防水套管列位，下部 DN500 主干侧恢复为 V81 的列位与路由开关组合。",
+      "view_direction": "按 page_4 的 A 标记位置、当前局部平面裁图和 page_5 图面表达，当前按“从池体/主管侧横向观察 A-A 典型模块”理解；剖面图中左侧为 item13 所在 DN250 立管一侧，中部为池体与泵侧链，右侧为 item14 所在 DN250 回接立管一侧。本轮四组复用仅改变各组的平面 x 列位，不改变该剖面的观察方向。",
+      "removed_side": "切线前侧的冷却塔平面布置与未被剖到的顶部配水分支。",
+      "retained_side": "池体、泵组、底部主管、泵出口提升段及右侧回接接口。",
+      "projection_basis": "联合使用 page_4 A 标记位置、page_5 A-A 剖面和 page_3 设备平面布置图判断。",
+      "direction_confidence": 0.76,
+      "key_readings": {
+        "length_dimensions_mm": [
+          {"value_mm": 1000, "meaning": "左端立管到底部第一分段长度"},
+          {"value_mm": 1500, "meaning": "左侧池体前段长度"},
+          {"value_mm": 4200, "meaning": "池体中部主段长度"},
+          {"value_mm": 1500, "meaning": "池体后段长度"},
+          {"value_mm": 400, "meaning": "池体至泵区之间的短分段"},
+          {"value_mm": 2400, "meaning": "泵区左侧局部段长度"},
+          {"value_mm": 1850, "meaning": "P-0204 左侧至设备前的分段长度"},
+          {"value_mm": 1000, "meaning": "P-0204 设备本体宽度"},
+          {"value_mm": 2150, "meaning": "P-0204 右侧至末端立管的分段长度"},
+          {"value_mm": 10000, "meaning": "左侧池体主模块总长度"},
+          {"value_mm": 5000, "meaning": "右侧泵区模块总长度"}
+        ],
+        "elevation_markers_m": [
+          {"value_m": "+1.200", "meaning": "左侧顶部接口标高"},
+          {"value_m": "+2.000", "meaning": "左侧 DN250 弯头后横管控制标高"},
+          {"value_m": "±0.000", "meaning": "左侧地坪基准标高"},
+          {"value_m": "-1.200", "meaning": "左侧立管最低标高"},
+          {"value_m": "+1.500", "meaning": "池体内主要控制液位/平台标高"},
+          {"value_m": "±0.000", "meaning": "池体内部地坪/基准标高"},
+          {"value_m": "+1.900", "meaning": "泵区上部平台控制标高"},
+          {"value_m": "-1.400", "meaning": "泵区局部底标高"},
+          {"value_m": "+0.535", "meaning": "泵区局部连接高程"},
+          {"value_m": "±0.000", "meaning": "泵区地坪基准标高"},
+          {"value_m": "+0.510", "meaning": "右侧接口局部控制标高"},
+          {"value_m": "±0.000", "meaning": "右侧地坪基准标高"},
+          {"value_m": "-1.200", "meaning": "右侧回接主管连接高程"}
+        ],
+        "visible_section_items": [
+          {"item_no": 4, "count_in_section": 1, "bom_quantity": 4, "meaning": "左侧顶部 DN250 接口件"},
+          {"item_no": 13, "count_in_section": 1, "bom_quantity": 5, "meaning": "左侧底部主干连接三通"},
+          {"item_no": 29, "count_in_section": 1, "bom_quantity": 4, "meaning": "喇叭口支架"},
+          {"item_no": 30, "count_in_section": 1, "bom_quantity": 5, "meaning": "防水套管"},
+          {"item_no": 27, "count_in_section": 1, "bom_quantity": 4, "meaning": "盲法兰/端部封堵"},
+          {"item_no": 19, "count_in_section": 1, "bom_quantity": 4, "meaning": "DN300 弯头"},
+          {"item_no": 11, "count_in_section": 1, "bom_quantity": 4, "meaning": "DN300 伸缩接头"},
+          {"item_no": 3, "count_in_section": 1, "bom_quantity": 4, "meaning": "DN300 进塔手动蝶阀"},
+          {"item_no": 25, "count_in_section": 1, "bom_quantity": 4, "meaning": "DN300x250 同心异径管"},
+          {"item_no": 26, "count_in_section": 1, "bom_quantity": 4, "meaning": "DN250x150 异径管"},
+          {"item_no": 10, "count_in_section": 1, "bom_quantity": 4, "meaning": "压力表"},
+          {"item_no": 8, "count_in_section": 1, "bom_quantity": 4, "meaning": "DN250 对夹式多功能蝶阀"},
+          {"item_no": 20, "count_in_section": 1, "bom_quantity": 9, "meaning": "DN250 弯头"},
+          {"item_no": 12, "count_in_section": 1, "bom_quantity": 4, "meaning": "DN250 伸缩接头"},
+          {"item_no": 1, "count_in_section": 1, "bom_quantity": 4, "meaning": "DN250 止回阀"},
+          {"item_no": 14, "count_in_section": 1, "bom_quantity": 5, "meaning": "DN450x250 异径三通"}
+        ],
+        "main_nominal_sizes": ["DN500", "DN450", "DN300", "DN250"]
+      },
+      "controlled_run_ids": [
+        "bottom_header_main",
+        "left_side_riser",
+        "right_side_riser",
+        "pump_1_discharge_lift",
+        "pump_2_discharge_lift",
+        "pump_3_discharge_lift",
+        "pump_4_discharge_lift"
+      ],
+      "local_feature_skeletons": [
+        {
+          "feature_id": "aa_left_dn250_riser",
+          "kind": "section_local_profile",
+          "dn": 250,
+          "segments": [
+            {"segment_type": "header_connection_circle", "header_dn": 500, "center_elevation_mm": -1200, "fitting_item_no": 13, "fitting_specification": "DN500x250"},
+            {"segment_type": "vertical", "from_elevation_mm": -1200, "to_elevation_mm": 1200},
+            {"segment_type": "valve", "center_elevation_mm": 1200, "related_item_no": 4},
+            {"segment_type": "vertical", "from_elevation_mm": 1200, "to_elevation_mm": 2000},
+            {"segment_type": "elbow_to_horizontal", "target_elevation_mm": 2000, "dn": 250, "related_item_no": null},
+            {"segment_type": "horizontal_to_tower_side", "target_elevation_mm": 2000, "target_reference": "cooling_tower_outer_wall"}
+          ],
+          "related_items": [4, 13],
+          "status": "section_preview_candidate"
+        },
+        {
+          "feature_id": "aa_p0204_discharge_chain",
+          "kind": "section_local_profile",
+          "dn": 300,
+          "segments": [
+            {"segment_type": "vertical", "from_elevation_mm": 0, "to_elevation_mm": 535, "related_item_no": 19},
+            {"segment_type": "horizontal_chain", "from_dn": 300, "to_dn": 250, "related_items": [11, 3, 25, 10, 8]},
+            {"segment_type": "right_riser", "dn": 250, "from_elevation_mm": -1200, "to_elevation_mm": 510, "related_items": [20, 12, 1, 14]}
+          ],
+          "related_items": [1, 3, 8, 10, 11, 12, 14, 19, 20, 25],
+          "status": "section_preview_candidate"
+        }
+      ],
+      "modeling_notes": [
+        "A-A 仍然是所有全局高程的主基准。",
+        "本轮新增约束：A-A 按“上部泵链恢复 V79、下部 DN500 主干侧恢复 V78”执行；也就是上部保留 4 组泵位中部链路，而下部仅保留 V78 俯视图中的 3 组 DN500 主干侧管道。",
+        "左侧立管可稳定读到 -1.200、0.000、1.200；且由图可知该立管通过三通与 DN500 主管连接，位于主管正上方，并按用户最新约束保持距蓄水池内壁 1000。阀后还要继续上翻到 +2.000，再经 DN250 弯头转成横管接入冷却塔塔侧，并一直延伸到当前剖切到的冷却塔外壁。泵区可稳定读到 +1.900、+0.535、-1.400；右侧回接立管可稳定读到 +0.510 和 -1.200，其中 -1.200 当前按与下方主管/三通的连接高程保留，不再强制解释为可见直管最低点。",
+        "当前并存记录更新为：A-A 可读到左侧 item13=DN500x250、右侧 item14=DN450x250；全局主干则按用户最新更正执行为“上方主管 DN450、下方主管 DN500”，后续若用户继续修正局部件号与主干口径之间的关系，再单独细化。"
+      ]
+    },
+    {
+      "section": "B-B",
+      "source_view": "page_5",
+      "plan_anchor": "page_4 B-B 剖切线位于左下侧 DN100 局部支路附近，靠近 Y-1401/Y-0202 之间的小口径局部件。",
+      "purpose": "确认局部 DN100 支路的立管高度、回弯高程和与池体短接的关系。",
+      "cut_line_description": "切线穿过一根局部 DN100 立管及其顶部回弯短接，用于读取 2.050、1.900、1.500、-0.500 等控制高程。",
+      "view_direction": "按 page_4 B 标记与剖面图表达，当前按“从局部小口径支路外侧看向池体短接侧”理解；剖面图中左侧为 DN100 立管，右侧为池体/短接侧。",
+      "removed_side": "切线前侧未被剖到的平面局部管线和附属设备。",
+      "retained_side": "局部 DN100 立管、顶部回弯段和池体短接。",
+      "projection_basis": "联合 page_4 B 标记位置和 page_5 B-B 典型局部剖面判断。",
+      "direction_confidence": 0.72,
+      "key_readings": {
+        "length_dimensions_mm": [
+          {"value_mm": 700, "meaning": "局部 DN100 支路水平伸入量"}
+        ],
+        "elevation_markers_m": [
+          {"value_m": "+2.050", "meaning": "局部 DN100 顶部最高标高"},
+          {"value_m": "+1.900", "meaning": "局部回弯控制标高"},
+          {"value_m": "+1.500", "meaning": "池体控制标高"},
+          {"value_m": "±0.000", "meaning": "地坪基准标高"},
+          {"value_m": "±0.000", "meaning": "池体内部基准标高"},
+          {"value_m": "-0.500", "meaning": "局部 DN100 最低标高"}
+        ],
+        "visible_section_items": [
+          {"item_no": 24, "count_in_section": 1, "bom_quantity": 6, "meaning": "DN100 弯头"},
+          {"item_no": 7, "count_in_section": 1, "bom_quantity": 2, "meaning": "DN100 多功能蝶阀"},
+          {"item_no": 2, "count_in_section": 1, "bom_quantity": 1, "meaning": "DN100 球阀"}
+        ],
+        "main_nominal_sizes": ["DN100"]
+      },
+      "controlled_run_ids": ["cc_left_wall_dn200"],
+      "local_feature_skeletons": [
+        {
+          "feature_id": "bb_local_dn100_riser",
+          "kind": "section_local_profile",
+          "dn": 100,
+          "segments": [
+            {"segment_type": "vertical", "from_elevation_mm": -500, "to_elevation_mm": 2050},
+            {"segment_type": "return_bend", "target_elevation_mm": 1900},
+            {"segment_type": "short_connect", "projection_mm": 700}
+          ],
+          "related_items": [2, 7, 24],
+          "status": "section_only"
+        }
+      ],
+      "modeling_notes": [
+        "B-B 本轮不再遗漏，作为独立剖面单独保留。",
+        "该剖面只提供局部骨架，不直接进入全局主干 pipe_runs。",
+        "若后续需要细模 DN100 支路，应优先读 B-B 而不是从平面图猜。"
+      ]
+    },
+    {
+      "section": "C-C",
+      "source_view": "page_5",
+      "plan_anchor": "page_4 C-C 剖切线位于左侧 DN200 穿墙支路与雨水井方向接口处。",
+      "purpose": "确认 DN200 穿墙支路、刚性防水套管和池壁内平台的相对关系。",
+      "cut_line_description": "切线横穿池壁和 DN200 管线，明确左侧排入雨水井方向、池壁套管位置和池内分层高程。",
+      "view_direction": "图面左侧明确标注“排入雨水井”，因此当前按“从雨水井方向看向池壁内侧”理解；左侧为外部排水方向，右侧为池内侧。",
+      "removed_side": "雨水井外侧和未被剖到的外部平面管线。",
+      "retained_side": "池壁、DN200 套管、池内平台和池底分层。",
+      "projection_basis": "page_4 C 标记位置与 page_5 C-C 剖面存在明确的一一对应，且剖面中带有雨水井方向文字，可稳定判断。",
+      "direction_confidence": 0.86,
+      "key_readings": {
+        "length_dimensions_mm": [
+          {"value_mm": 1000, "meaning": "套管至池内台阶的局部水平尺寸"}
+        ],
+        "elevation_markers_m": [
+          {"value_m": "+1.900", "meaning": "池顶控制标高"},
+          {"value_m": "+1.500", "meaning": "池内上部控制标高"},
+          {"value_m": "±0.000", "meaning": "地坪基准标高"},
+          {"value_m": "-0.700", "meaning": "DN200 管中心标高"},
+          {"value_m": "-1.400", "meaning": "池内中间平台标高"},
+          {"value_m": "-2.400", "meaning": "池底最低标高"}
+        ],
+        "visible_section_items": [
+          {"item_no": 9, "count_in_section": 1, "bom_quantity": 1, "meaning": "排入雨水井方向闸阀"},
+          {"item_no": 31, "count_in_section": 1, "bom_quantity": 2, "meaning": "钢性防水套管"}
+        ],
+        "main_nominal_sizes": ["DN200"]
+      },
+      "controlled_run_ids": [],
+      "local_feature_skeletons": [
+        {
+          "feature_id": "cc_wall_sleeve",
+          "kind": "section_local_profile",
+          "dn": 200,
+          "segments": [
+            {"segment_type": "horizontal_through_wall", "center_elevation_mm": -700, "projection_mm": 1000}
+          ],
+          "related_items": [9, 31],
+          "status": "section_only"
+        },
+        {
+          "feature_id": "cc_upper_left_sump_pit",
+          "kind": "section_local_profile",
+          "plan_size_mm": [1000.0, 1000.0],
+          "segments": [
+            {"segment_type": "pit_depth", "top_elevation_mm": -1400, "bottom_elevation_mm": -2400}
+          ],
+          "related_items": [],
+          "status": "layout_approximated"
+        }
+      ],
+      "modeling_notes": [
+        "C-C 可稳定确认 DN200 中心高程为 -0.700。",
+        "C-C 当前优先控制一条单独的左墙 DN200 穿墙典型链，不再把 page_4 左侧两条带坡度 DN200 线直接压缩成同一个双路穿墙局部。",
+        "池内还有 -1.400 和 -2.400 两级控制线，说明不是单一平底。",
+        "结合 P3 左上角平面信息，本轮将最左上角 1000x1000 集水坑落到设备图，并以 -2.400 作为坑底标高。"
+      ]
+    },
+    {
+      "section": "D-D",
+      "source_view": "page_5",
+      "plan_anchor": "page_4 D-D 剖切线位于 P-0204 左侧 DN200 典型支路位置。",
+      "purpose": "确认 DN200 支路自池内上翻后转向设备侧的高度与转弯逻辑。",
+      "cut_line_description": "切线穿过池内 DN200 立管、弯头和设备侧短接，是 DN200 典型支路的高程剖面。",
+      "view_direction": "按 page_4 D 标记和 page_5 图面表达，当前按“从池内支路一侧看向设备基础侧”理解；剖面图左侧为池内立管，右侧为设备/地坪侧。",
+      "removed_side": "切线前侧未被剖到的相邻泵组与平面局部阀件。",
+      "retained_side": "DN200 立管、两个弯头、孔口和设备基础短接。",
+      "projection_basis": "page_4 D 标记位于 DN200 典型立管上，page_5 D-D 给出了 1.650、1.600、0.400、-1.400 等完整高程链。",
+      "direction_confidence": 0.79,
+      "key_readings": {
+        "length_dimensions_mm": [
+          {"value_mm": 650, "meaning": "弯头转向后的局部水平偏移"},
+          {"value_mm": 1000, "meaning": "设备基础局部宽度"}
+        ],
+        "elevation_markers_m": [
+          {"value_m": "+1.650", "meaning": "立管顶部控制标高"},
+          {"value_m": "+1.900", "meaning": "上方平台/短接控制标高"},
+          {"value_m": "+1.600", "meaning": "池内上部控制标高"},
+          {"value_m": "+0.400", "meaning": "DN200 中心控制标高"},
+          {"value_m": "±0.000", "meaning": "设备侧地坪基准标高"},
+          {"value_m": "-1.400", "meaning": "池内底部控制标高"}
+        ],
+        "visible_section_items": [
+          {"item_no": 21, "count_in_section": 2, "bom_quantity": 5, "meaning": "DN200 弯头，两处转弯"},
+          {"item_no": 28, "count_in_section": 1, "bom_quantity": 1, "meaning": "DN200 制孔口"},
+          {"item_no": 31, "count_in_section": 1, "bom_quantity": 2, "meaning": "钢性防水套管"}
+        ],
+        "main_nominal_sizes": ["DN200"]
+      },
+      "controlled_run_ids": [
+        "pump_1_discharge_riser",
+        "pump_2_discharge_riser",
+        "pump_3_discharge_riser",
+        "pump_4_discharge_riser"
+      ],
+      "local_feature_skeletons": [
+        {
+          "feature_id": "dd_local_dn200_turn",
+          "kind": "section_local_profile",
+          "dn": 200,
+          "segments": [
+            {"segment_type": "vertical", "from_elevation_mm": 400, "to_elevation_mm": 1650},
+            {"segment_type": "horizontal_turn", "projection_mm": 650},
+            {"segment_type": "equipment_short_connect", "projection_mm": 1000}
+          ],
+          "related_items": [21, 28, 31],
+          "status": "layout_approximated"
+        }
+      ],
+      "modeling_notes": [
+        "D-D 是 DN200 局部支路的典型高程剖面。",
+        "池内左侧还有 1.600 控制线，说明立管顶点略高于池内液位/平台线。"
+      ]
+    },
+    {
+      "section": "E-E",
+      "source_view": "page_5",
+      "plan_anchor": "page_4 E-E 剖切线位于从左到右第三个预埋钢管/刚性防水套管处，对应一根由底部主管上翻的 DN250 典型立管；结合局部平面图，该处顶部 DN250 横管在平面上位于第三个预埋钢管正上方。",
+      "purpose": "确认该处 E-E 典型支路的底部主管、DN250 立管、蝶阀、顶部横管、两只弯头以及右侧回落短管与池内壁的关系。",
+      "cut_line_description": "切线穿过底部主管上的异径三通、左侧 DN250 立管、标高 1.200 处蝶阀、标高 2.200 的 DN250 顶部横管、右侧 DN250 回落短管以及其与池内壁的 500 定位尺寸。",
+      "view_direction": "按 page_4 E 标记和当前局部识读结果，按“从立管外侧看向池体短接侧”理解；剖面图左侧为由主管上翻的 DN250 立管，右侧为池体内壁与回落短管。",
+      "removed_side": "切线前侧未被剖到的相邻泵组和顶部主管平面。",
+      "retained_side": "DN450 底部主管圆形截面、通过 13 号件连接的 DN250 立管、4 号蝶阀、两只 20 号弯头、顶部横管和右侧回落短管。",
+      "projection_basis": "联合 page_4 E 局部平面、当前用户提供的 E-E 剖面局部裁图和 page_5 E-E 剖面高程链判断。",
+      "direction_confidence": 0.9,
+      "plan_location_reference": {
+        "reference_feature_order": "从左到右第三个预埋钢管/刚性防水套管",
+        "current_shared_anchor_guess": "top_wall_dn300_sleeve_3",
+        "note": "后续恢复该支路绘制时，优先把 E-E 典型段挂到当前 shared 中第三个上壁套管对应的 x 锚点。"
+      },
+      "key_readings": {
+        "length_dimensions_mm": [
+          {"value_mm": 500, "meaning": "右侧 DN250 回落短管中心距蓄水池下侧内壁"},
+          {"value_mm": 1000, "meaning": "底部主管圆心到内壁定位线的局部水平尺寸"}
+        ],
+        "elevation_markers_m": [
+          {"value_m": "+2.200", "meaning": "局部最高回弯标高"},
+          {"value_m": "+1.900", "meaning": "回弯出口标高"},
+          {"value_m": "+1.500", "meaning": "池体控制标高"},
+          {"value_m": "+1.200", "meaning": "立管中间控制标高"},
+          {"value_m": "±0.000", "meaning": "地坪基准标高"},
+          {"value_m": "±0.000", "meaning": "池体内部基准标高"},
+          {"value_m": "-1.200", "meaning": "立管最低标高"}
+        ],
+        "visible_section_items": [
+          {"item_no": 13, "count_in_section": 1, "bom_quantity": 5, "meaning": "底部主管与 DN250 立管连接处的异径三通，当前按用户说明记录为 DN500x250"},
+          {"item_no": 4, "count_in_section": 1, "bom_quantity": 4, "meaning": "标高 +1.200 处的 DN250 蝶阀"},
+          {"item_no": 20, "count_in_section": 2, "bom_quantity": 9, "meaning": "DN250 90 度弯头，上下各一处，用于左竖管接顶部横管、顶部横管接右竖管"}
+        ],
+        "main_nominal_sizes": ["DN450", "DN250"]
+      },
+      "controlled_run_ids": [
+        "right_side_riser",
+        "pump_1_suction_branch",
+        "pump_1_suction_riser",
+        "pump_2_suction_branch",
+        "pump_2_suction_riser",
+        "pump_3_suction_branch",
+        "pump_3_suction_riser",
+        "pump_4_suction_branch",
+        "pump_4_suction_riser"
+      ],
+      "local_feature_skeletons": [
+        {
+          "feature_id": "ee_typical_dn250_return",
+          "kind": "section_local_profile",
+          "dn": 250,
+          "segments": [
+            {"segment_type": "header_connection_circle", "header_dn": 500, "center_elevation_mm": -1200, "fitting_item_no": 13, "fitting_specification": "DN500x250"},
+            {"segment_type": "vertical", "from_elevation_mm": -1200, "to_elevation_mm": 2200, "valve_item_no": 4, "valve_center_elevation_mm": 1200},
+            {"segment_type": "top_horizontal", "from_elevation_mm": 2200, "to_elevation_mm": 2200, "dn": 250},
+            {"segment_type": "elbow_pair", "item_no": 20, "count": 2, "right_drop_target_elevation_mm": 1900},
+            {"segment_type": "inner_wall_offset", "projection_mm": 500, "reference": "right_vertical_center_to_inner_wall"}
+          ],
+          "related_items": [13, 4, 20],
+          "status": "layout_approximated"
+        }
+      ],
+      "modeling_notes": [
+        "E-E 当前不再只理解为“普通 DN250 回弯模板”，而是明确包含底部主管圆截面、13 号异径三通、4 号蝶阀和两只 20 号弯头的完整局部连接关系。",
+        "底部圆按用户最新更正读取为下方 DN500 主管的剖面圆，主管中心标高为 -1.200。",
+        "左侧 DN250 竖管在 +1.200 处设 4 号蝶阀，继续上翻到 +2.200 后转为顶部 DN250 横管。",
+        "顶部横管右端通过 20 号弯头下翻，右侧回落短管中心距蓄水池下侧内壁 500，而不是上侧内壁。",
+        "E-E 位于第三个预埋钢管/刚性防水套管处，因此平面恢复时，顶部 DN250 横管的 x 锚点必须与第三个上壁套管一致，不能只按文字随意挂到别处。"
+      ]
+    },
+    {
+      "section": "F-F",
+      "source_view": "page_5",
+      "plan_anchor": "page_4 F-F 剖切线位于左中部 DN150 局部支路附近；按用户最新更正，F-F 的顶部横管中点应经过蓄水池左侧第一块池顶预埋钢板中心，对应 `left_embedded_plate_1` x=150，因此该回弯的左侧立管列位需回算到 x=-150。",
+      "purpose": "确认局部 DN150 三通、左侧立管、顶部回弯和回落入池关系。",
+      "cut_line_description": "切线穿过底部 18 号 DN150 三通、左侧 DN150 立管、顶部两只 22 号弯头构成的回弯，以及右侧回落入池段，是左中部独立 DN150 局部典型剖面。",
+      "view_direction": "按 page_4 F 标记和 page_5 图面表达，当前按“从局部 DN150 支路外侧看向池体短接侧”理解。",
+      "removed_side": "未被剖到的相邻 DN125/DN150 平面走向和局部设备轮廓。",
+      "retained_side": "18 号三通、左侧 DN150 立管、顶部双 22 号弯头回弯和右侧回落入池段。",
+      "projection_basis": "page_4 F 标记位于左中部 Y-0202 附近的 DN150 局部支路上；page_5 F-F 可稳定读取 2.150、1.500、-0.600 和 600，其中 600 对应回弯左右立管中心线间距。",
+      "direction_confidence": 0.74,
+      "key_readings": {
+        "length_dimensions_mm": [
+          {"value_mm": 600, "meaning": "顶部回弯左右 DN150 立管中心线间距"}
+        ],
+        "elevation_markers_m": [
+          {"value_m": "+2.150", "meaning": "DN150 顶部最高标高"},
+          {"value_m": "+1.500", "meaning": "右侧回落入池控制标高"},
+          {"value_m": "±0.000", "meaning": "地坪基准标高"},
+          {"value_m": "±0.000", "meaning": "池体内部基准标高"},
+          {"value_m": "-0.600", "meaning": "底部局部最低标高"}
+        ],
+        "visible_section_items": [
+          {"item_no": 22, "count_in_section": 2, "bom_quantity": 8, "meaning": "DN150 弯头，两只共同构成顶部回弯"},
+          {"item_no": 18, "count_in_section": 1, "bom_quantity": 1, "meaning": "DN150 三通，位于底部 -0.600 处"}
+        ],
+        "main_nominal_sizes": ["DN150"]
+      },
+      "controlled_run_ids": ["ff_left_riser_dn150", "ff_top_return_dn150", "ff_return_drop_dn150"],
+      "local_feature_skeletons": [
+        {
+          "feature_id": "ff_local_dn150_riser",
+          "kind": "section_local_profile",
+          "dn": 150,
+          "segments": [
+            {"segment_type": "vertical", "from_elevation_mm": -600, "to_elevation_mm": 2150},
+            {"segment_type": "return_bend", "item_no": 22, "count": 2, "highest_elevation_mm": 2150, "centerline_span_mm": 600},
+            {"segment_type": "drop_into_basin", "to_elevation_mm": 1500},
+            {"segment_type": "bottom_tee", "item_no": 18}
+          ],
+          "related_items": [18, 22],
+          "status": "section_preview_enabled"
+        }
+      ],
+      "modeling_notes": [
+        "F-F 不应与 B-B 或 G-G 合并，它对应独立的 DN150 局部做法。",
+        "本轮把 F-F 从纯 section_only 文本模板提升为局部 section preview 路由。",
+        "按用户最新更正，F-F 顶部横管中点而不是左侧立管应经过蓄水池左侧第一块池顶预埋钢板中心；据此回弯左立管列位回算为 x=-150。",
+        "底部外露短 stub 可见但未标尺寸；局部试绘时只按可见短节补足，不把其长度写成强约束。"
+      ]
+    },
+    {
+      "section": "G-G",
+      "source_view": "page_5",
+      "plan_anchor": "page_4 G-G 剖切线位于从左到右第一个预埋钢管处；结合当前 shared 锚点顺序，这个“从左到右第一个”应映射到 top_wall_dn300_sleeve_5，而不是按 shared 中从右往左的 sleeve_1 顺序直接取值。",
+      "purpose": "确认第一个预埋钢管处的局部 DN100 支路与 DN250 立管、底部 DN500 主管截面以及 13/17/24/7 号件的衔接关系。",
+      "cut_line_description": "切线穿过底部 DN500 主管圆截面、右侧 DN250 立管、标高 +1.000 处的 17 号 DN250x100 异径三通、其左侧 1000 的 DN100 立管、上下两个 24 号 DN100 90 度弯头，以及下方长 500 的 DN100 短横管。",
+      "view_direction": "按 page_4 G 标记、当前局部平面裁图和 page_5 G-G 剖面表达，当前按“从局部 DN100 支路外侧看向右侧 DN250 立管和底部主管”理解；剖面图中左侧为 DN100 局部支路，右侧为 DN250 立管和底部圆形接口。",
+      "removed_side": "切线前侧未被剖到的底部主管平面段和相邻泵支路。",
+      "retained_side": "DN100 局部支路、DN250 立管、底部圆形接口和局部三通。",
+      "projection_basis": "page_4 G 标记位于底部 DN500 主管局部件附近，page_5 G-G 的 1.000、-0.650、-1.200 与 500/1000 尺寸链可稳定读取。",
+      "direction_confidence": 0.78,
+      "key_readings": {
+        "length_dimensions_mm": [
+          {"value_mm": 500, "meaning": "下部短 DN100 横管长度"},
+          {"value_mm": 1000, "meaning": "左侧 DN100 立管中心到右侧 DN250 立管中心的水平距离"}
+        ],
+        "elevation_markers_m": [
+          {"value_m": "+1.000", "meaning": "局部 DN100 顶部标高"},
+          {"value_m": "±0.000", "meaning": "地坪基准标高"},
+          {"value_m": "-0.650", "meaning": "局部 DN100 底部标高"},
+          {"value_m": "-1.200", "meaning": "DN250 立管底部标高"}
+        ],
+        "visible_section_items": [
+          {"item_no": 24, "count_in_section": 2, "bom_quantity": 6, "meaning": "DN100 弯头，两处转向"},
+          {"item_no": 7, "count_in_section": 1, "bom_quantity": 2, "meaning": "上方 DN100 横管上的 DN100 多功能蝶阀"},
+          {"item_no": 17, "count_in_section": 1, "bom_quantity": 1, "meaning": "标高 +1.000 处的 DN250x100 异径三通"},
+          {"item_no": 13, "count_in_section": 1, "bom_quantity": 5, "meaning": "底部主管与 DN250 立管连接处的异径三通，当前按用户说明保留 DN500x250 件号语义"}
+        ],
+        "main_nominal_sizes": ["DN500", "DN250", "DN100"]
+      },
+      "controlled_run_ids": [],
+      "local_feature_skeletons": [
+        {
+          "feature_id": "gg_local_dn100_to_dn250",
+          "kind": "section_local_profile",
+          "dn": 100,
+          "segments": [
+            {"segment_type": "header_connection_circle", "header_dn": 500, "center_elevation_mm": -1200, "fitting_item_no": 13, "fitting_specification": "DN500x250"},
+            {"segment_type": "riser_vertical", "dn": 250, "from_elevation_mm": -1200, "to_elevation_mm": 1000, "riser_tee_item_no": 17, "riser_tee_specification": "DN250x100"},
+            {"segment_type": "top_horizontal", "dn": 100, "centerline_spacing_to_riser_mm": 1000, "valve_item_no": 7},
+            {"segment_type": "left_vertical", "dn": 100, "from_elevation_mm": -650, "to_elevation_mm": 1000},
+            {"segment_type": "bottom_stub", "dn": 100, "projection_mm": 500},
+            {"segment_type": "elbow_pair", "item_no": 24, "count": 2}
+          ],
+          "related_items": [7, 13, 17, 24],
+          "status": "section_only"
+        }
+      ],
+      "modeling_notes": [
+        "G-G 对应的是第一个预埋钢管处的局部 DN100/DN250 典型接口，不应并入 C-C 或 B-B。",
+        "底部圆当前按用户最新更正读取为下方 DN500 主管截面，标高 -1.200；件号 13 仍保留 DN500x250 的 BOM 语义，暂不在识图阶段自行统一。",
+        "后续局部试绘时，平面 x 锚点优先使用 top_wall_dn300_sleeve_5，对应“从左到右第一个预埋钢管”。"
+      ]
+    },
+    {
+      "section": "H-H",
+      "source_view": "page_5",
+      "plan_anchor": "按用户最新更正，H-H 语义锚点位于 `Y-0202` 正方形右壁中间处；当前总图为了避免与设备长方形代理重叠，将可见 DN125 竖管外移到设备右边界外约 300，对应 x=-1700，设备中线 y=5850。",
+      "purpose": "确认 H-H 这条位于 Y-0202 右侧设备带的 DN125 连接链：H-H 本体负责底部弯头、底部横管和竖管；接向 DN450 主管的长连管单独保留为相连管道，不再重复画成长竖向链。",
+      "cut_line_description": "切线穿过 Y-0202 右侧中部 DN125 横管、其右端上翻弯头、外移后的 DN125 竖管、顶部接入段以及与 DN450 主管的三通连接语义；连接主管的长水平管另在总图平面中保留。",
+      "view_direction": "按 page_4 平面与用户最新更正，当前 H-H 优先理解为 Y-0202 右壁中部这一条向上回接 DN450 主管的 DN125 链；剖面图上部为主管接入侧，下部为 Y-0202 右壁中部横管侧。",
+      "removed_side": "切线前侧未被剖到的相邻平面段和局部设备轮廓。",
+      "retained_side": "16 号 DN450x125 分支语义、靠主管一侧的顶部接入短段、两只 23 号弯头、DN125 上行立管和 Y-0202 右壁中部横管。",
+      "projection_basis": "用户最新明确指出：H-H 不在 Y-0202 左边界向右 400，而在 Y-0202 正方形右壁中间处；并进一步说明下部横管右端弯头应朝 DN450 主管方向，上行 DN125 后在主管上方再经弯头下翻，通过三通与主管连接。同时明确要求删除 H-H 附近那根重复长竖管，只保留连接 DN450 主管的长连管。H-H 标高继续按 page_5 H-H 的 5.000、1.200、0.200、0.000、-0.900 执行。",
+      "direction_confidence": 0.84,
+      "key_readings": {
+        "length_dimensions_mm": [
+          {"value_mm": 500, "meaning": "上部 DN125 横向接入段长度"}
+        ],
+        "elevation_markers_m": [
+          {"value_m": "+5.000", "meaning": "顶部主管标高"},
+          {"value_m": "+1.200", "meaning": "下落支管中间控制标高"},
+          {"value_m": "+0.200", "meaning": "平台/池顶控制标高"},
+          {"value_m": "±0.000", "meaning": "地坪基准标高"},
+          {"value_m": "-0.900", "meaning": "下端局部标高"}
+        ],
+        "visible_section_items": [
+          {"item_no": 6, "count_in_section": 1, "bom_quantity": 1, "meaning": "标高 +1.200 处的 DN125 蝶阀"},
+          {"item_no": 23, "count_in_section": 2, "bom_quantity": 4, "meaning": "DN125 弯头，上下各一处"},
+          {"item_no": 16, "count_in_section": 0, "bom_quantity": 1, "meaning": "page_4 可确认顶部主管接 DN125 支路的 DN450x125 分支语义"}
+        ],
+        "main_nominal_sizes": ["DN450", "DN125"]
+      },
+      "controlled_run_ids": ["top_header_main_left", "hh_top_branch_dn125", "hh_vertical_drop_dn125", "hh_lower_outlet_dn125"],
+      "modeling_notes": [
+        "H-H 说明顶部主管高程应取 +5.000，下端局部标高取 -0.900。",
+        "按用户最新更正，H-H 的语义列位仍为 `Y-0202` 正方形右壁中间处；但总图可见竖管外移到 x=-1700，避免与设备代理重叠。",
+        "H-H 当前按“右壁中部横管 -> 右端弯头 -> DN125 竖管 -> 标高 +1.200 处 6 号 DN125 蝶阀 -> 阀后继续上翻段 -> 顶部接入段 -> 通过三通接回 DN450 主管”的链路理解；与主管相连的长水平接入管单独保留，不再重复落成长竖向链。"
+      ]
+    },
+    {
+      "section": "I-I",
+      "source_view": "page_5",
+      "plan_anchor": "page_4 I-I 剖切线位于 Y-0202 左下侧局部 DN150 链附近，按用户当前复核结果取 Y-0202 左边界向右 400、下边界向下 300 的位置，即 x=-4300、y=4200。",
+      "purpose": "确认 Y-0202 左侧局部 DN150 下落支路与上部短横段、下部短接的典型高程关系。",
+      "cut_line_description": "切线穿过 Y-0202 左侧一条局部 DN150 上部接入段、DN150 下落立管和下部沿 +Y 接出的短段，是左侧设备带的局部典型剖面。",
+      "view_direction": "按 page_4 I 标记与 page_5 图面表达，当前按“从局部上部短横段外侧看向 Y-0202/池内设备侧”理解。",
+      "removed_side": "切线前侧未被剖到的相邻局部设备轮廓与未入剖面的其余左侧平面管段。",
+      "retained_side": "上部 DN150 短横段、DN150 下落立管、上下两只 22 号弯头和下部沿 +Y 接出的短段。",
+      "projection_basis": "page_4 左侧局部裁图可见 I 标记落在 Y-0202 左侧局部设备带；结合 page_5 I-I，可稳定读取 +4.500、+0.200、±0.000、-0.600，并据用户当前复核把列位锁定到 Y-0202 左边界向右 400。",
+      "direction_confidence": 0.83,
+      "key_readings": {
+        "length_dimensions_mm": [],
+        "elevation_markers_m": [
+          {"value_m": "+4.500", "meaning": "顶部主管标高"},
+          {"value_m": "+1.200", "meaning": "下落支管中段控制标高"},
+          {"value_m": "+0.200", "meaning": "平台/池顶控制标高"},
+          {"value_m": "±0.000", "meaning": "地坪基准标高"},
+          {"value_m": "-0.600", "meaning": "下端局部标高"}
+        ],
+        "visible_section_items": [
+          {"item_no": 22, "count_in_section": 2, "bom_quantity": 4, "meaning": "I-I 局部 DN150 下落支路所用上下两只弯头"}
+        ],
+        "main_nominal_sizes": ["DN150"]
+      },
+      "controlled_run_ids": ["ii_top_branch_dn150", "ii_vertical_drop_dn150", "ii_lower_outlet_dn150"],
+      "modeling_notes": [
+        "按当前 P4/P5 复核结果，I-I 不再解释为右侧塔区 DN150 下落支路，而是恢复为 Y-0202 左侧局部 DN150 下落链；平面列位按 Y-0202 左边界向右 400 收紧。",
+        "I-I 本轮重新纳入当前总图的局部 section preview 执行对象，用于把该局部 DN150 上部短横段、立管和下部短接真正落到左侧设备带。",
+        "按用户本轮要求，Y-0202 附近 TK-0202 立式罐已左移到 I-I DN150 列位，外径按上下顶部横管间距取 1110，并按空心壳、实心底、无顶盖表达；下侧 I-I 与上侧对称 I-I 的顶部 DN150 横管（+4.500）均延长接入该罐外壁，底部短接与 F-F 平面外接链保持原语义。"
+      ]
+    }
+  ],
+  "section_direction_checklist": [
+    "先在 page_4 或 page_3 上确认剖切线具体落在哪一段主管、支路或设备附近。",
+    "再判断该剖面主要解释的是全局主干还是局部典型件，避免把局部典型误当成全局主干。",
+    "优先用剖面中的文字方向线、池体内外轮廓和设备基础位置判断左右两侧语义。",
+    "若剖面图中已经出现明确的去向文字，例如“排入雨水井”，优先用该文字锁定左右方向。",
+    "最后再用 page_4 的平面锚点、page_5 的剖面高程链和 page_3 的设备关系交叉复核。"
+  ],
+  "pipeline_profiles_v2": {
+    "basis": "本字段对应 2026-04-09 对 P4/P5 的重新识图结果，作为 pipeline_layout_v2 的高程模板；后续脚本优先读取本字段，不再直接消费旧 pipe_runs 的绝对坐标。",
+    "global_profiles": [
+      {
+        "profile_id": "top_header_profile",
+        "dn": 450,
+        "main_elevation_mm": 5000.0,
+        "source_sections": ["H-H"],
+        "basis": "H-H 剖面标注无无阀喷淋进水口 +5.000。"
+      },
+      {
+        "profile_id": "right_tower_drop_profile",
+        "dn": 150,
+        "main_elevation_mm": 4500.0,
+        "connection_elevation_mm": 3200.0,
+        "source_sections": [],
+        "basis": "原先曾借 I-I 解释右侧 DN150 下落支路并取 +4.500；本轮 I-I 已改判为 Y-0202 左侧局部剖切列位，因此这里只保留历史高度占位，不再声称来自 I-I。"
+      },
+      {
+        "profile_id": "bottom_header_profile",
+        "dn": 500,
+        "main_elevation_mm": 0.0,
+        "source_sections": ["A-A"],
+        "basis": "A-A 主剖面底部 DN500 主干以 ±0.000 为主控制标高。"
+      },
+      {
+        "profile_id": "pump_upper_connection_profile",
+        "dn": 250,
+        "pump_side_elevation_mm": 1900.0,
+        "source_sections": ["A-A", "E-E"],
+        "basis": "A-A 和 E-E 均表明泵侧上接段以 +1.900 为主要控制高程。"
+      },
+      {
+        "profile_id": "pump_lower_connection_profile",
+        "dn": 300,
+        "pump_side_elevation_mm": 535.0,
+        "header_connection_elevation_mm": 0.0,
+        "source_sections": ["A-A", "D-D"],
+        "basis": "A-A 泵侧局部短接高程 +0.535；D-D 说明 DN200/DN300 泵侧转接与穿墙带靠近 +0.400~+0.535 区间。"
+      },
+      {
+        "profile_id": "left_wall_dn200_upper_profile",
+        "dn": 200,
+        "main_elevation_mm": -710.0,
+        "wall_center_elevation_mm": -700.0,
+        "source_sections": ["C-C"],
+        "basis": "P4 左上 DN200 标注管内底 -0.710；C-C 给出穿墙中心 -0.700。"
+      },
+      {
+        "profile_id": "left_wall_dn200_lower_profile",
+        "dn": 200,
+        "main_elevation_mm": -720.0,
+        "wall_center_elevation_mm": -700.0,
+        "source_sections": ["C-C"],
+        "basis": "P4 左中 DN200 标注管内底 -0.720；穿墙仍按 C-C 统一左墙套管高程表达。"
+      }
+    ],
+    "section_only_profiles": [
+      {
+        "profile_id": "bb_local_dn100",
+        "dn": 100,
+        "top_elevation_mm": 2050.0,
+        "bottom_elevation_mm": -500.0,
+        "source_sections": ["B-B"],
+        "status": "section_only"
+      },
+      {
+        "profile_id": "ff_local_dn150",
+        "dn": 150,
+        "top_elevation_mm": 2150.0,
+        "bottom_elevation_mm": -600.0,
+        "source_sections": ["F-F"],
+        "status": "section_only"
+      },
+      {
+        "profile_id": "gg_local_dn100",
+        "dn": 100,
+        "top_elevation_mm": 1000.0,
+        "bottom_elevation_mm": -650.0,
+        "source_sections": ["G-G"],
+        "status": "section_only"
+      }
+    ],
+    "deprecated_note": "旧 pipe_runs 为上一轮总图骨架试算结果，保留仅供历史对照；本轮脚本不得再直接依赖旧 pipe_runs。"
+  },
+  "routing_rules": {
+    "modeling_strategy": "本轮主模型改为：page_3 设备锚点 + dimension_info.pipeline_layout_v2 的平面/三维锚点 + pipeline_profiles_v2 的剖面高程模板联合驱动。对于 P4 俯视图中上下两根 25000 长横向主管，优先读取 dimension_info.pipeline_layout_v2.p4_main_header_constraints_v4，不再回退到旧的 pipe_runs 或旧版上下主管口径/上下位置假设。当前阶段按用户要求进入“仅保留两根主管”的简化模式，其他管段全部关闭。",
+    "mainline_scope": [
+      "DN500 底部主管、DN450 顶部主管、四台泵上下主支管、三台实际冷却塔下落支管进入本轮全局 3D 主干。",
+      "B-B/F-F/G-G 仍只作为局部剖面模板，不强行提升为全局主干。"
+    ],
+    "connection_policy": [
+      "item 13~18、25~31 相关连接允许用正交骨架节点或 section-local skeleton 表达。",
+      "item 19~24 相关弯头默认用正交转折表达，不单独生成细模弯头实体。",
+      "局部典型件若缺少独立平面锚点，只能挂在剖面条目下，不得伪造全局坐标。"
+    ]
+  },
+  "pipe_runs": [
+    {
+      "run_id": "top_header_main_left",
+      "role": "top_supply_header",
+      "start": [-1200.0, 8400.0, 5000.0],
+      "end": [11400.0, 8400.0, 5000.0],
+      "axis": "x",
+      "dn": 450,
+      "source_views": ["page_4", "page_5 H-H"],
+      "plan_basis": "page_4 顶部 DN450 主干，位于四台冷却塔上方。",
+      "elevation_basis": "H-H 确认左侧顶部主管标高为 +5.000。",
+      "controlling_sections": ["H-H"],
+      "related_items": [14, 15, 16, 23, 33],
+      "confidence": 0.95
+    },
+    {
+      "run_id": "top_header_main_right",
+      "role": "top_supply_header",
+      "start": [11400.0, 8400.0, 4500.0],
+      "end": [18200.0, 8400.0, 4500.0],
+      "axis": "x",
+      "dn": 450,
+      "source_views": ["page_4", "page_5 I-I"],
+      "plan_basis": "page_4 顶部 DN450 主干右侧段，位于 CT-0203/CT-0204 上方。",
+      "elevation_basis": "I-I 确认右侧顶部主管标高为 +4.500。",
+      "controlling_sections": ["I-I"],
+      "related_items": [14, 17, 22, 33],
+      "confidence": 0.94
+    },
+    {
+      "run_id": "bottom_header_main",
+      "role": "bottom_header",
+      "start": [-1200.0, 1600.0, 0.0],
+      "end": [18200.0, 1600.0, 0.0],
+      "axis": "x",
+      "dn": 500,
+      "source_views": ["page_4", "page_5 A-A"],
+      "plan_basis": "page_4 底部 DN500 主管横穿泵区底部。",
+      "elevation_basis": "A-A 确认底部主管以 0.000 为主控制高程。",
+      "controlling_sections": ["A-A"],
+      "related_items": [13, 18, 22, 32],
+      "confidence": 0.95
+    },
+    {
+      "run_id": "left_side_riser",
+      "role": "left_main_riser",
+      "start": [0.0, 1600.0, -1200.0],
+      "end": [0.0, 1600.0, 1200.0],
+      "axis": "z",
+      "dn": 300,
+      "source_views": ["page_5 A-A"],
+      "plan_basis": "page_4 左侧主立管锚在左边界主干接口处。",
+      "elevation_basis": "A-A 确认立管自 -1.200 上翻到 +1.200。",
+      "controlling_sections": ["A-A"],
+      "related_items": [19, 20, 29, 30],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "right_side_riser",
+      "role": "right_return_riser",
+      "start": [17500.0, 1600.0, -1200.0],
+      "end": [17500.0, 1600.0, 1200.0],
+      "axis": "z",
+      "dn": 250,
+      "source_views": ["page_5 A-A", "page_5 E-E"],
+      "plan_basis": "page_4 右侧典型回接/吸入立管锚在右边界。",
+      "elevation_basis": "A-A 提供全局最低点，E-E 提供典型回弯控制。",
+      "controlling_sections": ["A-A", "E-E"],
+      "related_items": [20, 25, 26],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "left_bottom_stub",
+      "role": "external_connection",
+      "start": [-2600.0, 1600.0, 0.0],
+      "end": [0.0, 1600.0, 0.0],
+      "axis": "x",
+      "dn": 500,
+      "source_views": ["page_4"],
+      "plan_basis": "page_4 左侧 DN500 来水接口。",
+      "elevation_basis": "与 bottom_header_main 共用 0.000 基准。",
+      "controlling_sections": ["A-A"],
+      "related_items": [13, 32],
+      "confidence": 0.88
+    },
+    {
+      "run_id": "right_bottom_stub",
+      "role": "external_connection",
+      "start": [17500.0, 1600.0, 0.0],
+      "end": [20100.0, 1600.0, 0.0],
+      "axis": "x",
+      "dn": 450,
+      "source_views": ["page_4"],
+      "plan_basis": "page_4 右侧 DN450 外接接口。",
+      "elevation_basis": "与右侧回接系统共用底部 0.000 基准。",
+      "controlling_sections": ["A-A"],
+      "related_items": [13, 33],
+      "confidence": 0.86
+    },
+    {
+      "run_id": "pump_1_suction_branch",
+      "role": "pump_suction_horizontal",
+      "start": [3500.0, 1600.0, 0.0],
+      "end": [3500.0, 3600.0, 0.0],
+      "axis": "y",
+      "dn": 250,
+      "source_views": ["page_4", "page_5 E-E"],
+      "plan_basis": "page_4 P-0201 吸入支路。",
+      "elevation_basis": "E-E 典型剖面。",
+      "controlling_sections": ["E-E"],
+      "related_items": [1, 8, 20, 22],
+      "confidence": 0.92
+    },
+    {
+      "run_id": "pump_1_suction_riser",
+      "role": "pump_suction_vertical",
+      "start": [3500.0, 3600.0, 0.0],
+      "end": [3500.0, 3600.0, 1200.0],
+      "axis": "z",
+      "dn": 250,
+      "source_views": ["page_5 E-E"],
+      "plan_basis": "page_4 P-0201 吸入立管锚点。",
+      "elevation_basis": "E-E 1.200 中间控制高程。",
+      "controlling_sections": ["E-E"],
+      "related_items": [1, 8, 20, 22],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "pump_1_discharge_riser",
+      "role": "pump_discharge_vertical",
+      "start": [3500.0, 5200.0, 1200.0],
+      "end": [3500.0, 5200.0, 3600.0],
+      "axis": "z",
+      "dn": 300,
+      "source_views": ["page_4", "page_5 D-D"],
+      "plan_basis": "page_4 P-0201 出口立管。",
+      "elevation_basis": "D-D 提供 DN200/DN300 典型转向前的抬升逻辑。",
+      "controlling_sections": ["D-D"],
+      "related_items": [3, 19, 21, 25],
+      "confidence": 0.88
+    },
+    {
+      "run_id": "pump_1_discharge_lift",
+      "role": "pump_discharge_lift",
+      "start": [3500.0, 5200.0, 3600.0],
+      "end": [3500.0, 5200.0, 5000.0],
+      "axis": "z",
+      "dn": 250,
+      "source_views": ["page_5 A-A"],
+      "plan_basis": "page_4 P-0201 出口提升接塔段。",
+      "elevation_basis": "A-A 主剖面。",
+      "controlling_sections": ["A-A"],
+      "related_items": [4, 20, 25, 26],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "pump_1_discharge_connect",
+      "role": "pump_to_header_horizontal",
+      "start": [3500.0, 5200.0, 5000.0],
+      "end": [3500.0, 8400.0, 5000.0],
+      "axis": "y",
+      "dn": 250,
+      "source_views": ["page_4", "page_5 H-H"],
+      "plan_basis": "page_4 P-0201 出口接到顶部主管的水平段。",
+      "elevation_basis": "H-H 左侧顶部主管高程。",
+      "controlling_sections": ["H-H"],
+      "related_items": [4, 20, 22, 23],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "pump_2_suction_branch",
+      "role": "pump_suction_horizontal",
+      "start": [7700.0, 1600.0, 0.0],
+      "end": [7700.0, 3600.0, 0.0],
+      "axis": "y",
+      "dn": 250,
+      "source_views": ["page_4", "page_5 E-E"],
+      "plan_basis": "page_4 P-0202 吸入支路。",
+      "elevation_basis": "E-E 典型剖面。",
+      "controlling_sections": ["E-E"],
+      "related_items": [1, 8, 20, 22],
+      "confidence": 0.92
+    },
+    {
+      "run_id": "pump_2_suction_riser",
+      "role": "pump_suction_vertical",
+      "start": [7700.0, 3600.0, 0.0],
+      "end": [7700.0, 3600.0, 1200.0],
+      "axis": "z",
+      "dn": 250,
+      "source_views": ["page_5 E-E"],
+      "plan_basis": "page_4 P-0202 吸入立管锚点。",
+      "elevation_basis": "E-E 1.200 中间控制高程。",
+      "controlling_sections": ["E-E"],
+      "related_items": [1, 8, 20, 22],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "pump_2_discharge_riser",
+      "role": "pump_discharge_vertical",
+      "start": [7700.0, 5200.0, 1200.0],
+      "end": [7700.0, 5200.0, 3600.0],
+      "axis": "z",
+      "dn": 300,
+      "source_views": ["page_4", "page_5 D-D"],
+      "plan_basis": "page_4 P-0202 出口立管。",
+      "elevation_basis": "D-D 典型剖面。",
+      "controlling_sections": ["D-D"],
+      "related_items": [3, 19, 21, 25],
+      "confidence": 0.88
+    },
+    {
+      "run_id": "pump_2_discharge_lift",
+      "role": "pump_discharge_lift",
+      "start": [7700.0, 5200.0, 3600.0],
+      "end": [7700.0, 5200.0, 5000.0],
+      "axis": "z",
+      "dn": 250,
+      "source_views": ["page_5 A-A"],
+      "plan_basis": "page_4 P-0202 出口提升接塔段。",
+      "elevation_basis": "A-A 主剖面。",
+      "controlling_sections": ["A-A"],
+      "related_items": [4, 20, 25, 26],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "pump_2_discharge_connect",
+      "role": "pump_to_header_horizontal",
+      "start": [7700.0, 5200.0, 5000.0],
+      "end": [7700.0, 8400.0, 5000.0],
+      "axis": "y",
+      "dn": 250,
+      "source_views": ["page_4", "page_5 H-H"],
+      "plan_basis": "page_4 P-0202 出口接顶部主管水平段。",
+      "elevation_basis": "H-H 左侧顶部主管高程。",
+      "controlling_sections": ["H-H"],
+      "related_items": [4, 20, 22, 23],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "pump_3_suction_branch",
+      "role": "pump_suction_horizontal",
+      "start": [11900.0, 1600.0, 0.0],
+      "end": [11900.0, 3600.0, 0.0],
+      "axis": "y",
+      "dn": 250,
+      "source_views": ["page_4", "page_5 E-E"],
+      "plan_basis": "page_4 P-0203 吸入支路。",
+      "elevation_basis": "E-E 典型剖面。",
+      "controlling_sections": ["E-E"],
+      "related_items": [1, 8, 20, 22],
+      "confidence": 0.92
+    },
+    {
+      "run_id": "pump_3_suction_riser",
+      "role": "pump_suction_vertical",
+      "start": [11900.0, 3600.0, 0.0],
+      "end": [11900.0, 3600.0, 1200.0],
+      "axis": "z",
+      "dn": 250,
+      "source_views": ["page_5 E-E"],
+      "plan_basis": "page_4 P-0203 吸入立管锚点。",
+      "elevation_basis": "E-E 1.200 中间控制高程。",
+      "controlling_sections": ["E-E"],
+      "related_items": [1, 8, 20, 22],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "pump_3_discharge_riser",
+      "role": "pump_discharge_vertical",
+      "start": [11900.0, 5200.0, 1200.0],
+      "end": [11900.0, 5200.0, 3600.0],
+      "axis": "z",
+      "dn": 300,
+      "source_views": ["page_4", "page_5 D-D"],
+      "plan_basis": "page_4 P-0203 出口立管。",
+      "elevation_basis": "D-D 典型剖面。",
+      "controlling_sections": ["D-D"],
+      "related_items": [3, 19, 21, 25],
+      "confidence": 0.88
+    },
+    {
+      "run_id": "pump_3_discharge_lift",
+      "role": "pump_discharge_lift",
+      "start": [11900.0, 5200.0, 3600.0],
+      "end": [11900.0, 5200.0, 5000.0],
+      "axis": "z",
+      "dn": 250,
+      "source_views": ["page_5 A-A"],
+      "plan_basis": "page_4 P-0203 出口提升接塔段。",
+      "elevation_basis": "A-A 主剖面。",
+      "controlling_sections": ["A-A"],
+      "related_items": [4, 20, 25, 26],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "pump_3_discharge_connect",
+      "role": "pump_to_header_horizontal",
+      "start": [11900.0, 5200.0, 5000.0],
+      "end": [11900.0, 8400.0, 5000.0],
+      "axis": "y",
+      "dn": 250,
+      "source_views": ["page_4", "page_5 H-H"],
+      "plan_basis": "page_4 P-0203 出口接顶部主管水平段。",
+      "elevation_basis": "H-H 左侧顶部主管高程。",
+      "controlling_sections": ["H-H"],
+      "related_items": [4, 20, 22, 23],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "pump_4_suction_branch",
+      "role": "pump_suction_horizontal",
+      "start": [16100.0, 1600.0, 0.0],
+      "end": [16100.0, 3600.0, 0.0],
+      "axis": "y",
+      "dn": 250,
+      "source_views": ["page_4", "page_5 E-E"],
+      "plan_basis": "page_4 P-0204 吸入支路。",
+      "elevation_basis": "E-E 典型剖面。",
+      "controlling_sections": ["E-E"],
+      "related_items": [1, 8, 20, 22],
+      "confidence": 0.92
+    },
+    {
+      "run_id": "pump_4_suction_riser",
+      "role": "pump_suction_vertical",
+      "start": [16100.0, 3600.0, 0.0],
+      "end": [16100.0, 3600.0, 1200.0],
+      "axis": "z",
+      "dn": 250,
+      "source_views": ["page_5 E-E"],
+      "plan_basis": "page_4 P-0204 吸入立管锚点。",
+      "elevation_basis": "E-E 1.200 中间控制高程。",
+      "controlling_sections": ["E-E"],
+      "related_items": [1, 8, 20, 22],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "pump_4_discharge_riser",
+      "role": "pump_discharge_vertical",
+      "start": [16100.0, 5200.0, 1200.0],
+      "end": [16100.0, 5200.0, 3600.0],
+      "axis": "z",
+      "dn": 300,
+      "source_views": ["page_4", "page_5 D-D"],
+      "plan_basis": "page_4 P-0204 出口立管。",
+      "elevation_basis": "D-D 典型剖面。",
+      "controlling_sections": ["D-D"],
+      "related_items": [3, 19, 21, 25],
+      "confidence": 0.88
+    },
+    {
+      "run_id": "pump_4_discharge_lift",
+      "role": "pump_discharge_lift",
+      "start": [16100.0, 5200.0, 3600.0],
+      "end": [16100.0, 5200.0, 4500.0],
+      "axis": "z",
+      "dn": 150,
+      "source_views": ["page_5 A-A", "page_5 I-I"],
+      "plan_basis": "page_4 P-0204 右侧顶部接塔典型段。",
+      "elevation_basis": "I-I 右侧顶部主管高程为 +4.500。",
+      "controlling_sections": ["A-A", "I-I"],
+      "related_items": [5, 22, 26],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "pump_4_discharge_connect",
+      "role": "pump_to_header_horizontal",
+      "start": [16100.0, 5200.0, 4500.0],
+      "end": [16100.0, 8400.0, 4500.0],
+      "axis": "y",
+      "dn": 150,
+      "source_views": ["page_4", "page_5 I-I"],
+      "plan_basis": "page_4 P-0204 出口接右侧顶部主管水平段。",
+      "elevation_basis": "I-I 右侧顶部主管高程。",
+      "controlling_sections": ["I-I"],
+      "related_items": [5, 22, 23],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "tower_drop_1_vertical",
+      "role": "tower_drop_vertical",
+      "start": [3000.0, 8400.0, 5000.0],
+      "end": [3000.0, 8400.0, 3200.0],
+      "axis": "z",
+      "dn": 125,
+      "source_views": ["page_4", "page_5 H-H"],
+      "plan_basis": "CT-0201 下落支管。",
+      "elevation_basis": "H-H 典型剖面。",
+      "controlling_sections": ["H-H"],
+      "related_items": [23],
+      "confidence": 0.93
+    },
+    {
+      "run_id": "tower_drop_1_horizontal",
+      "role": "tower_drop_horizontal",
+      "start": [3000.0, 8400.0, 3200.0],
+      "end": [3000.0, 6800.0, 3200.0],
+      "axis": "y",
+      "dn": 125,
+      "source_views": ["page_4", "page_5 H-H"],
+      "plan_basis": "CT-0201 接塔水平段。",
+      "elevation_basis": "H-H 典型剖面。",
+      "controlling_sections": ["H-H"],
+      "related_items": [23],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "tower_drop_2_vertical",
+      "role": "tower_drop_vertical",
+      "start": [7200.0, 8400.0, 5000.0],
+      "end": [7200.0, 8400.0, 3200.0],
+      "axis": "z",
+      "dn": 125,
+      "source_views": ["page_4", "page_5 H-H"],
+      "plan_basis": "CT-0202 下落支管。",
+      "elevation_basis": "H-H 典型剖面。",
+      "controlling_sections": ["H-H"],
+      "related_items": [23],
+      "confidence": 0.93
+    },
+    {
+      "run_id": "tower_drop_2_horizontal",
+      "role": "tower_drop_horizontal",
+      "start": [7200.0, 8400.0, 3200.0],
+      "end": [7200.0, 6800.0, 3200.0],
+      "axis": "y",
+      "dn": 125,
+      "source_views": ["page_4", "page_5 H-H"],
+      "plan_basis": "CT-0202 接塔水平段。",
+      "elevation_basis": "H-H 典型剖面。",
+      "controlling_sections": ["H-H"],
+      "related_items": [23],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "tower_drop_3_vertical",
+      "role": "tower_drop_vertical",
+      "start": [11400.0, 8400.0, 4500.0],
+      "end": [11400.0, 8400.0, 3200.0],
+      "axis": "z",
+      "dn": 125,
+      "source_views": ["page_4", "page_5 I-I"],
+      "plan_basis": "CT-0203 下落支管。",
+      "elevation_basis": "I-I 右侧顶部主管高程。",
+      "controlling_sections": ["I-I"],
+      "related_items": [23],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "tower_drop_3_horizontal",
+      "role": "tower_drop_horizontal",
+      "start": [11400.0, 8400.0, 3200.0],
+      "end": [11400.0, 6800.0, 3200.0],
+      "axis": "y",
+      "dn": 125,
+      "source_views": ["page_4", "page_5 I-I"],
+      "plan_basis": "CT-0203 接塔水平段。",
+      "elevation_basis": "I-I 典型剖面。",
+      "controlling_sections": ["I-I"],
+      "related_items": [23],
+      "confidence": 0.88
+    },
+    {
+      "run_id": "tower_drop_4_vertical",
+      "role": "tower_drop_vertical",
+      "start": [15600.0, 8400.0, 4500.0],
+      "end": [15600.0, 8400.0, 3200.0],
+      "axis": "z",
+      "dn": 125,
+      "source_views": ["page_4", "page_5 I-I"],
+      "plan_basis": "CT-0204 下落支管。",
+      "elevation_basis": "I-I 右侧顶部主管高程。",
+      "controlling_sections": ["I-I"],
+      "related_items": [23],
+      "confidence": 0.9
+    },
+    {
+      "run_id": "tower_drop_4_horizontal",
+      "role": "tower_drop_horizontal",
+      "start": [15600.0, 8400.0, 3200.0],
+      "end": [15600.0, 6800.0, 3200.0],
+      "axis": "y",
+      "dn": 125,
+      "source_views": ["page_4", "page_5 I-I"],
+      "plan_basis": "CT-0204 接塔水平段。",
+      "elevation_basis": "I-I 典型剖面。",
+      "controlling_sections": ["I-I"],
+      "related_items": [23],
+      "confidence": 0.88
+    }
+  ],
+  "connection_details": [
+    {
+      "detail_id": "wall_sleeve_left",
+      "item_no": 31,
+      "kind": "sleeve_proxy",
+      "source_views": ["page_5 C-C"],
+      "center": [900.0, 3600.0, -700.0],
+      "axis": "x",
+      "length_mm": 1000.0,
+      "outer_diameter_mm": 260.0,
+      "inner_diameter_mm": 219.0,
+      "fit_relation": "按 C-C 剖面的 DN200 套管代理建模。",
+      "weld_relation": "焊接细节不展开，只保留池壁穿越关系。"
+    },
+    {
+      "detail_id": "support_proxy_left",
+      "item_no": 29,
+      "kind": "support_proxy",
+      "source_views": ["page_5 A-A"],
+      "center": [3000.0, 1400.0, -400.0],
+      "size_mm": [280.0, 280.0, 600.0],
+      "fit_relation": "喇叭口支架按总图级代理块表达。",
+      "weld_relation": "不展开焊脚。"
+    }
+  ],
+  "plan_only_feature_constraints": [
+    {
+      "feature_id": "p3_pool_top_embedded_plates_2026_04_09",
+      "source_view": "page_3",
+      "applies_to": "设备图",
+      "kind": "plan_only_layout_feature",
+      "note": "P3 新增/复核池顶预埋钢板 8 处：下边 5 处、左边 2 处、上边 1 处。其定位完全由 page_3 平面尺寸链控制，不依赖 page_5 剖面。",
+      "modeling_rule": "脚本先读 dimension_info.model_input.plan_reference.embedded_plates，再按池顶边带中心线直接落图。"
+    },
+    {
+      "feature_id": "p3_pool_top_dn50_flanged_pipe_2026_04_09",
+      "source_view": "page_3",
+      "applies_to": "设备图",
+      "kind": "plan_only_layout_feature",
+      "note": "P3 新增/复核池顶一根 DN50 法兰钢管，位置由右内壁 9760 与前内壁 400 共同控制，顶部高出池顶 100。",
+      "modeling_rule": "脚本先读 dimension_info.model_input.plan_reference.top_flange_pipes，再按总图级代理表达立管与法兰。"
+    },
+    {
+      "feature_id": "p3_pool_top_d300_opening_2026_04_09",
+      "source_view": "page_3",
+      "applies_to": "设备图",
+      "kind": "plan_only_layout_feature",
+      "note": "P3 新增/复核一个直径 300 的池顶开孔，位置由右内壁 6210 与前内壁 600 共同控制。",
+      "modeling_rule": "当前设备图模型无整块顶板，脚本先读 dimension_info.model_input.plan_reference.top_openings，并用圆环代理表达孔位和孔径。"
+    },
+    {
+      "feature_id": "p3_cc_upper_left_sump_pit_2026_04_09",
+      "source_view": "page_3 + page_5 C-C",
+      "applies_to": "设备图",
+      "kind": "plan_and_section_driven_layout_feature",
+      "note": "由 P3 蓄水池左上角可知，分隔板最左边有一个 1000x1000 的集水坑；由 C-C 剖面可知，集水坑底部标高为 -2.400。",
+      "modeling_rule": "脚本先读 dimension_info.model_input.plan_reference.sump_pits，并按 P3 给平面位置、C-C 给坑底标高的组合约束绘制局部深坑。"
+    }
+  ],
+  "global_rules": [
+    "本轮把 page_4 平面主干和 page_5 剖面高程分层建模：能全局锚定的进入 pipe_runs，只能局部确认的进入 section-local skeleton。",
+    "A-A/B-B/C-C/D-D/E-E/F-F/G-G/H-H/I-I 每个独立剖面均已单独保留，不允许合并。",
+    "任何 run 的 Z 高程都必须写明来自哪一个 section，不允许只凭印象填坐标。",
+    "局部 DN100/DN150/DN200 典型件若缺少可靠全局 XY 尺寸链，不强行写成全局主干 run。",
+    "2026-04-09 用户最新复核结果要求：P4 俯视图只保留两根横向主管，上边为 DN500、距蓄水池上侧内壁 4920、标高 -1.200；下边为 DN450、距蓄水池下侧内壁 1000、标高 -1.200；俯视图下方另外三条旧长直管删除。",
+    "当前阶段先不画除两根主管外的其他管子；本轮只把 DN450 主管水平方向改按“右端距蓄水池右侧内壁 700”执行，DN500 主管继续保持上一轮“右端距蓄水池右侧外壁左边 2650”的位置；后续如用户继续补充新的平面基准，再据此修正。"
+  ]
+}
