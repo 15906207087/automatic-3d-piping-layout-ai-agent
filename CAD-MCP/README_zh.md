@@ -58,7 +58,7 @@ CAD-MCP 是一个基于 **MCP（Model Context Protocol）** 的 CAD 控制服务
 - 自然语言创建 / 切换图层（经 `process_command`）
 - 保存图纸为 DWG（`save_drawing`）
 
-### 国标管件与配管零件
+### 零件
 
 - 管道弯头（`draw_pipe_elbow`）：GB/T 12459；支持 45° / 90° / 180°；LR / SR / 3D；可按 DN 联动壁厚画空心弯头
 - 异径管（`draw_reducer`）：同心 / 偏心；GB/T 12459
@@ -66,22 +66,13 @@ CAD-MCP 是一个基于 **MCP（Model Context Protocol）** 的 CAD 控制服务
 - 法兰盘（`draw_flange`）：GB/T 9124.1 PN 系列 / GB/T 9124.2 Class 系列；按 DN / PN 查表或自定义尺寸
 - 盲板 / 法兰盖（`draw_blind_flange`）：GB/T 9124.1 / GB/T 9124.2 等
 - 人孔（`draw_manhole`）：带颈、法兰、盖板、提手 / 吊耳等参数化表达
-
-### 紧固件
-
 - 六角头螺栓（`draw_bolt`）：GB/T 5782、GB/T 5783；亦支持自定义尺寸
 - 六角螺母（`draw_hex_nut`）：GB/T 6170 / GB/T 6170.1
 - 平垫圈（`draw_washer`）：GB/T 97.1
-
-### 阀门
-
 - 球阀（`draw_ball_valve`）：GB/T 12237、GB/T 12221；法兰 / 螺纹 / 承插焊 / 对焊等连接型式
 - 蝶阀（`draw_butterfly_valve`）：GB/T 12238、GB/T 12221
 - 截止阀（`draw_globe_valve`）：GB/T 12235、GB/T 12221
 - 止回阀（`draw_check_valve`）：GB/T 12236、GB/T 12221；优先旋启式
-
-### 仪表、封头与工程附件
-
 - 一般压力表（`draw_pressure_gauge`）：GB/T 1226；Y-60 / Y-100 / Y-150；径向 / 轴向；直装 / 盘装
 - 椭圆封头（`draw_elliptical_head`）：GB/T 25198；2:1 椭圆；可选直边
 - 刚性防水套管（`draw_rigid_waterproof_sleeve`）：02S404 A 型等
@@ -127,34 +118,7 @@ CAD-MCP 是一个基于 **MCP（Model Context Protocol）** 的 CAD 控制服务
 - `screen_capture.py` / `vision_loop.py` / `vision_provider.py`：截图与视觉回路
 - `archive_output_versions.py`：本地 `output/` 版本目录整理工具
 - `cad_controller.py`：CAD COM 控制器与国标件实现核心
-
-### 参数化案例与校验脚本（`src/parametric_models/`）
-
-- `basic_solids_one_dwg_demo`：基础 3D 实体合图演示
-- `boolean_spheres_demo`：布尔运算球体演示
-- `standard_parts_grid_demo`：标准件网格演示
-- `three_valves_one_dwg_demo`：三阀合图演示
-- `dn250_elbow_demo`：DN250 弯头演示
-- `dn250_elbow_angle_suite`：DN250 弯头角度套件
-- `dn250_standard_elbow_suite`：DN250 标准弯头套件
-- `dn250_tee_break_demo`：DN250 三通断管演示
-- `ee_left_elbow_helper_probe`：弯头 helper 探针脚本
-- `globe_valve_view_validation`：截止阀视图校验
-- `butterfly_valve_left_view_validation`：蝶阀左视图校验
-- `manhole_standard_validation`：人孔标准校验
-- `compressed_air_tank_parametric`：压缩空气储罐参数化
-- `compressed_air_tank_parametric_from_scratch`：压缩空气储罐从零参数化
-- `raw_water_tank_parametric`：原水箱参数化
-- `cycle_water_equipment_from_json`：循环水设备 JSON 出图
-- `cycle_water_pipeline_from_json`：循环水管道 JSON 出图
-- `cycle_water_section_route_validation`：循环水剖面路由校验
-- `cycle_water_dd_rebuilt`：D-D 剖面重建
-- `dd_section_from_scratch`：D-D 剖面从零绘制
-- `cycle_water_ff_hh_local_rebuilt`：F-F / H-H 局部重建
-- `cycle_water_aa_right_validation`：A-A 右侧校验
-- `cycle_water_aa_p0204_validation`：A-A / P0204 校验
-- `cycle_water_pump_complete_local`：循环水泵局部完整绘制
-- `cycle_water_y0202_tank_ii_validation`：Y0202 水箱 II 校验
+- `parametric_models/`：参数化建模脚本（本仓库示例为循环水）
 
 ### 可选旁路：LangChain 内存迭代代码生成（不影响主链路）
 
@@ -167,10 +131,6 @@ python -m experimental.langchain_pilot
 ```
 
 详见 `experimental/langchain_pilot/README.md`。
-
-## Demo
-
-![Demo](imgs/demo.gif)
 
 ## 安装要求
 
@@ -256,7 +216,7 @@ pip install -r requirements.txt
 python src/server.py
 ```
 
-### Claude Desktop、Windsurf
+### Claude Desktop、Windsurf、Cursor
 
 ```json
 {
@@ -271,13 +231,7 @@ python src/server.py
 }
 ```
 
-### Cursor
-
-按图配置 Cursor MCP（请改成你的本机路径）：
-
-![Cursor config](imgs/cursor_config.png)
-
-说明：新版 Cursor 也改为 JSON 配置，参见上一节。
+新版 Cursor 也使用上面这份 JSON（请把路径改成你的本机路径）。
 
 ### MCP Inspector
 
@@ -320,7 +274,7 @@ npx -y @modelcontextprotocol/inspector python C:\\path\\to\\CAD-MCP\\src\\server
 - `extrude_entity`：拉伸
 - `revolve_entity`：旋转成型
 
-#### 管件、紧固件、阀门与附件
+#### 零件
 
 - `draw_pipe_elbow`：管道弯头
 - `draw_reducer`：异径管
@@ -360,9 +314,8 @@ npx -y @modelcontextprotocol/inspector python C:\\path\\to\\CAD-MCP\\src\\server
 
 ```text
 CAD-MCP/
-├── imgs/                              # 图像和演示资源
-│   ├── demo.gif
-│   └── cursor_config.png
+├── imgs/                              # 演示动图
+│   └── demo.gif
 ├── experimental/                      # 可选旁路（LangChain pilot）
 │   └── langchain_pilot/
 ├── requirements.txt                   # 主服务依赖
